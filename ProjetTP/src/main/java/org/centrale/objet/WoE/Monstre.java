@@ -16,7 +16,7 @@ public class Monstre {
     private int ptPar;
     private int pageAtt;
     private int pagePar;
-    private Point2D p;
+    private Point2D pos;
 
     public Monstre(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, Point2D p) {
         this.ptVie = ptVie;
@@ -24,7 +24,7 @@ public class Monstre {
         this.ptPar = ptPar;
         this.pageAtt = pageAtt;
         this.pagePar = pagePar;
-        this.p = p;
+        this.pos = p;
     }
 
     public Monstre() {
@@ -37,7 +37,7 @@ public class Monstre {
         this.ptPar = m.getPtPar();
         this.pageAtt = m.getPageAtt();
         this.pagePar = m.getPagePar();
-        this.p = m.getP();
+        this.pos = m.getPos();
     }
     
 
@@ -61,8 +61,8 @@ public class Monstre {
         return degAtt;
     }
 
-    public Point2D getP() {
-        return p;
+    public Point2D getPos() {
+        return pos;
     }
 
     public void setPtVie(int ptVie) {
@@ -85,15 +85,15 @@ public class Monstre {
         this.pagePar = pagePar;
     }
 
-    public void setP(Point2D p) {
-        this.p = new Point2D(p);
+    public void setPos(Point2D p) {
+        this.pos = new Point2D(p);
     }
 
     public void deplace(){
         Random aleaInt = new Random();
         int movex = aleaInt.nextInt(3)-1;
         int movey = aleaInt.nextInt(3)-1;
-        p.translate(movex,movey);
+        pos.translate(movex,movey);
     }
     
     public void affiche(){

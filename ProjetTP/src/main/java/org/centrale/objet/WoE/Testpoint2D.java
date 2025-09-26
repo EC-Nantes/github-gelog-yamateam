@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.centrale.projet.objet;
+package org.centrale.objet.WoE;
 
 /**
  *
- * @author Max
+ * @author Max, Yaël
  */
 public class Testpoint2D {
     public static void main(String[] args){
@@ -28,7 +28,7 @@ public class Testpoint2D {
         // test
         p1.affiche();
         //Translation du deuxieme point
-        p2.translation(4);
+        p2.translate(4,5);
         //Verifier la modification
         p2.affiche();
         
