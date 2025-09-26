@@ -20,15 +20,19 @@ public class Lapin extends Monstre {
      * @param dMax
      * @param p
      */
-    public Lapin(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
-        super(ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
+    public Lapin(String n,int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
+        super(n, ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
     }
 
     /**
      *
      */
     public Lapin() {
-        super();
+        super("Lapin");
+    }
+    
+    public Lapin(String n) {
+        super(n);
     }
 
     /**

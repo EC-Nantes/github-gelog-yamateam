@@ -22,15 +22,19 @@ public class Monstre extends Creature {
      * @param dMax
      * @param p
      */
-    public Monstre(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
-        super(ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
+    public Monstre(String n, int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
+        super(n,ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
     }
 
     /**
      *
      */
     public Monstre() {
-        this(100,10,2,60,40,1,new Point2D());
+        this("Monstre",100,10,2,60,40,1,new Point2D());
+    }
+    
+    public Monstre(String n) {
+        this(n,100,10,2,60,40,1,new Point2D());
     }
     
     /**
@@ -38,7 +42,7 @@ public class Monstre extends Creature {
      * @param m
      */
     public Monstre(Monstre m) {
-        this(m.getPtVie(),m.getDegAtt(),m.getPtPar(), m.getPageAtt(), m.getPagePar(),m.getDistAttMax(),new Point2D(m.getPos()));
+        this(m.getNom(),m.getPtVie(),m.getDegAtt(),m.getPtPar(), m.getPageAtt(), m.getPagePar(),m.getDistAttMax(),new Point2D(m.getPos()));
     }
     
     /**

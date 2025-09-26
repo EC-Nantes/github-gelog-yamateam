@@ -43,6 +43,10 @@ public class Archer extends Personnage {
     public Archer(){
         this("Mohammed",100,50,50,75,25,3,new Point2D(0,0), 12);  
     }
+    
+    public Archer(String n){
+        this(n,100,50,50,75,25,3,new Point2D(0,0), 12);  
+    }
 
     /**
      *

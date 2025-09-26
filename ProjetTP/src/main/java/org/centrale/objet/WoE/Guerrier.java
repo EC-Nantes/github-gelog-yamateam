@@ -40,6 +40,10 @@ public class Guerrier extends Personnage{
     public Guerrier(){
         this("Général DJOMBY",200,20,50,75,25,1,new Point2D(0,0));  
     }
+    
+    public Guerrier(String n){
+        this(n,200,20,50,75,25,1,new Point2D(0,0));  
+    }
 
     /**
      * @param c

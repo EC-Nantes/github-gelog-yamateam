@@ -16,8 +16,7 @@ import java.util.Random;
 
 public class Personnage extends Creature{
 
-    /** Nom du personnage */
-    private String nom;
+
     
     // --- Constructeurs : ---
     /**
@@ -33,8 +32,7 @@ public class Personnage extends Creature{
      * @param p        Position initiale
      */
     public Personnage(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){
-        super(pV, dA, pPar, paAtt, paPar, dMax, p);
-        nom = n;               
+        super(n, pV, dA, pPar, paAtt, paPar, dMax, p);           
     }
     
      /**
@@ -51,6 +49,10 @@ public class Personnage extends Creature{
      */
     public Personnage(){
         this("Jean",100,50,50,75,25,3,new Point2D(0,0));  
+    }
+    
+    public Personnage(String n){
+        this(n,100,50,50,75,25,3,new Point2D(0,0));
     }
     
     // --- Méthodes : ---
@@ -70,13 +72,6 @@ public class Personnage extends Creature{
     this.getPos().translate(dx - 1, dy - 1);
     }
     
-    /**
-     *
-     * @return None
-     */
-    public String getNom() {
-        return nom;
-    }
 
      /**
      * Affiche dans la console les informations détaillées du personnage

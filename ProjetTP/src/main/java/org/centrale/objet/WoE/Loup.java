@@ -11,7 +11,7 @@ package org.centrale.objet.WoE;
 public class Loup extends Monstre{
 
     /**
-     *
+     * @param n
      * @param ptVie
      * @param degAtt
      * @param ptPar
@@ -20,15 +20,19 @@ public class Loup extends Monstre{
      * @param dMax
      * @param p
      */
-    public Loup(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
-        super(ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
+    public Loup(String n,int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
+        super(n, ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
     }
 
     /**
      *
      */
     public Loup() {
-        super();
+        super("Loup");
+    }
+    
+    public Loup(String n) {
+        super(n);
     }
 
     /**
@@ -48,4 +52,4 @@ public class Loup extends Monstre{
         
     }
         
-}
+}   

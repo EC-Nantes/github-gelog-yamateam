@@ -39,4 +39,8 @@ public class Paysan extends Personnage {
     public Paysan(){
         this("Jean",100,50,50,75,25,3,new Point2D(0,0));  
     }
+    
+    public Paysan(String nom){
+        this(nom,100,50,50,75,25,3,new Point2D(0,0));  
+    }
 }
