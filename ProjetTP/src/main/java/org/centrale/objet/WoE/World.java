@@ -61,21 +61,26 @@ public class World {
         do { //évite que deux persos soient sur la même case
             p2.setX(randInt.nextInt(101)-50);
             p2.setY(randInt.nextInt(101)-50);
-        } while (p2 != p1);
+        } while (p2 == p1);
         
         do { //évite que deux persos soient sur la même case
             p3.setX(randInt.nextInt(101)-50);
             p3.setY(randInt.nextInt(101)-50);
-        } while (p3 != p1 && p3 != p2);
+        } while (p3 == p1 || p3 == p2);
         
         do { //évite que deux persos soient sur la même case
             p4.setX(randInt.nextInt(101)-50);
             p4.setY(randInt.nextInt(101)-50);
-        } while (p4 != p1 && p4 != p2 && p4 != p3);
+        } while (p4 == p1 || p4 == p2 || p4 == p3);
         
+        
+        robin.setPos(p1);
+        peon.setPos(p2);
+        bugs1.setPos(p3);
+        bugs2.setPos(p4);
     }
-
         
 }
+
 
 
