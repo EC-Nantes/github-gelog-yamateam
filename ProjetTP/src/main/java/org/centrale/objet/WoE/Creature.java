@@ -202,15 +202,15 @@ public class Creature {
      * Affiche dans la console les informations détaillées du Creature
      */
     public void affiche() {
-    System.out.println("===== Creature =====");
-    System.out.println("Points de vie : " + ptVie);
-    System.out.println("Dégâts d'attaque : " + degAtt);
-    System.out.println("Points de parade : " + ptPar);
-    System.out.println("Pourcentage attaque : " + pageAtt + "%");
-    System.out.println("Pourcentage parade : " + pagePar + "%");
-    System.out.println("Distance max attaque : " + distAttMax);
-    pos.affiche();
-    System.out.println("======================");
+        System.out.println("===== Creature =====");
+        System.out.println("Points de vie : " + ptVie);
+        System.out.println("Dégâts d'attaque : " + degAtt);
+        System.out.println("Points de parade : " + ptPar);
+        System.out.println("Pourcentage attaque : " + pageAtt + "%");
+        System.out.println("Pourcentage parade : " + pagePar + "%");
+        System.out.println("Distance max attaque : " + distAttMax);
+        pos.affiche();
+        System.out.println("======================");
     }
     
 }

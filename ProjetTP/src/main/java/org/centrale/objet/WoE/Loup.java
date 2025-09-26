@@ -8,7 +8,7 @@ package org.centrale.objet.WoE;
  *
  * @author yaelv
  */
-public class Lapin extends Monstre {
+public class Loup extends Monstre{
 
     /**
      *
@@ -20,14 +20,14 @@ public class Lapin extends Monstre {
      * @param dMax
      * @param p
      */
-    public Lapin(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
+    public Loup(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
         super(ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
     }
 
     /**
      *
      */
-    public Lapin() {
+    public Loup() {
         super();
     }
 
@@ -35,9 +35,17 @@ public class Lapin extends Monstre {
      *
      * @param l
      */
-    public Lapin(Lapin l) {
+    public Loup(Loup l) {
         super(l);
     }
     
     
+    /**
+     * @param c
+     * Fait ce combattre cet objet avec la créature rentrée en paramètre
+     */
+    public void combattre(Creature c){
+        
+    }
+        
 }

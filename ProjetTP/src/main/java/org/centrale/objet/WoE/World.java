@@ -1,7 +1,7 @@
 package org.centrale.objet.WoE;
 import java.util.Random;
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,13 +10,36 @@ import java.util.List;
 
 /**
  *
- * @author yaelv
+ * @author yaelv, mathys
  */
+
+
 public class World {
+
+    /**
+     *
+     */
     public Archer robin;
+
+    /**
+     *
+     */
     public Paysan peon;
+
+    /**
+     *
+     */
     public Lapin bugs1;
+
+    /**
+     *
+     */
     public Lapin bugs2;
+    
+/**
+ * 
+ * Crée un monde possédant un archer, un paysan et deux lapins
+ */    
 
     public World() {
         robin = new Archer();
@@ -24,6 +47,12 @@ public class World {
         bugs1 = new Lapin();
         bugs2 = new Lapin();
     }
+        
+/**
+ * 
+ * Place les 4 personnages à des positions aléatoires différentes
+ * 
+ */    
     
     public void creerMondeAlea(){
         
@@ -48,7 +77,8 @@ public class World {
         peon.setPos(liste.get(1));
         bugs1.setPos(liste.get(2));
         bugs2.setPos(liste.get(3));
-*/      Random randInt = new Random();
+*/      
+        Random randInt = new Random();
         
         Point2D p1 = new Point2D();
         Point2D p2 = new Point2D();
@@ -74,13 +104,15 @@ public class World {
         } while (p4 == p1 || p4 == p2 || p4 == p3);
         
         
-        robin.setPos(p1);
-        peon.setPos(p2);
-        bugs1.setPos(p3);
-        bugs2.setPos(p4);
     }
+    
+    
+    public void tourDeJeu(){
         
+    }
+    
+    public void afficheWorld(){
+        
+    }
 }
-
-
 

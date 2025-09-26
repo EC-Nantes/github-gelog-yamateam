@@ -4,16 +4,38 @@
  */
 package org.centrale.objet.WoE;
 
+/**
+ *
+ * @author yaelv
+ */
 public class Paysan extends Personnage {
     
+    /**
+     *
+     * @param n
+     * @param pV
+     * @param dA
+     * @param pPar
+     * @param paAtt
+     * @param paPar
+     * @param dMax
+     * @param p
+     */
     public Paysan(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){
         super(n,pV,dA,pPar,paAtt,paPar,dMax,p);
     }
     
+    /**
+     *
+     * @param p
+     */
     public Paysan(Paysan p){
-        this(p.getNom(), p.getPtVie(),p.getDegAtt(),p.getPtPar(), p.getPageAtt(), p.getPagePar(),p.getDistAttMax(),p.getPos());
+        this(p.getNom(), p.getPtVie(),p.getDegAtt(),p.getPtPar(), p.getPageAtt(), p.getPagePar(),p.getDistAttMax(),new Point2D(p.getPos()));
     }
     
+    /**
+     *
+     */
     public Paysan(){
         this("Jean",100,50,50,75,25,3,new Point2D(0,0));  
     }
