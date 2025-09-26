@@ -70,16 +70,10 @@ public class Point2D {
         this.y += dy;
     }
     
-    public void recopie(Point2D p){
-        this.x = p.getX();
-        this.y = p.getY();
+    public double distance(Point2D p1, Point2D p2){
+        double d = Math.sqrt((p1.getX()-p2.getX())*(p1.getX()-p2.getX())+(p1.getY()-p2.getY())*(p1.getY()-p2.getY()));
+        return d;
     }
-    // La recopie fonctionne également avec le programme ci-dessous
-    // Possibilité de le mettre ? A la place de recopie ? (pour avoir sous le même nom, toutes les constructions de points)
-    //public void Point2D(Point2D p){
-        //this.x = p.getX();
-        //this.y = p.getY();
-    //}
     
     
 }
