@@ -4,6 +4,8 @@
  */
 package org.centrale.objet.WoE;
 
+import java.util.Random;
+
 /**
  *
  * @author dytri
@@ -68,7 +70,30 @@ public class Archer extends Personnage {
      * @param c
      * Fait ce combattre cet objet avec la créature rentrée en paramètre
      */
-    public void combattre(Creature c){
+public void combattre(Creature c){
+        Random randInt = new Random();
         
+        if (this.getPos().distance(c.getPos()) <= 1.5){
+            int RandAtt = randInt.nextInt(100) + 1;
+            
+            if (RandAtt <= this.getPageAtt()){
+                int RandDef = randInt.nextInt(100) + 1;
+                
+                if (RandDef > c.getPagePar()){
+                    c.subirDegat(this.getDegAtt());
+                }
+                else{
+                    c.subirDegat(this.getDegAtt()-c.getPtPar());
+                }
+            }
+        }
+        else if (this.getPos().distance(c.getPos())>1.5 && this.getPos().distance(c.getPos()) <= this.getDistAttMax()){
+            int RandAtt = randInt.nextInt(100) + 1;
+            
+            if (RandAtt <= this.getPageAtt()){
+                c.subirDegat(this.getDegAtt());
+            }
+        }
     }
+
 }
