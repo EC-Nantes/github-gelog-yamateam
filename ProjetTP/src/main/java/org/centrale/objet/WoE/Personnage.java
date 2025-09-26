@@ -11,29 +11,13 @@ import java.util.Random;
  * Un personnage est défini par son nom, ses points de vie, ses statistiques d’attaque et de défense, ainsi que sa position dans le plan
  * </p>
  *
- * @author Mathys&Yael
+ * @author Mathys_Yael
  */
 
-public class Personnage {
+public class Personnage extends Creature{
 
-    //--- Attributs : ---
     /** Nom du personnage */
     private String nom;
-    /** Points de vie du personnage */
-    private int ptVie;
-    /** Dégâts d'attaque */
-    private int degAtt;
-    /** Points de parade */
-    private int ptPar;
-    /** Pourcentage de réussite d’une attaque */
-    private int pageAtt;
-    /** Pourcentage de réussite d’une parade */
-    private int pagePar;
-    /** Distance maximale à laquelle le personnage peut attaquer */
-    private int distAttMax;
-    /** Position du personnage */
-    private Point2D pos;
-    
     
     // --- Constructeurs : ---
     /**
@@ -48,16 +32,9 @@ public class Personnage {
      * @param dMax     Distance maximale d’attaque
      * @param p        Position initiale
      */
-    
     public Personnage(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){
-        nom = n;
-        ptVie = pV;
-        degAtt = dA;
-        ptPar = pPar;
-        pageAtt = paAtt;
-        pagePar = paPar;
-        distAttMax = dMax;
-        pos = p;
+        super(pV, dA, pPar, paAtt, paPar, dMax, p);
+        nom = n;               
     }
     
      /**
@@ -66,7 +43,7 @@ public class Personnage {
      * @param perso Personnage à copier
      */
     public Personnage(Personnage perso){
-        this(perso.getNom(), perso.getPtVie(),perso.getDegAtt(),perso.getPtPar(), perso.getPageAtt(), perso.getPagePar(),perso.getDistAttMax(),perso.getPos());
+        this(perso.getNom(), perso.getPtVie(),perso.getDegAtt(),perso.getPtPar(), perso.getPageAtt(), perso.getPagePar(),perso.getDistAttMax(),new Point2D(perso.getPos()));
     }
     
      /**
@@ -80,8 +57,8 @@ public class Personnage {
     
      /**
      * Déplace le personnage d'une case aléatoire autour de sa position actuelle
-     */
-        
+     */        
+    @Override
     public void deplace() {
         int dx, dy;
         Random randInt = new Random();
@@ -90,88 +67,32 @@ public class Personnage {
             dy = randInt.nextInt(3);
         } while (dx == 1 && dy == 1);
 
-    pos.translate(dx - 1, dy - 1);
-}
+    this.getPos().translate(dx - 1, dy - 1);
+    }
     
+    /**
+     *
+     * @return None
+     */
     public String getNom() {
         return nom;
     }
 
-    public int getPtVie() {
-        return ptVie;
-    }
-
-    public int getDegAtt() {
-        return degAtt;
-    }
-
-    public int getPtPar() {
-        return ptPar;
-    }
-
-    public int getPageAtt() {
-        return pageAtt;
-    }
-
-    public int getPagePar() {
-        return pagePar;
-    }
-
-    public int getDistAttMax() {
-        return distAttMax;
-    }
-
-    public Point2D getPos() {
-        return pos;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public void setPtVie(int ptVie) {
-        this.ptVie = ptVie;
-    }
-
-    public void setDegAtt(int degAtt) {
-        this.degAtt = degAtt;
-    }
-
-    public void setPtPar(int ptPar) {
-        this.ptPar = ptPar;
-    }
-
-    public void setPageAtt(int pageAtt) {
-        this.pageAtt = pageAtt;
-    }
-
-    public void setPagePar(int pagePar) {
-        this.pagePar = pagePar;
-    }
-
-    public void setDistAttMax(int distAttMax) {
-        this.distAttMax = distAttMax;
-    }
-
-    public void setPos(Point2D pos) {
-        this.pos = pos;
-    }
-    
      /**
      * Affiche dans la console les informations détaillées du personnage
      */
-
+    @Override
     public void affiche() {
-    System.out.println("===== Personnage =====");
-    System.out.println("Nom : " + nom);
-    System.out.println("Points de vie : " + ptVie);
-    System.out.println("Dégâts d'attaque : " + degAtt);
-    System.out.println("Points de parade : " + ptPar);
-    System.out.println("Pourcentage attaque : " + pageAtt + "%");
-    System.out.println("Pourcentage parade : " + pagePar + "%");
-    System.out.println("Distance max attaque : " + distAttMax);
-    pos.affiche();
-    System.out.println("======================");
+        System.out.println("===== Personnage =====");
+        System.out.println("Nom : " + this.getNom());
+        System.out.println("Points de vie : " + this.getPtVie());
+        System.out.println("Dégâts d'attaque : " + this.getDegAtt());
+        System.out.println("Points de parade : " + this.getPtPar());
+        System.out.println("Pourcentage attaque : " + this.getPageAtt() + "%");
+        System.out.println("Pourcentage parade : " + this.getPagePar() + "%");
+        System.out.println("Distance max attaque : " + this.getDistAttMax());
+        this.getPos().affiche();
+        System.out.println("======================");
     }
     
 }

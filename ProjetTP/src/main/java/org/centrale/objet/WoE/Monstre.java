@@ -6,104 +6,54 @@ package org.centrale.objet.WoE;
 
 import java.util.Random;
 /**
- *
+ * Monstre du jeu
  * @author yaelv
  */
-public class Monstre {
+public class Monstre extends Creature {
     
-    private int ptVie;
-    private int degAtt;
-    private int ptPar;
-    private int pageAtt;
-    private int pagePar;
-    private Point2D pos;
 
-    public Monstre(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, Point2D p) {
-        this.ptVie = ptVie;
-        this.degAtt = degAtt;
-        this.ptPar = ptPar;
-        this.pageAtt = pageAtt;
-        this.pagePar = pagePar;
-        this.pos = p;
+    /**
+     *
+     * @param ptVie
+     * @param degAtt
+     * @param ptPar
+     * @param pageAtt
+     * @param pagePar
+     * @param dMax
+     * @param p
+     */
+    public Monstre(int ptVie, int degAtt, int ptPar, int pageAtt, int pagePar, int dMax, Point2D p) {
+        super(ptVie, degAtt, ptPar, pageAtt, pagePar, dMax, p);
     }
 
+    /**
+     *
+     */
     public Monstre() {
-        this(100,10,2,60,40,new Point2D());
+        this(100,10,2,60,40,1,new Point2D());
     }
     
+    /**
+     *
+     * @param m
+     */
     public Monstre(Monstre m) {
-        this.ptVie = m.getPtVie();
-        this.degAtt = m.getDegAtt();
-        this.ptPar = m.getPtPar();
-        this.pageAtt = m.getPageAtt();
-        this.pagePar = m.getPagePar();
-        this.pos = m.getPos();
+        this(m.getPtVie(),m.getDegAtt(),m.getPtPar(), m.getPageAtt(), m.getPagePar(),m.getDistAttMax(),new Point2D(m.getPos()));
     }
     
-
-    public int getPtVie() {
-        return ptVie;
-    }
-
-    public int getPtPar() {
-        return ptPar;
-    }
-
-    public int getPagePar() {
-        return pagePar;
-    }
-
-    public int getPageAtt() {
-        return pageAtt;
-    }
-
-    public int getDegAtt() {
-        return degAtt;
-    }
-
-    public Point2D getPos() {
-        return pos;
-    }
-
-    public void setPtVie(int ptVie) {
-        this.ptVie = ptVie;
-    }
-
-    public void setDegAtt(int degAtt) {
-        this.degAtt = degAtt;
-    }
-
-    public void setPtPar(int ptPar) {
-        this.ptPar = ptPar;
-    }
-
-    public void setPageAtt(int pageAtt) {
-        this.pageAtt = pageAtt;
-    }
-
-    public void setPagePar(int pagePar) {
-        this.pagePar = pagePar;
-    }
-
-    public void setPos(Point2D p) {
-        this.pos = new Point2D(p);
-    }
-
-    public void deplace(){
-        Random aleaInt = new Random();
-        int movex = aleaInt.nextInt(3)-1;
-        int movey = aleaInt.nextInt(3)-1;
-        pos.translate(movex,movey);
-    }
-    
+    /**
+     *
+     */
+    @Override
     public void affiche(){
-        System.out.println("===== Personnage =====");
-        System.out.println("Points de vie : " + ptVie);
-        System.out.println("Dégâts d'attaque : " + degAtt);
-        System.out.println("Points de parade : " + ptPar);
-        System.out.println("Pourcentage attaque : " + pageAtt + "%");
-        System.out.println("Pourcentage parade : " + pagePar + "%");
-        pos.affiche();
+        System.out.println("===== Monstre =====");
+        System.out.println("Points de vie : " + this.getPtVie());
+        System.out.println("Dégâts d'attaque : " + this.getDegAtt());
+        System.out.println("Points de parade : " + this.getPtPar());
+        System.out.println("Pourcentage attaque : " + this.getPageAtt() + "%");
+        System.out.println("Pourcentage parade : " + this.getPagePar() + "%");
+        System.out.println("Distance max attaque : " + this.getDistAttMax());
+        this.getPos().affiche();
         System.out.println("======================");
     }
 }
