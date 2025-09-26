@@ -6,21 +6,48 @@ package org.centrale.objet.WoE;
 import java.util.Random;
 
 /**
+ * Représente un personnage du jeu World of ECN
+ * <p>
+ * Un personnage est défini par son nom, ses points de vie, ses statistiques d’attaque et de défense, ainsi que sa position dans le plan
+ * </p>
  *
- * @author dytri
+ * @author Mathys&Yael
  */
-public class Personnage {
-    
-    // attributs 
 
+public class Personnage {
+
+    //--- Attributs : ---
+    /** Nom du personnage */
     private String nom;
+    /** Points de vie du personnage */
     private int ptVie;
+    /** Dégâts d'attaque */
     private int degAtt;
+    /** Points de parade */
     private int ptPar;
+    /** Pourcentage de réussite d’une attaque */
     private int pageAtt;
+    /** Pourcentage de réussite d’une parade */
     private int pagePar;
+    /** Distance maximale à laquelle le personnage peut attaquer */
     private int distAttMax;
+    /** Position du personnage */
     private Point2D pos;
+    
+    
+    // --- Constructeurs : ---
+    /**
+     * Constructeur principal
+     *
+     * @param n        Nom du personnage
+     * @param pV       Points de vie
+     * @param dA       Dégâts d'attaque
+     * @param pPar     Points de parade
+     * @param paAtt    Pourcentage d'attaque
+     * @param paPar    Pourcentage de parade
+     * @param dMax     Distance maximale d’attaque
+     * @param p        Position initiale
+     */
     
     public Personnage(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){
         nom = n;
@@ -33,13 +60,27 @@ public class Personnage {
         pos = p;
     }
     
+     /**
+     * Constructeur de copie
+     *
+     * @param perso Personnage à copier
+     */
     public Personnage(Personnage perso){
         this(perso.getNom(), perso.getPtVie(),perso.getDegAtt(),perso.getPtPar(), perso.getPageAtt(), perso.getPagePar(),perso.getDistAttMax(),perso.getPos());
     }
     
+     /**
+     * Constructeur par défaut
+     */
     public Personnage(){
         this("Jean",100,50,50,75,25,3,new Point2D(0,0));  
     }
+    
+    // --- Méthodes : ---
+    
+     /**
+     * Déplace le personnage d'une case aléatoire autour de sa position actuelle
+     */
         
     public void deplace() {
         int dx, dy;
@@ -116,17 +157,21 @@ public class Personnage {
         this.pos = pos;
     }
     
+     /**
+     * Affiche dans la console les informations détaillées du personnage
+     */
+
     public void affiche() {
-        System.out.println("===== Personnage =====");
-        System.out.println("Nom : " + nom);
-        System.out.println("Points de vie : " + ptVie);
-        System.out.println("Dégâts d'attaque : " + degAtt);
-        System.out.println("Points de parade : " + ptPar);
-        System.out.println("Pourcentage attaque : " + pageAtt + "%");
-        System.out.println("Pourcentage parade : " + pagePar + "%");
-        System.out.println("Distance max attaque : " + distAttMax);
-        pos.affiche();
-        System.out.println("======================");
+    System.out.println("===== Personnage =====");
+    System.out.println("Nom : " + nom);
+    System.out.println("Points de vie : " + ptVie);
+    System.out.println("Dégâts d'attaque : " + degAtt);
+    System.out.println("Points de parade : " + ptPar);
+    System.out.println("Pourcentage attaque : " + pageAtt + "%");
+    System.out.println("Pourcentage parade : " + pagePar + "%");
+    System.out.println("Distance max attaque : " + distAttMax);
+    pos.affiche();
+    System.out.println("======================");
     }
     
 }
