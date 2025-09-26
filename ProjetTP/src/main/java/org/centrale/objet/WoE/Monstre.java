@@ -97,6 +97,13 @@ public class Monstre {
     }
     
     public void affiche(){
-        
+        System.out.println("===== Personnage =====");
+        System.out.println("Points de vie : " + ptVie);
+        System.out.println("Dégâts d'attaque : " + degAtt);
+        System.out.println("Points de parade : " + ptPar);
+        System.out.println("Pourcentage attaque : " + pageAtt + "%");
+        System.out.println("Pourcentage parade : " + pagePar + "%");
+        pos.affiche();
+        System.out.println("======================");
     }
 }
