@@ -223,5 +223,16 @@ public class Creature {
         pos.affiche();
         System.out.println("======================");
     }
+
+        
+    public void subirDegat(int deg){
+        this.ptVie -= deg;
+        if (ptVie <= 0){
+            this.ptVie = 0;
+            System.out.println(nom + " est Mort");
+        }
+    }
+    
     
 }
+
