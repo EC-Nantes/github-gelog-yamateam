@@ -12,6 +12,8 @@ import java.util.Random;
  */
 public class Creature {
     
+    /** Nom du Creature */
+    private String nom;
     /** Points de vie du Creature */
     private int ptVie;
     /** Dégâts d'attaque */
@@ -41,7 +43,8 @@ public class Creature {
      * @param dMax     Distance maximale d’attaque
      * @param p        Position initiale
      */
-    public Creature(int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){
+    public Creature(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){
+        nom = n;
         ptVie = pV;
         degAtt = dA;
         ptPar = pPar;
@@ -57,14 +60,14 @@ public class Creature {
      * @param crea Creature à copier
      */
     public Creature(Creature crea){
-        this(crea.getPtVie(),crea.getDegAtt(),crea.getPtPar(), crea.getPageAtt(), crea.getPagePar(),crea.getDistAttMax(),new Point2D(crea.getPos()));
+        this(crea.getNom(), crea.getPtVie(),crea.getDegAtt(),crea.getPtPar(), crea.getPageAtt(), crea.getPagePar(),crea.getDistAttMax(),new Point2D(crea.getPos()));
     }
     
      /**
      * Constructeur par défaut
      */
     public Creature(){
-        this(100,50,50,75,25,3,new Point2D(0,0));  
+        this("Jean-Baptiste",100,50,50,75,25,3,new Point2D(0,0));  
     }
     
     // --- Méthodes : ---
@@ -196,6 +199,14 @@ public class Creature {
      */
     public void setPos(Point2D pos) {
         this.pos = pos;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
     
      /**
