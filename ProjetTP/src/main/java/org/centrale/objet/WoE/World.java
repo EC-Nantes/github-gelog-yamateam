@@ -27,6 +27,7 @@ public class World {
     
     public void creerMondeAlea(){
         
+        /*
         List<Point2D> liste = new ArrayList();
         Random aleaInt = new Random();
         
@@ -47,8 +48,34 @@ public class World {
         peon.setPos(liste.get(1));
         bugs1.setPos(liste.get(2));
         bugs2.setPos(liste.get(3));
+*/      Random randInt = new Random();
+        
+        Point2D p1 = new Point2D();
+        Point2D p2 = new Point2D();
+        Point2D p3 = new Point2D();
+        Point2D p4 = new Point2D();
+        
+        p1.setX(randInt.nextInt(101)-50);
+        p1.setY(randInt.nextInt(101)-50);
+        
+        do { //évite que deux persos soient sur la même case
+            p2.setX(randInt.nextInt(101)-50);
+            p2.setY(randInt.nextInt(101)-50);
+        } while (p2 != p1);
+        
+        do { //évite que deux persos soient sur la même case
+            p3.setX(randInt.nextInt(101)-50);
+            p3.setY(randInt.nextInt(101)-50);
+        } while (p3 != p1 && p3 != p2);
+        
+        do { //évite que deux persos soient sur la même case
+            p4.setX(randInt.nextInt(101)-50);
+            p4.setY(randInt.nextInt(101)-50);
+        } while (p4 != p1 && p4 != p2 && p4 != p3);
         
     }
+
         
 }
+
 
