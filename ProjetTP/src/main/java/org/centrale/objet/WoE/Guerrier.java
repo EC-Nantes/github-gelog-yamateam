@@ -51,7 +51,7 @@ public class Guerrier extends Personnage{
      * @param c
      * Fait ce combattre cet objet avec la créature rentrée en paramètre
      */
-    public void combattre(Creature c){
+public void combattre(Creature c){
         Random randInt = new Random();
         
         if (this.getPos().distance(c.getPos()) <= 1.5){
@@ -77,3 +77,4 @@ public class Guerrier extends Personnage{
         }
     }
 }
+
