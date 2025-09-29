@@ -78,8 +78,7 @@ public class Personnage extends Creature{
      */
     @Override
     public void affiche() {
-        System.out.println("===== Personnage =====");
-        System.out.println("Nom : " + this.getNom());
+        System.out.println("===== "+ this.getNom() +" =====");
         System.out.println("Points de vie : " + this.getPtVie());
         System.out.println("Dégâts d'attaque : " + this.getDegAtt());
         System.out.println("Points de parade : " + this.getPtPar());
