@@ -107,6 +107,7 @@ public class Archer extends Personnage {
                 c.subirDegat(this.getDegAtt());
                 this.setNbFleches(this.getNbFleches() - 1);
                 System.out.println(c.getNom() + ": Pv = " + c.getPtVie());
+                System.out.println(c.getNom() + ": NbFleche = " + this.getNbFleches());
             }
             else{
                 System.out.println(this.getNom() +" a raté son attaque !");
@@ -116,5 +117,6 @@ public class Archer extends Personnage {
     }
 
 }
+
 
 
