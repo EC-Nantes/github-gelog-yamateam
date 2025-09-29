@@ -57,6 +57,12 @@ public class Archer extends Personnage {
     public void setNbFleches(int nbFleches) {
         this.nbFleches = nbFleches;
     }
+    
+    @Override
+    public void affiche(){
+        super.affiche();
+        System.out.println("Nombre de flèche : " + this.getNbFleches());
+    }
 
     /**
      *
