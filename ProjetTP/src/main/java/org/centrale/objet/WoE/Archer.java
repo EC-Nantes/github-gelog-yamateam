@@ -97,3 +97,4 @@ public void combattre(Creature c){
     }
 
 }
+
