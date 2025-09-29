@@ -98,7 +98,7 @@ public class Archer extends Personnage {
             }
             System.out.println("===========================");
         }
-        else if (this.getPos().distance(c.getPos())>1.5 && this.getPos().distance(c.getPos()) <= this.getDistAttMax()){
+        else if (this.getPos().distance(c.getPos())>1.5 && this.getPos().distance(c.getPos()) <= this.getDistAttMax() && this.getNbFleches() > 0){
             System.out.println("===== "+ this.getNom() + " combat à distance " + c.getNom() + " =====");
             int RandAtt = randInt.nextInt(100) + 1;
             
@@ -117,6 +117,3 @@ public class Archer extends Personnage {
     }
 
 }
-
-
-
