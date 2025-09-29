@@ -86,7 +86,6 @@ public class Personnage extends Creature{
         System.out.println("Pourcentage parade : " + this.getPagePar() + "%");
         System.out.println("Distance max attaque : " + this.getDistAttMax());
         this.getPos().affiche();
-        System.out.println("======================");
     }
     
 }
