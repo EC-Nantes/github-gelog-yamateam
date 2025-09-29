@@ -213,7 +213,7 @@ public class Creature {
      * Affiche dans la console les informations détaillées du Creature
      */
     public void affiche() {
-        System.out.println("===== Creature =====");
+        System.out.println("===== "+ nom +" =====");
         System.out.println("Points de vie : " + ptVie);
         System.out.println("Dégâts d'attaque : " + degAtt);
         System.out.println("Points de parade : " + ptPar);
@@ -223,8 +223,7 @@ public class Creature {
         pos.affiche();
         System.out.println("======================");
     }
-
-        
+    
     public void subirDegat(int deg){
         this.ptVie -= deg;
         if (ptVie <= 0){
@@ -233,6 +232,4 @@ public class Creature {
         }
     }
     
-    
 }
-
