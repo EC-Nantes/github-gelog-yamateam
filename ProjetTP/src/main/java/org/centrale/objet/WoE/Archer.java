@@ -93,9 +93,13 @@ public class Archer extends Personnage {
                     System.out.println(c.getNom() + ": Pv = " + c.getPtVie());
                 }
                 else{
+                    int deg = this.getDegAtt()-c.getPtPar();
+                    if (deg < 0) {
+                        deg = 0;
+                    }
                     System.out.println(c.getNom() +" a paré l'attaque !");
-                    System.out.println(c.getNom() +" subit " + (this.getDegAtt()-c.getPtPar()) + " dmg");
-                    c.subirDegat(this.getDegAtt()-c.getPtPar());
+                    System.out.println(c.getNom() +" subit " + deg + " dmg");
+                    c.subirDegat(deg);
                     System.out.println(c.getNom() + ": Pv = " + c.getPtVie());
                 }
             }
@@ -122,5 +126,6 @@ public class Archer extends Personnage {
     }
 
 }
+
 
 
