@@ -221,7 +221,6 @@ public class Creature {
         System.out.println("Pourcentage parade : " + pagePar + "%");
         System.out.println("Distance max attaque : " + distAttMax);
         pos.affiche();
-        System.out.println("======================");
     }
     
     public void subirDegat(int deg){
@@ -233,3 +232,4 @@ public class Creature {
     }
     
 }
+
