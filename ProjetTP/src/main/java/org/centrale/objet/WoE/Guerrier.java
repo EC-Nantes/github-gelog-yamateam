@@ -77,7 +77,6 @@ public class Guerrier extends Personnage{
             else {
                 System.out.println(this.getNom() +" a raté son attaque !");
             }
-            System.out.println("===========================");
         }
         else if (this.getPos().distance(c.getPos())>1.5 && this.getPos().distance(c.getPos()) <= this.getDistAttMax()){
             System.out.println("===== "+ this.getNom() + " combat à distance " + c.getNom() + " =====");
@@ -91,9 +90,9 @@ public class Guerrier extends Personnage{
             else{
                 System.out.println(this.getNom() +" a raté son attaque !");
             }
-            System.out.println("===========================");
         }
     }
 }
+
 
 
