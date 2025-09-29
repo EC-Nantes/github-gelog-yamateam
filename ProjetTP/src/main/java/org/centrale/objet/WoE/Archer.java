@@ -108,6 +108,7 @@ public class Archer extends Personnage {
             int RandAtt = randInt.nextInt(100) + 1;
             
             if (RandAtt <= this.getPageAtt()){
+                System.out.println(this.getNom() +" a réussi son attaque !");
                 System.out.println(c.getNom() +" subit " + this.getDegAtt() + " dmg");
                 c.subirDegat(this.getDegAtt());
                 this.setNbFleches(this.getNbFleches() - 1);
@@ -121,4 +122,5 @@ public class Archer extends Personnage {
     }
 
 }
+
 
