@@ -48,8 +48,12 @@ public class Guerrier extends Personnage{
     }
 
     /**
-     * @param c
-     * Fait ce combattre cet objet avec la créature rentrée en paramètre
+     * @param c Créature à combattre
+     * 
+     * Fait se combattre cet objet avec la créature rentrée en paramètre.
+     * Deux styles de combat selon la distance entre les créatures concernées : 
+     * - Au Corps à Corps (CaC) si elles sont adjacentes
+     * - A distance si elles ne le sont pas et que la distance d'attaque de l'attaquant est suffisante
      */
     public void combattre(Creature c){
         Random randInt = new Random();
@@ -97,7 +101,3 @@ public class Guerrier extends Personnage{
         }
     }
 }
-
-
-
-
