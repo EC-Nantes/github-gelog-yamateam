@@ -77,6 +77,7 @@ public class Creature {
      */
         
     public void deplace() {
+        System.out.println("===== "+ this.getNom() +" se déplace =====");
         int dx, dy;
         Random randInt = new Random();
         do { //évite le non déplacement et permet de se déplacer aléatoirement parmis les 8 cases autours de la créature
@@ -85,6 +86,7 @@ public class Creature {
         } while (dx == 1 && dy == 1);
 
     pos.translate(dx - 1, dy - 1);
+    System.out.println("Nouvelle position : " + this.getPos().toString());
 }
     
 
@@ -232,4 +234,3 @@ public class Creature {
     }
     
 }
-
