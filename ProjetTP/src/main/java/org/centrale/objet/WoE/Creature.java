@@ -216,13 +216,13 @@ public class Creature {
      */
     public void affiche() {
         System.out.println("===== "+ nom +" =====");
+        System.out.println("Position : " + this.getPos().toString());
         System.out.println("Points de vie : " + ptVie);
         System.out.println("Dégâts d'attaque : " + degAtt);
         System.out.println("Points de parade : " + ptPar);
         System.out.println("Pourcentage attaque : " + pageAtt + "%");
         System.out.println("Pourcentage parade : " + pagePar + "%");
         System.out.println("Distance max attaque : " + distAttMax);
-        pos.affiche();
     }
     
     public void subirDegat(int deg){
