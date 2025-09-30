@@ -34,7 +34,7 @@ public class Creature {
     /**
      * Constructeur principal
      *
-     * @param n        Nom du Creature
+     * @param n        Nom de la Creature
      * @param pV       Points de vie
      * @param dA       Dégâts d'attaque
      * @param pPar     Points de parade
@@ -225,6 +225,11 @@ public class Creature {
         System.out.println("Distance max attaque : " + distAttMax);
     }
     
+     /**
+     * @param deg Dégat que la créature doit subir
+     * 
+     * Fait subir les dégats et affiche si la créature est morte ou pas (PtVie <= 0)
+     */
     public void subirDegat(int deg){
         this.ptVie -= deg;
         if (ptVie <= 0){
