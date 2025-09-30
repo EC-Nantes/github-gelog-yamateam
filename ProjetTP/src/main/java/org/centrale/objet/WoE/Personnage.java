@@ -73,7 +73,7 @@ public class Personnage extends Creature{
     }
     
     public void recupererObjet(Objet o){
-        if (this.getPos().distance(o.getPos()) <= 1.5 && o.getDetenteur() == null){
+        if (this.getPos().distance(o.getPos()) == 0 && o.getDetenteur() == null){
             o.setDetenteur(this);
         }
     }
