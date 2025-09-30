@@ -55,14 +55,12 @@ public class Objet {
     
     public void utiliser(){
     }
-
+    
     public void affiche(){
         if (this.getDetenteur() == null){
             System.out.println("===== "+ this.getNom() +" =====");
-            this.getPos().affiche();
+            System.out.println("Position : " + this.getPos().toString());
         }
     }
     
 }
-
-
