@@ -123,13 +123,11 @@ public class Point2D {
      * Donne la distance entre deux points du plan
      * 
      * @param p1    Point n°1
-     * @param p2    Point n°2
-     * 
      * @return distance entre p1 et p2 (float)
      */
-    public double distance(Point2D p1, Point2D p2){
-        double d = Math.sqrt((p1.getX()-p2.getX())*(p1.getX()-p2.getX())+(p1.getY()-p2.getY())*(p1.getY()-p2.getY()));
+    public double distance(Point2D p1){
+        double d = Math.sqrt((p1.getX()-this.x)*(p1.getX()-this.x)+(p1.getY()-this.y)*(p1.getY()-this.y));
         return d;
     }
-    
+        
 }
