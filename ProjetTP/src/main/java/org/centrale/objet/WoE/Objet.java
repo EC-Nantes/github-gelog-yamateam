@@ -53,4 +53,7 @@ public class Objet {
     }
     
     
+    public void utiliser(){
+    }
+    
 }
