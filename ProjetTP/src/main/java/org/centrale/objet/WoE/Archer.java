@@ -43,11 +43,11 @@ public class Archer extends Personnage {
      *
      */
     public Archer(){
-        this("Mohammed",100,50,50,75,25,3,new Point2D(0,0), 12);  
+        this("Mohammed",100,50,50,75,25,10,new Point2D(0,0), 12);  
     }
     
     public Archer(String n){
-        this(n,100,50,50,75,25,3,new Point2D(0,0), 12);  
+        this(n,100,50,50,75,25,10,new Point2D(0,0), 12);  
     }
 
     /**
@@ -73,8 +73,12 @@ public class Archer extends Personnage {
     }
     
     /**
-     * @param c
-     * Fait ce combattre cet objet avec la créature rentrée en paramètre
+     * @param c Créature à combattre
+     * 
+     * Fait se combattre cet objet avec la créature rentrée en paramètre.
+     * Deux styles de combat selon la distance entre les créatures concernées : 
+     * - Au Corps à Corps (CaC) si elles sont adjacentes
+     * - A distance si elles ne le sont pas et que la distance d'attaque de l'attaquant est suffisante
      */
     public void combattre(Creature c){
         Random randInt = new Random();
@@ -117,7 +121,7 @@ public class Archer extends Personnage {
                 c.subirDegat(this.getDegAtt());
                 this.setNbFleches(this.getNbFleches() - 1);
                 System.out.println(c.getNom() + ": Pv = " + c.getPtVie());
-                System.out.println(c.getNom() + ": NbFleche = " + this.getNbFleches());
+                System.out.println(this.getNom() + ": NbFleche = " + this.getNbFleches());
             }
             else{
                 System.out.println(this.getNom() +" a raté son attaque !");
@@ -126,6 +130,3 @@ public class Archer extends Personnage {
     }
 
 }
-
-
-
