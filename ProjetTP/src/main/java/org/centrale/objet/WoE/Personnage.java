@@ -57,21 +57,6 @@ public class Personnage extends Creature{
     
     // --- Méthodes : ---
     
-     /**
-     * Déplace le personnage d'une case aléatoire autour de sa position actuelle
-     */        
-    @Override
-    public void deplace() {
-        int dx, dy;
-        Random randInt = new Random();
-        do { //évite le non déplacement et permet de se déplacer aléatoirement parmis les 8 cases autours du perso
-            dx = randInt.nextInt(3);
-            dy = randInt.nextInt(3);
-        } while (dx == 1 && dy == 1);
-
-    this.getPos().translate(dx - 1, dy - 1);
-    }
-    
     public void recupererObjet(Objet o){
         if (this.getPos().distance(o.getPos()) == 0 && o.getDetenteur() == null){
             o.setDetenteur(this);
@@ -84,21 +69,6 @@ public class Personnage extends Creature{
             o.setDetenteur(new Creature());
         }
     }
-    
-
-     /**
-     * Affiche dans la console les informations détaillées du personnage
-     */
-    @Override
-    public void affiche() {
-        System.out.println("===== "+ this.getNom() +" =====");
-        System.out.println("Points de vie : " + this.getPtVie());
-        System.out.println("Dégâts d'attaque : " + this.getDegAtt());
-        System.out.println("Points de parade : " + this.getPtPar());
-        System.out.println("Pourcentage attaque : " + this.getPageAtt() + "%");
-        System.out.println("Pourcentage parade : " + this.getPagePar() + "%");
-        System.out.println("Distance max attaque : " + this.getDistAttMax());
-        this.getPos().affiche();
-    }
+   
     
 }
