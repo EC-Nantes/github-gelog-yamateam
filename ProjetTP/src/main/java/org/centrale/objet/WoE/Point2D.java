@@ -103,6 +103,11 @@ public class Point2D {
         // Par exemple : le point p2 est aux coordonnées...
         System.out.println("[" + this.x + ";" + this.y + "]");
      }
+
+    @Override
+    public String toString(){
+        return("[" + this.x + ";" + this.y + "]");
+    }
     
     /**
      *
