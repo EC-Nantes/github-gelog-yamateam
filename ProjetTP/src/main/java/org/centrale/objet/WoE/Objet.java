@@ -57,11 +57,12 @@ public class Objet {
     }
 
     public void affiche(){
-        if (this.detenteur == null){
+        if (this.getDetenteur() == null){
             System.out.println("===== "+ this.getNom() +" =====");
             this.getPos().affiche();
         }
     }
     
 }
+
 
