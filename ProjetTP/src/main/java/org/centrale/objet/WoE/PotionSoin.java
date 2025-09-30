@@ -33,6 +33,13 @@ public class PotionSoin extends Objet{
         this.ptSoin = ptSoin;
     }
     
+    @Override
+    public void utiliser(){
+        System.out.println("===== "+ this.getDetenteur() + " utilise " + this.getNom() + " =====");
+        this.getDetenteur().setPtVie(this.getDetenteur().getPtVie()+ptSoin);
+        System.out.println(this.getDetenteur().getNom() + ": Pv = " + this.getDetenteur().getPtVie());
+    }
+    
 
     
 }
