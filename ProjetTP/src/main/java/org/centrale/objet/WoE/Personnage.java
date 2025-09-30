@@ -72,6 +72,19 @@ public class Personnage extends Creature{
     this.getPos().translate(dx - 1, dy - 1);
     }
     
+    public void recupererObjet(Objet o){
+        if (this.getPos().distance(o.getPos()) <= 1.5 && o.getDetenteur() == null){
+            o.setDetenteur(this);
+        }
+    }
+    
+    public void utiliserObjet(Objet o){
+        if (this == o.getDetenteur()){
+            o.utiliser();
+            o.setDetenteur(new Creature());
+        }
+    }
+    
 
      /**
      * Affiche dans la console les informations détaillées du personnage
