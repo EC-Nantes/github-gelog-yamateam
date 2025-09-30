@@ -35,25 +35,40 @@ public class World {
      *
      */
     public Lapin bugs2;
-    
+
+    /**
+     *
+     */
+    public Archer guillaumeT;
+
+    /**
+     *
+     */
+    public Guerrier grosBill;
+
+    /**
+     *
+     */
+    public Loup wolfie;    
 /**
  * 
- * Crée un monde possédant un archer, un paysan et deux lapins
+ * Crée un monde possédant deux archers, un paysan, deux lapins, un guerrier et un loup
  */    
-
     public World() {
-        robin = new Archer();
+        robin = new Archer("Robin");
         peon = new Paysan();
         bugs1 = new Lapin();
         bugs2 = new Lapin();
+        guillaumeT = new Archer("GuillaumeT");
+        grosBill = new Guerrier("GrosBill");
+        wolfie = new Loup("Wolfie");
     }
         
 /**
  * 
  * Place les 4 personnages à des positions aléatoires différentes
  * 
- */    
-    
+ */        
     public void creerMondeAlea(){
         
         /*
@@ -84,6 +99,9 @@ public class World {
         Point2D p2 = new Point2D();
         Point2D p3 = new Point2D();
         Point2D p4 = new Point2D();
+        Point2D p5 = new Point2D();
+        Point2D p6 = new Point2D();
+        Point2D p7 = new Point2D();
         
         p1.setX(randInt.nextInt(101)-50);
         p1.setY(randInt.nextInt(101)-50);
@@ -103,7 +121,28 @@ public class World {
             p4.setY(randInt.nextInt(101)-50);
         } while (p4 == p1 || p4 == p2 || p4 == p3);
         
+        do { //évite que deux persos soient sur la même case
+            p5.setX(randInt.nextInt(101)-50);
+            p5.setY(randInt.nextInt(101)-50);
+        } while (p5 == p1 || p5 == p2 || p5 == p3 || p5 == p4);
+
+        do { //évite que deux persos soient sur la même case
+            p6.setX(randInt.nextInt(101)-50);
+            p6.setY(randInt.nextInt(101)-50);
+        } while (p6 == p1 || p6 == p2 || p6 == p3 || p6 == p4 || p6 == p5);
+
+        do { //évite que deux persos soient sur la même case
+            p7.setX(randInt.nextInt(101)-50);
+            p7.setY(randInt.nextInt(101)-50);
+        } while (p7 == p1 || p7 == p2 || p7 == p3 || p7 == p4 || p7 == p5 || p7 == p6);        
         
+        robin.setPos(p1);
+        peon.setPos(p2);
+        bugs1.setPos(p3);
+        bugs2.setPos(p4);
+        guillaumeT.setPos(p5);
+        grosBill.setPos(p6);
+        wolfie.setPos(p7);
     }
     
     
