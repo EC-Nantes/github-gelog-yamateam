@@ -55,5 +55,13 @@ public class Objet {
     
     public void utiliser(){
     }
+
+    public void affiche(){
+        if (this.detenteur == null){
+            System.out.println("===== "+ this.getNom() +" =====");
+            this.getPos().affiche();
+        }
+    }
     
 }
+
