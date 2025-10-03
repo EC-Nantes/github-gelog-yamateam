@@ -19,15 +19,25 @@ public class TestWoE {
         w.creerMondeAlea();
 
 
-        long tpsDebut = System.nanoTime();
+        long tpsDebut1 = System.nanoTime();
         int totPV = 0;
         for(int i=0;i<100;i++){
             totPV += w.getListe_perso().get(i).getPtVie();
         }
-        long tpsFin = System.nanoTime();
-        System.out.println("Temps écoulé (ns): " + (tpsFin-tpsDebut));
+        long tpsFin1 = System.nanoTime();
+        System.out.println("Temps écoulé boucle for(ns): " + (tpsFin1-tpsDebut1));
+
+        
+        long tpsDebut2 = System.nanoTime();
+        totPV = 0;
+        for(Personnage p : w.getListe_perso()){
+            totPV += p.getPtVie();
+        }
+        long tpsFin2 = System.nanoTime();
+        System.out.println("Temps écoulé boucle itéré(ns): " + (tpsFin2-tpsDebut2));
 
     }
 
 
 }
+
