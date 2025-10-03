@@ -9,29 +9,25 @@ package org.centrale.objet.WoE;
  * @author dytri
  */
 public class TestWoE {
-    
+
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
-        World w = new World();
+        World w = new World(50);
         w.creerMondeAlea();
-        
-        w.robin.affiche();
-        w.peon.affiche();
-        w.bugs1.affiche();
-        w.bugs2.affiche();
-        
-        
-        w.robin.deplace();
-        w.peon.deplace();
-        w.bugs1.deplace();
-        w.bugs2.deplace();
-        
-        
-        w.robin.affiche();
-        w.peon.affiche();
-        w.bugs1.affiche();
-        w.bugs2.affiche();
-        
+
+
+        long tpsDebut = System.nanoTime();
+        int totPV = 0;
+        for(int i=0;i<100;i++){
+            totPV += w.getListe_perso().get(i).getPtVie();
+        }
+        long tpsFin = System.nanoTime();
+        System.out.println("Temps écoulé (ns): " + (tpsFin-tpsDebut));
+
     }
-    
-    
+
+
 }
