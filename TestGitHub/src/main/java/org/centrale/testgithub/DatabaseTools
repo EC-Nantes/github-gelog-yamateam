@@ -1,0 +1,27 @@
+public Integer getPlayerID(String nomJoueur, String password) {
+        Integer playerId = null;
+
+        try {
+            this.connect();
+            String query = "SELECT code_joueur FROM joueur WHERE pseudo = ? AND mot_de_passe = ?";
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+
+            stmt.setString(1, nomJoueur);
+            stmt.setString(2, password);
+
+            ResultSet res = stmt.executeQuery();
+
+            if (res.next()) {
+                playerId = res.getInt("code_joueur");
+            }
+
+            res.close();
+            stmt.close();
+            this.connection.close();
+        } 
+        catch (SQLException e) {
+            return null;  
+        }
+
+        return playerId;
+    }
