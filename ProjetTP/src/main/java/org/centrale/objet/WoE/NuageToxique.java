@@ -68,4 +68,3 @@ public class NuageToxique extends Objet implements Deplacable, Combattant {
     }
     
 }
-

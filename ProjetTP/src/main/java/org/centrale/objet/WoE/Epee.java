@@ -8,7 +8,7 @@ package org.centrale.objet.WoE;
  *
  * @author Mathys_Yael
  */
-public class Epee extends Objet {
+public class Epee extends Objet implements Utilisable{
     
     private int degObj;
     private int durab;
@@ -25,14 +25,6 @@ public class Epee extends Objet {
     
     public Epee(){
         this("Epée", new Point2D(0,0), null, 30, 100);
-    }
-    
-    /** Crée une copie indépendante de l'epee
-    * @return une copie de l'epee
-    */
-    @Override
-    public Epee copie(){
-        return new Epee(this);
     }
 
     public int getDegObj() {
@@ -51,4 +43,11 @@ public class Epee extends Objet {
         this.durab = durab;
     }
     
+    /** Crée une copie indépendante de la créature 
+     * @return une épée
+     */
+    @Override
+    public Epee copie(){
+        return new Epee(this);
+    }
 }

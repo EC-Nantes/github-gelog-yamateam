@@ -8,7 +8,7 @@ package org.centrale.objet.WoE;
  *
  * @author dytri
  */
-public class PotionSoin extends Objet{
+public class PotionSoin extends Objet implements Utilisable{
     
     private int ptSoin;
     
@@ -47,14 +47,12 @@ public class PotionSoin extends Objet{
             System.out.println("Points de Soin : " + ptSoin);
         }
     }
-    
-    /** Crée une copie indépendante de l'objet 
-    * @return une copie de la potion
-    */
+
+    /** Crée une copie indépendante de la créature 
+     * @return une potion de soin
+     */
     @Override
     public PotionSoin copie(){
         return new PotionSoin(this);
     }
-
-    
 }

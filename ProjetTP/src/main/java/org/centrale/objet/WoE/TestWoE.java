@@ -16,7 +16,7 @@ public class TestWoE {
     public static void main(String[] args){
         
         World w = new World(10);
-        w.creerMondeAlea(1);
+        w.creerMondeAlea();
         
         
         System.out.println("Sélectionnez son nombre de points de vie :");
