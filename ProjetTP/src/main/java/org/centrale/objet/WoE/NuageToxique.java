@@ -26,6 +26,7 @@ public class NuageToxique extends Objet implements Deplacable, Combattant {
         vitesse=v;
         longueur=l1;
         largeur=l2;
+        this.setNom("Nuage Toxique");
     }
     
     public NuageToxique(){
@@ -67,3 +68,4 @@ public class NuageToxique extends Objet implements Deplacable, Combattant {
     }
     
 }
+
