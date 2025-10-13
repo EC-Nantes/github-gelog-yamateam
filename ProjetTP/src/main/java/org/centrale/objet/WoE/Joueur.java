@@ -10,7 +10,26 @@ package org.centrale.objet.WoE;
  */
 public class Joueur {
     
-    public Joueur(){
+    private Personnage perso;
+    
+    
+    public boolean choixPerso(String nom,String type){
+        switch(type){
+            case "Guerrier" -> {
+                this.perso = new Guerrier(nom);
+                return true;
+            }
+            case "Archer" -> {
+                this.perso = new Archer(nom);
+                return true;
+            }
+            default -> {
+                return false;
+            }
+                 
+                       
+        }
     }
+    
     
 }
