@@ -10,13 +10,11 @@ package org.centrale.objet.WoE;
  */
 public abstract class Objet extends ElementDeJeu{
     
-    private String nom;
-    private Point2D pos;
+
     private Creature detenteur;
     
     public Objet(String n, Point2D p, Creature det){
-        this.nom = n;
-        this.pos = p;
+        super(n,p);
         this.detenteur = det;
     }
     
@@ -28,21 +26,6 @@ public abstract class Objet extends ElementDeJeu{
         this("Objet", new Point2D(0,0),null);
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public Point2D getPos() {
-        return pos;
-    }
-
-    public void setPos(Point2D pos) {
-        this.pos = pos;
-    }
 
     public Creature getDetenteur() {
         return detenteur;
