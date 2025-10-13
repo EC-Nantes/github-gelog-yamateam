@@ -25,11 +25,11 @@ public class World {
     /**
      * Grille du jeu
      */
-    private Personnage monde[][];
+    private ElementDeJeu monde[][];
     /**
      * Liste des personnages du jeu
      */
-    private LinkedList<Personnage> liste_perso;
+    private LinkedList<Creature> liste_perso;
     
     private double pAge_perso_max;
     private double pAge_monstre_max;
@@ -59,7 +59,7 @@ public class World {
     
     
 
-    public LinkedList<Personnage> getListe_perso() {
+    public LinkedList<Creature> getListe_perso() {
         return liste_perso;
     }
      
@@ -79,10 +79,15 @@ public class World {
                 p.setX(aleaInt.nextInt(taille));
                 p.setY(aleaInt.nextInt(taille));
             }
-            Creature type = liste_type.get(aleaInt.nextInt(liste_type.size()));
-            liste_perso.add(type.copie());
-            liste_perso.get(liste_type.size() - 1).setPos(p);
-            monde[p.getX()][p.getY()] = liste_perso.get(liste_type.size() - 1);
+            
+            ElementDeJeu type = liste_type.get(aleaInt.nextInt(liste_type.size()));
+            
+            if (type instanceof Creature){
+                liste_perso.add((Creature)type.copie());
+                liste_perso.get(liste_type.size() - 1).setPos(p);
+            }
+            
+            monde[p.getX()][p.getY()] = type;
             
         }
     }
@@ -94,9 +99,9 @@ public class World {
  * 
  */        
     public void creerMondeAlea(){
-        this.ajouterElement(pAge_perso_max, new ArrayList<ElementDeJeu>(List.of(new Guerrier(), new Archer(), new Paysan())));
-        this.ajouterElement(pAge_monstre_max, new ArrayList<ElementDeJeu>(List.of(new Loup(), new Lapin())));
-        this.ajouterElement(pAge_objet_max, new ArrayList<ElementDeJeu>(List.of(new PotionSoin(), new Epee())));
+        this.ajouterElement(pAge_perso_max, new ArrayList<>(List.of(new Guerrier(), new Archer(), new Paysan())));
+        this.ajouterElement(pAge_monstre_max, new ArrayList<>(List.of(new Loup(), new Lapin())));
+        this.ajouterElement(pAge_objet_max, new ArrayList<>(List.of(new PotionSoin(), new Epee())));
 
     }
     
