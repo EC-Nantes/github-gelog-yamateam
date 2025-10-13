@@ -113,4 +113,22 @@ public class World {
     public void afficheWorld(){
         
     }
+
+    public void creationJoueur(){
+        boolean verif = false;
+        Scanner inputReader = new Scanner(System.in);
+            
+        System.out.println("Entrez le nom de votre personnage :");
+        String nom = inputReader.next();
+            
+        while(!verif){   
+            
+            System.out.println("Entrez la classe de personnage que vous souhaitez jouer :");
+            String classe = inputReader.next();
+            
+            this.joueur.choixPerso(nom,classe);
+        }
+    }  
+    
 }
+
