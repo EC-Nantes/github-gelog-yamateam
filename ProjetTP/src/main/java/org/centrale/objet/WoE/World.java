@@ -2,6 +2,7 @@ package org.centrale.objet.WoE;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.List;
 
 
 /*
@@ -30,6 +31,10 @@ public class World {
      */
     private LinkedList<Personnage> liste_perso;
     
+    private double pAge_perso_max;
+    private double pAge_monstre_max;
+    private double pAge_objet_max;
+    
     /**
      * 
      * Crée un monde de taille n*n
@@ -38,7 +43,10 @@ public class World {
     public World(int n) {
         this.taille=n;
         this.monde = new Personnage[taille][taille];
-        liste_perso  = new LinkedList<>();
+        this.liste_perso  = new LinkedList<>();
+        this.pAge_perso_max = 0.05;
+        this.pAge_monstre_max = 0.1;
+        this.pAge_objet_max = 0.1;
     }
     
     /**
@@ -46,9 +54,7 @@ public class World {
      * Crée un monde de taille 100*100
      */    
     public World() {
-        this.taille=100;
-        this.monde = new Personnage[taille][taille];
-        liste_perso  = new LinkedList<>();
+        this(100);
     }
     
     
@@ -58,32 +64,39 @@ public class World {
     }
      
     
-    
-/**
- * 
- * Place nb guerriers à des positions aléatoires distinctes
- * 
- * @param nb
- */        
-    public void creerMondeAlea(int nb){
-        
+    private void ajouterElement(double pAge, ArrayList<ElementDeJeu> liste_type){
         Random aleaInt = new Random();
+        
+        int n = aleaInt.nextInt((int)Math.floor(pAge*taille*taille) - (int)Math.floor(pAge*taille*taille/2) + 1) + (int)Math.floor(pAge*taille*taille/2);
         
         Point2D p = new Point2D();
         p.setX(aleaInt.nextInt(taille));
         p.setY(aleaInt.nextInt(taille));
         
-        for(int i=0;i<nb;i++){
+        for(int i=0;i<n;i++){
             
             while(monde[p.getX()][p.getY()] != null){
                 p.setX(aleaInt.nextInt(taille));
                 p.setY(aleaInt.nextInt(taille));
             }
-            liste_perso.add(new Guerrier());
-            liste_perso.get(i).setPos(p);
-            monde[p.getX()][p.getY()] = liste_perso.get(i);
+            Creature type = liste_type.get(aleaInt.nextInt(liste_type.size()));
+            liste_perso.add(type.copie());
+            liste_perso.get(liste_type.size() - 1).setPos(p);
+            monde[p.getX()][p.getY()] = liste_perso.get(liste_type.size() - 1);
             
         }
+    }
+    
+/**
+ * 
+ * 
+ * 
+ * 
+ */        
+    public void creerMondeAlea(){
+        this.ajouterElement(pAge_perso_max, new ArrayList<ElementDeJeu>(List.of(new Guerrier(), new Archer(), new Paysan())));
+        this.ajouterElement(pAge_monstre_max, new ArrayList<ElementDeJeu>(List.of(new Loup(), new Lapin())));
+        this.ajouterElement(pAge_objet_max, new ArrayList<ElementDeJeu>(List.of(new PotionSoin(), new Epee())));
 
     }
     
@@ -96,4 +109,3 @@ public class World {
         
     }
 }
-
