@@ -43,5 +43,11 @@ public class Lapin extends Monstre {
         super(l);
     }
     
-    
+    /** Crée une copie indépendante de la créature 
+     * @return un lapin
+     */
+    @Override
+    public Lapin copie(){
+        return new Lapin(this);
+    }
 }

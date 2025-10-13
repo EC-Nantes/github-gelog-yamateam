@@ -43,4 +43,12 @@ public class Paysan extends Personnage {
     public Paysan(String nom){
         this(nom,100,50,50,75,25,3,new Point2D(0,0));  
     }
+    
+    /** Crée une copie indépendante de la créature 
+     * @return un paysan 
+     */
+    @Override
+    public Paysan copie(){
+        return new Paysan(this);
+    }
 }

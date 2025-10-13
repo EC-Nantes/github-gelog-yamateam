@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author yaelv
  */
-public class Creature {
+public abstract class Creature extends ElementDeJeu implements Deplacable{
     
     /** Nom du Creature */
     private String nom;
@@ -72,11 +72,18 @@ public class Creature {
     
     // --- Méthodes : ---
     
+    
+     /** Crée une copie indépendante de la créature
+     * @return une créature indépendante
+     */
+    public abstract Creature copie();    
+    
+    
      /**
      * Déplace le Creature d'une case aléatoire autour de sa position actuelle
      */
-        
-    public void deplace() {
+    @Override
+    public void deplacer() {
         System.out.println("===== "+ this.getNom() +" se déplace =====");
         int dx, dy;
         Random randInt = new Random();
@@ -85,9 +92,9 @@ public class Creature {
             dy = randInt.nextInt(3);
         } while (dx == 1 && dy == 1);
 
-    pos.translate(dx - 1, dy - 1);
-    System.out.println("Nouvelle position : " + this.getPos().toString());
-}
+        pos.translate(dx - 1, dy - 1);
+        System.out.println("Nouvelle position : " + this.getPos().toString());
+    }
     
 
     /**

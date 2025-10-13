@@ -14,7 +14,7 @@ import java.util.Random;
  * @author Mathys_Yael
  */
 
-public class Personnage extends Creature{
+public abstract class Personnage extends Creature{
 
 
     
@@ -51,6 +51,10 @@ public class Personnage extends Creature{
         this("Jean",100,50,50,75,25,3,new Point2D(0,0));  
     }
     
+    /**
+     * Constructeur par défaut avec un nom spécifique
+     * @param n Nom à donner au personnage (String)
+     */
     public Personnage(String n){
         this(n,100,50,50,75,25,3,new Point2D(0,0));
     }
@@ -77,7 +81,7 @@ public class Personnage extends Creature{
     public void utiliserObjet(Objet o){
         if (this == o.getDetenteur()){
             o.utiliser();
-            o.setDetenteur(new Creature());
+            o.setDetenteur(new Guerrier());
         }
     }
    

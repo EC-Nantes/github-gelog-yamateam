@@ -8,7 +8,7 @@ package org.centrale.objet.WoE;
  *
  * @author Mathys_Yael
  */
-public class Objet {
+public abstract class Objet extends ElementDeJeu{
     
     private String nom;
     private Point2D pos;

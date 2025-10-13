@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author dytri
  */
-public class Archer extends Personnage {
+public class Archer extends Personnage implements Combattant {
     
     private int nbFleches;
     
@@ -64,6 +64,14 @@ public class Archer extends Personnage {
         System.out.println("Nombre de flèche : " + this.getNbFleches());
     }
 
+    /** Crée une copie indépendante de la créature 
+     * @return un archer
+     */
+    @Override
+    public Archer copie(){
+        return new Archer(this);
+    }
+    
     /**
      *
      * @return le nombre de flèches
@@ -80,6 +88,7 @@ public class Archer extends Personnage {
      * - Au Corps à Corps (CaC) si elles sont adjacentes
      * - A distance si elles ne le sont pas et que la distance d'attaque de l'attaquant est suffisante
      */
+    @Override
     public void combattre(Creature c){
         Random randInt = new Random();
         

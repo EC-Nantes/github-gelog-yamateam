@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author yaelv
  */
-public class Guerrier extends Personnage{
+public class Guerrier extends Personnage implements Combattant{
     
     
     /**
@@ -47,6 +47,14 @@ public class Guerrier extends Personnage{
         this(n,200,20,50,75,25,1,new Point2D(0,0));  
     }
 
+    /** Crée une copie indépendante de la créature 
+     * @return un guerrier 
+     */
+    @Override
+    public Guerrier copie(){
+        return new Guerrier(this);
+    }
+    
     /**
      * @param c Créature à combattre
      * 
@@ -55,6 +63,7 @@ public class Guerrier extends Personnage{
      * - Au Corps à Corps (CaC) si elles sont adjacentes
      * - A distance si elles ne le sont pas et que la distance d'attaque de l'attaquant est suffisante
      */
+    @Override
     public void combattre(Creature c){
         Random randInt = new Random();
         
@@ -100,4 +109,6 @@ public class Guerrier extends Personnage{
             }
         }
     }
+    
+    
 }
