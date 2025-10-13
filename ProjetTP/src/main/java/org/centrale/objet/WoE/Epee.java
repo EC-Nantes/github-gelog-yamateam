@@ -26,6 +26,14 @@ public class Epee extends Objet {
     public Epee(){
         this("Epée", new Point2D(0,0), null, 30, 100);
     }
+    
+    /** Crée une copie indépendante de l'epee
+    * @return une copie de l'epee
+    */
+    @Override
+    public Epee copie(){
+        return new Epee(this);
+    }
 
     public int getDegObj() {
         return degObj;
