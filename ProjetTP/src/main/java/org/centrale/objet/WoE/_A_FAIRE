@@ -1,0 +1,3 @@
+- Deplacer pour les monstres : pas sur les objets + mettre le monde dans deplacer en paramètre + faire attention au cas ou on les cases autours sont occupés
+- Inventaire
+- 
