@@ -47,6 +47,14 @@ public class PotionSoin extends Objet{
             System.out.println("Points de Soin : " + ptSoin);
         }
     }
+    
+    /** Crée une copie indépendante de l'objet 
+    * @return une copie de la potion
+    */
+    @Override
+    public PotionSoin copie(){
+        return new PotionSoin(this);
+    }
 
     
 }
