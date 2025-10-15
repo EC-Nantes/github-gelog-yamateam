@@ -454,5 +454,51 @@ public class DatabaseTools {
         // remove elements de jeu linked to the sauvegarde
         // remove sauvegarde
         // remove if partie has no mode sauvegarde, remove partie
+        
+        try{
+            this.connect();
+            
+            String query = "SELECT id_sauvegarde FROM sauvegarde JOIN partie on partie.id_partie = sauvegarde.id_partie WHERE nom_partie =? and nom_sauvegarde =? and id_joueur =?";
+                PreparedStatement stmt1 = this.connection.prepareStatement(query);
+                stmt1.setString(1, nomPartie);
+                stmt1.setString(2, nomSauvegarde);
+                stmt1.setInt(3, idJoueur);
+            
+                ResultSet res1 = stmt1.executeQuery();
+                
+                if (res1.next()){   //si la sauvegarde existe -> on supprime les éléments du jeu associés
+                    int idSauvegarde = res1.getInt("id_sauvegarde");
+                    res1.close();
+                    
+                    query = "SELECT id_element FROM element_jeu WHERE id_sauvegarde=?";
+                    PreparedStatement stmt2 = this.connection.prepareStatement(query);
+                    stmt2.setInt(1, idSauvegarde);
+                    
+                    ResultSet res2 = stmt2.executeQuery();
+                    
+                    //supprimer tout les éléments et les posseder
+                    while(res2.next()){
+                        query = "DELETE FROM posseder WHERE id_element = ?";
+                        PreparedStatement stmt3 = this.connection.prepareStatement(query);
+                        stmt3.setInt(1, res2.getInt("id_element"));
+                        query = "DELETE FROM element_jeu WHERE id_element = ?";
+                        PreparedStatement stmt4 = this.connection.prepareStatement(query);
+                        stmt4.setInt(1, res2.getInt("id_element"));
+                    }
+                    
+                    //supprimer la sauvegarde
+                    query = "DELETE FROM sauvegarde WHERE id_sauvegarde = ?";
+                    PreparedStatement stmt5 = this.connection.prepareStatement(query);
+                    stmt5.setInt(1, idSauvegarde);
+                    
+                }
+                
+                this.disconnect();
+        }
+        catch (SQLException e) {
+             System.out.println("t'as pas réussi à remove mon pote");
+        }
+        
+        
     }
 }
