@@ -445,7 +445,6 @@ public class DatabaseTools {
      * @param nomSauvegarde
      */
     public void removeWorld(Integer idJoueur, String nomPartie, String nomSauvegarde) {
-        World monde = new World();
         // TO BE DEFINED
         
         // Retreive partie infos for the player
@@ -456,7 +455,6 @@ public class DatabaseTools {
         // remove if partie has no mode sauvegarde, remove partie
         
         try{
-            this.connect();
             
             String query = "SELECT id_sauvegarde FROM sauvegarde JOIN partie on partie.id_partie = sauvegarde.id_partie WHERE nom_partie =? and nom_sauvegarde =? and id_joueur =?";
                 PreparedStatement stmt1 = this.connection.prepareStatement(query);
@@ -493,7 +491,7 @@ public class DatabaseTools {
                     
                 }
                 
-                this.disconnect();
+                
         }
         catch (SQLException e) {
              System.out.println("t'as pas réussi à remove mon pote");
