@@ -12,7 +12,8 @@ import java.util.Random;
  */
 public abstract class Creature extends ElementDeJeu implements Deplacable{
     
-
+    /** Nom du Creature */
+    private String nom;
     /** Points de vie du Creature */
     private int ptVie;
     /** Dégâts d'attaque */
@@ -25,7 +26,8 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
     private int pagePar;
     /** Distance maximale à laquelle le Creature peut attaquer */
     private int distAttMax;
-
+    /** Position du Creature */
+    private Point2D pos;
     
     
     // --- Constructeurs : ---
@@ -42,13 +44,14 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
      * @param p        Position initiale
      */
     public Creature(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){
-        super(n,p);
+        nom = n;
         ptVie = pV;
         degAtt = dA;
         ptPar = pPar;
         pageAtt = paAtt;
         pagePar = paPar;
         distAttMax = dMax;
+        pos = p;
     }
     
      /**
@@ -86,7 +89,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
             dy = randInt.nextInt(3);
         } while (dx == 1 && dy == 1);
 
-        this.getPos().translate(dx - 1, dy - 1);
+        pos.translate(dx - 1, dy - 1);
         System.out.println("Nouvelle position : " + this.getPos().toString());
     }
     
@@ -141,6 +144,15 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
 
     /**
      *
+     * @return
+     */
+    public Point2D getPos() {
+        return pos;
+    }
+
+
+    /**
+     *
      * @param ptVie
      */
     public void setPtVie(int ptVie) {
@@ -187,12 +199,27 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
         this.distAttMax = distAttMax;
     }
 
+    /**
+     *
+     * @param pos
+     */
+    public void setPos(Point2D pos) {
+        this.pos = pos;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
     
      /**
      * Affiche dans la console les informations détaillées du Creature
      */
     public void affiche() {
-        System.out.println("===== "+ this.getNom() +" =====");
+        System.out.println("===== "+ nom +" =====");
         System.out.println("Position : " + this.getPos().toString());
         System.out.println("Points de vie : " + ptVie);
         System.out.println("Dégâts d'attaque : " + degAtt);
@@ -211,7 +238,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
         this.ptVie -= deg;
         if (ptVie <= 0){
             this.ptVie = 0;
-            System.out.println(this.getNom() + " est Mort");
+            System.out.println(nom + " est Mort");
         }
     }
     

@@ -8,51 +8,52 @@ package org.centrale.objet.WoE;
  *
  * @author dytri
  */
-public class PotionSoin extends Objet implements Utilisable{
+public class PotionSoin extends Objet{
     
-    private int ptSoin;
+    private final String caracteristique = "pVie";
     
-    public PotionSoin(String n, Point2D p, Creature det, int pSoin){
-        super(n, p, det);
-        this.ptSoin = pSoin;
+    public PotionSoin(String n, int pSoin, Point2D p){
+        super(n,pSoin, p);
     }   
     
     public PotionSoin(PotionSoin e){
-        this(e.getNom(), e.getPos(), e.getDetenteur(), e.getPtSoin());
+        this(e.getNom(), e.getEffet(), e.getPos());
     }
     
     public PotionSoin(){
-        this("Potion de Soin", new Point2D(0,0), null, 30);
-    }
-
-    public int getPtSoin() {
-        return ptSoin;
-    }
-
-    public void setPtSoin(int ptSoin) {
-        this.ptSoin = ptSoin;
+        this("Potion de Soin", 30, new Point2D(0,0));
     }
     
     @Override
-    public void utiliser(){
-        System.out.println("===== "+ this.getDetenteur().getNom() + " utilise " + this.getNom() + " =====");
-        this.getDetenteur().setPtVie(this.getDetenteur().getPtVie()+ptSoin);
-        System.out.println(this.getDetenteur().getNom() + ": Pv = " + this.getDetenteur().getPtVie());
-    }   
+    public void utiliser(Personnage perso, World world){
+        perso.setPtVie(perso.getPtVie()+this.getEffet());
+        System.out.println("Une potion de soin (+" + this.getEffet() + "pv) a été utilisée par " + perso.getNom());
+    }
     
     @Override
-    public void affiche(){
-        if (this.getDetenteur() == null){
-            super.affiche();
-            System.out.println("Points de Soin : " + ptSoin);
-        }
+    public void retirer(Personnage perso){
+        
+    }
+    
+    @Override
+    public boolean estExpirer(World world){
+        return true;
     }
 
-    /** Crée une copie indépendante de la créature 
-     * @return une potion de soin
-     */
+    /** Crée une copie indépendante de l'objet 
+    * @return une copie de la potion
+    */
     @Override
     public PotionSoin copie(){
         return new PotionSoin(this);
     }
+    
+    @Override
+    public String getCaracteristique() {
+        return caracteristique;
+    }
+    
+    
+
+    
 }

@@ -4,7 +4,6 @@
  */
 package org.centrale.objet.WoE;
 
-import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -16,7 +15,23 @@ import java.util.ArrayList;
 public class Joueur {
     
     private Personnage perso;
+    private ArrayList<Utilisable> inventaire = new ArrayList<>();
+    private ArrayList<Utilisable> effets = new ArrayList<>();
+
+    public Personnage getPerso() {
+        return perso;
+    }
+
+    public void setPerso(Personnage perso) {
+        this.perso = perso;
+    }
+    public void chargerArcher(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p, int nbFl){
+        this.perso = new Archer( n,  pV,  dA,  pPar,  paAtt,  paPar,  dMax,  p,  nbFl);
+    }
     
+    public void chargerGuerrier(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){       
+        this.perso = new Guerrier(n,  pV,  dA,  pPar,  paAtt,  paPar,  dMax,  p);                        
+    }
     
     public boolean choixPerso(String nom,String type){
         switch(type){
@@ -29,6 +44,7 @@ public class Joueur {
                 return true;
             }
             default -> {
+                System.out.println("Erreur : la classe n'est pas valide ('Guerrier' ou 'Archer'), recommencez");
                 return false;
             }
                  
@@ -36,10 +52,11 @@ public class Joueur {
         }
     }
     
-    public void combattre(LinkedList<Creature> liste_perso){
+    public void combattre(World world){
+        
         Random randInt = new Random();
         
-        Creature opps = this.choisir_adversaire(liste_perso);
+        Creature opps = this.choisir_adversaire(world);
         
         if (opps == null){
             System.out.println("Il n'y pas d'adversaire disponible");
@@ -58,6 +75,12 @@ public class Joueur {
                     System.out.println(opps.getNom() +" subit " + perso.getDegAtt() + " dmg");
                     opps.subirDegat(perso.getDegAtt());
                     System.out.println(opps.getNom() + ": Pv = " + opps.getPtVie());
+                    
+                    //mort du opps
+                    if (opps.getPtVie() <= 0){
+                        world.getListe_perso().remove(opps);
+                        world.getMonde()[opps.getPos().getX()][opps.getPos().getY()] = null;
+                    }
                 }
                 else{
                     int deg = perso.getDegAtt()-opps.getPtPar();
@@ -82,6 +105,12 @@ public class Joueur {
                 System.out.println(opps.getNom() +" subit " + perso.getDegAtt() + " dmg");
                 opps.subirDegat(perso.getDegAtt());
                 System.out.println(opps.getNom() + ": Pv = " + opps.getPtVie());
+                
+                //mort du opps
+                if (opps.getPtVie() <= 0){
+                        world.getListe_perso().remove(opps);
+                        world.getMonde()[opps.getPos().getX()][opps.getPos().getY()] = null;
+                }
             }
             else{
                 System.out.println(perso.getNom() +" a raté son attaque !");
@@ -89,18 +118,24 @@ public class Joueur {
         }
     }
     
-    public Creature choisir_adversaire(LinkedList<Creature> liste_perso){
+    public Creature choisir_adversaire(World world){
         System.out.println("------ Combattre : Choix adversaire ------");
         System.out.println("Choisir le numéro de l'adversaire :");
         ArrayList<Creature> liste_adversaire = new ArrayList<>();
         
-        for(Creature c : liste_perso){
-            if(perso.getPos().distance(c.getPos()) <= perso.getDistAttMax()){
-                System.out.println(c.getNom() + " (Pt de vie : " + c.getPtVie() + ") "  + c.getPos().toString());
+        int k = 0;
+        for(Creature c : world.getListe_perso()){
+            if(perso.getPos().distance(c.getPos()) <= (perso.getDistAttMax()+0.5) && c !=perso){
+                System.out.println(k + ". " + c.getNom() + " (Classe : "+ c.getClass().getSimpleName() + ", Pt de vie : " + c.getPtVie() + ") "  + c.getPos().toString());
                 liste_adversaire.add(c);
+                k = k+1;
             }
         }
-     
+        
+        if(k == 0){
+            return null;
+        }
+        
         Scanner sc = new Scanner(System.in);
         boolean a_choisi = false;
         Creature opps = null;
@@ -111,13 +146,172 @@ public class Joueur {
                 opps = liste_adversaire.get(i);         
                 a_choisi = true;
             }catch(Exception e){
-                System.out.println("Erreur le numéro n'est pas un entier ou ne fait pas partie de la liste");
+                System.out.println("Erreur : le numéro n'est pas un entier ou ne fait pas partie de la liste, recommencez");
+                sc.nextLine();
+            }
+        }
+        
+        return opps;
+    }
+    
+    public Point2D deplacer(World world){
+        System.out.println("------ Se déplacer : Choix position ------");
+        System.out.println("Rentrer une position libre ( . ) au format 'x y' ('-1' si toutes les cases sont occupées)");
+        
+        Scanner sc = new Scanner(System.in);
+        boolean a_choisi = false;
+        Point2D dep = new Point2D();
+        
+        while(!a_choisi){
+            
+            try{
+                int x = sc.nextInt();
+                
+                if(x == -1){ // aucune case dispo
+                    return dep; //dep sera null
+                }
+                
+                int y = sc.nextInt();
+                
+                dep.setX(x);
+                dep.setY(y);
+                
+                //test si la case est libre et adjacente au perso
+                if((world.getMonde()[x][y] == null || world.getMonde()[x][y] instanceof Utilisable) && perso.getPos().distance(dep)<1.5){
+                    System.out.println("Déplacement sur la case ["+x+","+y+"]");
+                    perso.setPos(dep);
+                    
+                    a_choisi = true;
+                }
+                else if(perso.getPos().distance(dep) > 1.5){
+                    System.out.println("Erreur : la case n'est pas adjacente, recommencez");
+                }
+                else{
+                    System.out.println("Erreur : la case n'est pas libre, recommencez");
+                }
+                
+                
+            }catch(Exception e){
+                System.out.println("Erreur : la position n'est pas au bon format, recommencez");
+                sc.nextLine();
+            }
+        }
+        
+        if(world.getMonde()[dep.getX()][dep.getY()] instanceof Utilisable obj){
+            if(obj instanceof NuageToxique n){
+                n.combattre(perso);
+            }
+            else{
+                System.out.println(obj.getNom() + " a été rammasé(e) (type : "+ obj.getClass().getSimpleName() + ", " + obj.getCaracteristique() +" : " + obj.getEffet() + ") ");
+                inventaire.add((obj.copie()));
+            }
+        }
+        
+        return dep;
+    }
+    
+    public void RegarderInventaire(World monde){
+        System.out.println("------ Inventaire ------");
+        
+        if(inventaire.isEmpty()){
+            System.out.println("L'inventaire est vide...");
+            return;
+        }
+        
+        System.out.println("Rentrer le numéro de l'objet à utiliser (-1 pour ne rien utiliser) :");
+        
+        int k = 0;
+        for(Utilisable u : inventaire){
+            System.out.println(k + ". " + u.getNom() + " (type : "+ u.getClass().getSimpleName() + ", " + u.getCaracteristique() +" : " + u.getEffet() + ") ");
+            k = k+1;
+        }
+        
+        Scanner sc = new Scanner(System.in);
+        boolean a_choisi = false;
+        
+        while(!a_choisi){
+            try{
+                int i = sc.nextInt();
+                
+                if(i==-1){
+                    break;
+                }
+                
+                Utilisable obj = inventaire.get(i); //levera une exception si i est en dehors de la taille de la liste
+                obj.utiliser(perso, monde);
+                inventaire.remove(i);
+                effets.add(obj);
+
+                a_choisi = true;
+                
+            }catch(Exception e){
+                System.out.println("Erreur : vous n'avez pas rentrer un nombre valable, recommencez");
+                sc.nextLine();
             }
         }
         
         
-        return opps;
     }
+    
+    public void afficherGrille(ElementDeJeu[][] monde) {
+        int nb_lignes = monde.length;
+        int nb_colonnes = monde[0].length;
+        int xJ = perso.getPos().getX();
+        int yJ = perso.getPos().getY();
+
+        // Affichage indices des colonnes
+        System.out.print("    "); // espace pour l'indice de ligne
+        for (int dy = -1; dy <= 1; dy++) {
+            int y = yJ + dy;
+            System.out.print(String.format("%-4s", (y >= 0 && y < nb_colonnes) ? y : ".")); 
+        }
+        System.out.println();
+        System.out.print("    "); // ligne séparatrice
+        for (int dy = -1; dy <= 1; dy++) {
+            System.out.print("____");
+        }
+        System.out.println();
+
+        // Parcours des lignes autour du joueur
+        for (int dx = -1; dx <= 1; dx++) {
+            int x = xJ + dx;
+            // indice de la ligne
+            System.out.print((x >= 0 && x < nb_lignes ? x : ".") + " | ");
+
+            for (int dy = -1; dy <= 1; dy++) {
+                int y = yJ + dy;
+                if (x >= 0 && x < nb_lignes && y >= 0 && y < nb_colonnes) {
+                    if (dx == 0 && dy == 0) {
+                        System.out.print("You "); // joueur au centre
+                    } else if (monde[x][y] == null) {
+                        System.out.print(" .  "); // case vide
+                    } else {
+                        System.out.print(monde[x][y].getClass().getSimpleName().substring(0,3) + " ");
+                    }
+                } else {
+                    System.out.print("XXX "); // hors limites
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public ArrayList<Utilisable> getInventaire() {
+        return inventaire;
+    }
+
+    public void setInventaire(ArrayList<Utilisable> inventaire) {
+        this.inventaire = inventaire;
+    }
+
+    public ArrayList<Utilisable> getEffets() {
+        return effets;
+    }
+
+    public void setEffets(ArrayList<Utilisable> effets) {
+        this.effets = effets;
+    }
+    
     
     
     

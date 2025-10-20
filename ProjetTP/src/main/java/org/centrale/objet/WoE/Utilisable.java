@@ -6,7 +6,16 @@ package org.centrale.objet.WoE;
 
 /**
  *
- * @author yaelv
+ * @author dytri
  */
-public interface Utilisable {
+public interface Utilisable {  
+    public void utiliser(Personnage perso, World world);
+    public void retirer(Personnage perso);
+    public boolean estExpirer(World world);
+    public String getNom();
+    public String getCaracteristique();
+    public int getEffet();
+    public Utilisable copie();
+    public void setPos(Point2D pos);
+    
 }

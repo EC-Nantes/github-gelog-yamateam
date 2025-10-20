@@ -8,42 +8,65 @@ package org.centrale.objet.WoE;
  *
  * @author Mathys_Yael
  */
-public abstract class Objet extends ElementDeJeu{
+public abstract class Objet extends ElementDeJeu implements Utilisable{
     
-
-    private Creature detenteur;
+    private String nom;
+    private Point2D pos;
+    private int effet;
     
-    public Objet(String n, Point2D p, Creature det){
-        super(n,p);
-        this.detenteur = det;
+    public Objet(String n,int eff, Point2D p){
+        this.nom = n;
+        this.pos = p;
+        this.effet = eff;
     }
     
     public Objet(Objet obj){
-        this(obj.getNom(), obj.getPos(), obj.getDetenteur());
+        this(obj.getNom(),obj.getEffet(), obj.getPos());
     }
     
     public Objet(){
-        this("Objet", new Point2D(0,0),null);
-    }
-
-
-    public Creature getDetenteur() {
-        return detenteur;
-    }
-
-    public void setDetenteur(Creature detenteur) {
-        this.detenteur = detenteur;
+        this("Objet",5, new Point2D(0,0));
     }
     
+    @Override
+    public abstract Objet copie();
+    
+    @Override
+    public abstract void utiliser(Personnage perso, World world);
+    
+    @Override
+    public abstract void retirer(Personnage perso);
+
+    @Override
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
+    public Point2D getPos() {
+        return pos;
+    }
+    
+    @Override
+    public void setPos(Point2D pos) {
+        this.pos = pos;
+    }
     
     public void utiliser(){
     }
     
-    public void affiche(){
-        if (this.getDetenteur() == null){
-            System.out.println("===== "+ this.getNom() +" =====");
-            System.out.println("Position : " + this.getPos().toString());
-        }
+    @Override
+    public int getEffet() {
+        return effet;
     }
+
+    public void setEffet(int effet) {
+        this.effet = effet;
+    }
+   
+    
     
 }

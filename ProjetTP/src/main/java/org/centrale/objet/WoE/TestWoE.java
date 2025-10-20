@@ -4,36 +4,21 @@
  */
 package org.centrale.objet.WoE;
 
-import static java.lang.Integer.parseInt;
-import java.util.Scanner;
-
 /**
  *
- * @author mathys,yaël
+ * @author dytri
  */
 public class TestWoE {
-    
+
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
-        
-        World w = new World(10);
+        World w = new World(100);
         w.creerMondeAlea();
-        
-        
-        System.out.println("Sélectionnez son nombre de points de vie :");
-        Scanner inputReader = new Scanner(System.in);
-        int pv;
-        try{
-            pv = parseInt(inputReader.next());
-            w.getListe_perso().get(0).setPtVie(pv);
-        }catch(NumberFormatException e){
-            System.out.println("Sélectionnez un nombre entier :");
-        }
-        
-        
-        
-                
-    }    
+       
+    }
+    
+
 }
-    
-    
- 

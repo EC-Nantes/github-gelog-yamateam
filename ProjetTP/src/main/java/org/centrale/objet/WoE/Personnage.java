@@ -59,31 +59,7 @@ public abstract class Personnage extends Creature{
         this(n,100,50,50,75,25,3,new Point2D(0,0));
     }
     
-    // --- Méthodes : ---
-    
-    
-    /**
-     * @param o Objet à récupérer 
-     * 
-     * Met la créature en tant que détenteur de l'objet concerné 
-     */
-    public void recupererObjet(Objet o){
-        if (this.getPos().distance(o.getPos()) == 0 && o.getDetenteur() == null){
-            o.setDetenteur(this);
-        }
-    }
-    
-     /**
-     * @param o Objet à utiliser
-     * 
-     * La créature utilise l'objet et l'objet devient inutilisable (détenteur fictif en attendant l'implémentation d'un inventaire)
-     */
-    public void utiliserObjet(Objet o){
-        if (this == o.getDetenteur()){
-            o.utiliser();
-            o.setDetenteur(new Guerrier());
-        }
-    }
+
    
     
 }

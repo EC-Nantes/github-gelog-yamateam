@@ -11,7 +11,7 @@ package org.centrale.objet.WoE;
 public class Lapin extends Monstre {
 
     /**
-     *
+     * @param n
      * @param ptVie
      * @param degAtt
      * @param ptPar

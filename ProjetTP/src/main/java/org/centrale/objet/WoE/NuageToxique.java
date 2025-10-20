@@ -11,9 +11,7 @@ import java.util.Random;
  * @author yaelv
  */
 public class NuageToxique extends Objet implements Deplacable, Combattant {
-    
-    private int degAtt;
-    
+
     private int vitesse;
     
     private int longueur;
@@ -21,26 +19,28 @@ public class NuageToxique extends Objet implements Deplacable, Combattant {
     private int largeur;
     
    
-    public NuageToxique(int a,int v,int l1,int l2){
-        degAtt=a;
-        vitesse=v;
-        longueur=l1;
-        largeur=l2;
-        this.setNom("Nuage Toxique");
+    public NuageToxique(int e,int v,int l1,int l2, Point2D p){
+        super("Nuage Toxique",e, p);
+        this.vitesse = v;
+        this.longueur=l1;
+        this.largeur=l2;
+       
     }
     
     public NuageToxique(){
-        this(1,2,5,4);
+        this(1,2,5,4, new Point2D(0,0));
     }
     
-    
+    public NuageToxique(NuageToxique n){
+        this(n.getEffet(),n.getVitesse(),n.getLongueur(),n.getLargeur(), n.getPos());
+    }
     
     /** Crée une copie indépendante de la créature 
-     * @return un archer
+     * @return un nuage toxique
      */
     @Override
     public NuageToxique copie(){
-        return new NuageToxique();
+        return new NuageToxique(this);
     }
     
     /**
@@ -64,7 +64,32 @@ public class NuageToxique extends Objet implements Deplacable, Combattant {
 
     @Override
     public void combattre(Creature c) {
-        c.subirDegat(this.degAtt);
+        System.out.println("Vous êtes dans un nuage toxique, vous avez subi : "+this.getEffet()+" dégats");
+        c.subirDegat(this.getEffet());
     }
+    
+    @Override
+    public void utiliser(Personnage perso, World world){}
+    @Override
+    public void retirer(Personnage perso){}
+    @Override
+    public boolean estExpirer(World world){return false;}
+    @Override
+    public String getNom(){return "Nuage Toxique";}
+    @Override
+    public String getCaracteristique(){return "dA";}
+
+    public int getVitesse() {
+        return vitesse;
+    }
+
+    public int getLongueur() {
+        return longueur;
+    }
+
+    public int getLargeur() {
+        return largeur;
+    }
+    
     
 }
