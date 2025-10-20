@@ -129,6 +129,11 @@ public class World {
         boolean a_choisi_action = false;
         String nom_save = "sauvegarde_rapide.txt";
         File dossier = new File("saves_WoE");
+        //créer le dossier de sauvegarde si il n'existe pas déjà
+        if(!dossier.exists()){
+            dossier.mkdir();
+        }
+                        
         
         while(!a_choisi_action){
             System.out.println("Choisir : '1' : Écraser une sauvegarde existante ou '2' : Nouvelle sauvegarde");
@@ -488,27 +493,23 @@ public class World {
       
         
         for(int i=0;i<n;i++){
-            Point2D p = new Point2D();
-            p.setX(aleaInt.nextInt(taille));
-            p.setY(aleaInt.nextInt(taille));
             
-            while(monde[p.getX()][p.getY()] != null){
-                p.setX(aleaInt.nextInt(taille));
-                p.setY(aleaInt.nextInt(taille));
+            int x = aleaInt.nextInt(taille);
+            int y = aleaInt.nextInt(taille);
+            
+            while(monde[x][y] != null){
+                x = aleaInt.nextInt(taille);
+                y = aleaInt.nextInt(taille);
             }
             
             
             ElementDeJeu type = liste_type.get(aleaInt.nextInt(liste_type.size()));
-            ElementDeJeu element = type.copie();
+            ElementDeJeu new_element = type.copie();
+            new_element.setPos(new Point2D(x,y));
+            monde[x][y] = new_element;
             
-            if (type instanceof Creature){
-                Creature new_creature = (Creature)element;
-                new_creature.setPos(p);
+            if (new_element instanceof Creature new_creature){
                 liste_perso.add(new_creature);
-                monde[p.getX()][p.getY()] = new_creature;
-            } else {
-                ((Utilisable)element).setPos(p);
-                monde[p.getX()][p.getY()] = element;
             }
             
         }
