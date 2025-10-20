@@ -209,7 +209,7 @@ public class World {
                 for(ElementDeJeu e : ligne_monde){
                     
                     if(e == null || e == joueur.getPerso() ){ //case vide ou perso (pas envie de le stocker comme une créature lambda)
-                        break;
+                        continue;
                     }
                     
                     if (e instanceof Creature c){ // element type créature 
@@ -268,8 +268,15 @@ public class World {
 
             }
             
-            fichier.write("Joueur|" + joueur.getPerso().getClass().getSimpleName() + "|" + joueur.getPerso().getNom() + "|" + joueur.getPerso().getPtVie() + "|" + joueur.getPerso().getDegAtt() + "|" +  joueur.getPerso().getPtPar() + "|" +joueur.getPerso().getPageAtt() + "|" +joueur.getPerso().getPagePar() + "|" +joueur.getPerso().getDistAttMax() + "|" +joueur.getPerso().getPos().getX() + "|" +joueur.getPerso().getPos().getY());
-            fichier.newLine();
+            switch(joueur.getPerso().getClass().getSimpleName()){
+                case "Archer":
+                    fichier.write("Joueur|" + joueur.getPerso().getClass().getSimpleName() + "|" + joueur.getPerso().getNom() + "|" + joueur.getPerso().getPtVie() + "|" + joueur.getPerso().getDegAtt() + "|" +  joueur.getPerso().getPtPar() + "|" +joueur.getPerso().getPageAtt() + "|" +joueur.getPerso().getPagePar() + "|" +joueur.getPerso().getDistAttMax() + "|" +joueur.getPerso().getPos().getX() + "|" +joueur.getPerso().getPos().getY() + "|" + ((Archer)joueur.getPerso()).getNbFleches());
+                    fichier.newLine();
+                case "Guerrier":
+                    fichier.write("Joueur|" + joueur.getPerso().getClass().getSimpleName() + "|" + joueur.getPerso().getNom() + "|" + joueur.getPerso().getPtVie() + "|" + joueur.getPerso().getDegAtt() + "|" +  joueur.getPerso().getPtPar() + "|" +joueur.getPerso().getPageAtt() + "|" +joueur.getPerso().getPagePar() + "|" +joueur.getPerso().getDistAttMax() + "|" +joueur.getPerso().getPos().getX() + "|" +joueur.getPerso().getPos().getY());
+                    fichier.newLine();
+            }
+            
             
             for(Utilisable e : joueur.getInventaire()){
                 switch(e.getClass().getSimpleName()){
