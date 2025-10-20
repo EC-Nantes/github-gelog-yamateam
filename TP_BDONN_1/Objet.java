@@ -112,9 +112,33 @@ public class Objet extends ElementDeJeu {
     }
 
     @Override
-    public Integer saveToDatabase(Connection connection) {
+    public Integer saveToDatabase(Connection connection, int idSauvegarde) {
         Integer id = -1;
+        String query;
 
+        try {
+            query = "INSERT INTO element_jeu(pos_x,pos_y,type_element,id_sauvegarde) VALUES (?,?,?,?)";
+            PreparedStatement stmt1 = connection.prepareStatement(query);
+            stmt1.setInt(1, this.getPosition().getX());
+            stmt1.setInt(2, this.getPosition().getY());
+            stmt1.setString(3, this.getType());
+            stmt1.setInt(4, idSauvegarde);
+            stmt1.executeUpdate();
+            stmt1.close();
+            
+            query = "SELECT max(id_element) FROM element_jeu WHERE id_sauvegarde=?";
+            PreparedStatement stmt2 = connection.prepareStatement(query);
+            stmt2.setInt(1, idSauvegarde);
+            ResultSet res1 = stmt2.executeQuery();
+            res1.next();
+            id = res1.getInt("id_element");
+            res1.close();
+            stmt2.close();
+            
+            
+                      
+        } catch (SQLException ex) {
+        }
         return id;
     }
 
