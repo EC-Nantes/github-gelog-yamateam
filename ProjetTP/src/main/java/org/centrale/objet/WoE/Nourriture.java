@@ -9,30 +9,26 @@ package org.centrale.objet.WoE;
  * @author ian-frederickabondo
  */
 public abstract class Nourriture extends ElementDeJeu implements Utilisable {
-    private String nom;
     private String type; //bonus ou malus
     private int effet; // par exemple 2 si +2
     private int nb_tours;
     private String caracteristique;// par exemple degat
-    private Point2D pos;
     private int tourExpiration;
     
     public Nourriture(){
-        this.nom = "feuille d'épinard";
+        super("feuille d'épinard",new Point2D(0,0));
         this.type = "bonus";
         this.effet = 2;
         this.nb_tours = 3;
         this.caracteristique = "pVie";
-        this.pos = new Point2D(0,0);
     }
     
     public Nourriture(String n, String t, int e, int nb, String c, Point2D p){
-        this.nom = n;
+        super(n,p);
         this.type = t;
         this.effet = e;
         this.nb_tours = nb;
         this.caracteristique = c;
-        this.pos = p;
     }
     
     public Nourriture(Nourriture n){
@@ -51,17 +47,7 @@ public abstract class Nourriture extends ElementDeJeu implements Utilisable {
     @Override
     public boolean estExpirer(World world){
         return world.getCompteurTour()>= this.tourExpiration;
-    }
-    
-    @Override
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-    
+    }    
     
     public String getType() {
         return type;
@@ -95,15 +81,6 @@ public abstract class Nourriture extends ElementDeJeu implements Utilisable {
 
     public void setCaractéristique(String caracteristique) {
         this.caracteristique = caracteristique;
-    }
-
-    public Point2D getPos() {
-        return pos;
-    }
-    
-    @Override
-    public void setPos(Point2D pos) {
-        this.pos = pos;
     }
 
     public int getTourExpiration() {
