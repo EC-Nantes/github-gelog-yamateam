@@ -1,326 +1,522 @@
 /* --------------------------------------------------------------------------------
- * WoE
+ * WoE Tools
  * 
  * Ecole Centrale Nantes - Septembre 2022
  * Equipe pédagogique Informatique et Mathématiques
  * JY Martin
  * -------------------------------------------------------------------------------- */
-package fr.centrale.nantes.worldofecn.world;
+package fr.centrale.nantes.worldofecn;
 
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import fr.centrale.nantes.worldofecn.world.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
-import java.util.Random;
 
 /**
- *
+ * Manage database connectio, saves and retreive informations
  * @author ECN
  */
-public class World {
+public class DatabaseTools {
 
-    private static final int MAXPEOPLE = 20;
-    private static final int MAXMONSTERS = 10;
-    private static final int MAXOBJECTS = 20;
-
-    private Integer width;
-    private Integer height;
-    
-    private int roundNo;
-    private List<ElementDeJeu> listElements;
-    private Joueur player;
-    private List<Point2D> positions;
-    //private List<ElementDeJeu> roundElements;
+    private String login;
+    private String password;
+    private String url;
+    private Connection connection;
 
     /**
-     * Default constructor
+     * Load infos
      */
-    public World() {
-        this(20, 20);
+    public DatabaseTools() {
+        try {
+            // Get Properties file
+            ResourceBundle properties = ResourceBundle.getBundle(DatabaseTools.class.getPackage().getName() + ".database");
+
+            // USE config parameters
+            login = properties.getString("login");
+            password = properties.getString("password");
+            String server = properties.getString("server");
+            String database = properties.getString("database");
+            url = "jdbc:postgresql://" + server + "/" + database;
+
+            // Mount driver
+            Driver driver = DriverManager.getDriver(url);
+            if (driver == null) {
+                Class.forName("org.postgresql.Driver");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(DatabaseTools.class.getName()).log(Level.SEVERE, null, ex);
+            // If driver is not found, cancel url
+            url = null;
+        }
+        this.connection = null;
     }
 
     /**
-     * Constructor for specific world size
-     *
-     * @param width : world width
-     * @param height : world height
+     * Get connection to the database
      */
-    public World(int width, int height) {
-        this.setHeightWidth(height, width);
-        init();
-        generate();
-        
-        this.roundNo = 0;
-        //this.roundElements = null;
+    public void connect() {
+        if ((this.connection == null) && (url != null) && (! url.isEmpty())) {
+            try {
+                this.connection = DriverManager.getConnection(url, login, password);
+            } catch (SQLException ex) {
+                Logger.getLogger(DatabaseTools.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     /**
-     * Initialize elements
+     * Disconnect from database
      */
-    private void init() {
-        this.listElements = new LinkedList<ElementDeJeu>();
-        this.player = new Joueur("Player");
-        this.positions = new ArrayList<Point2D>();
+    public void disconnect() {
+        if (this.connection != null) {
+            try {
+                this.connection.close();
+                this.connection = null;
+            } catch (SQLException ex) {
+                Logger.getLogger(DatabaseTools.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     /**
-     *
+     * get Player ID
+     * @param nomJoueur : le login du joueur
+     * @param password : le mot de passe du joueur
      * @return
      */
-    public Integer getWidth() {
-        return width;
-    }
+    public Integer getPlayerID(String nomJoueur, String password) {
+        Integer playerId = null;
 
-    /**
-     *
-     * @param width
-     */
-    public void setWidth(Integer width) {
-        this.width = width;
-    }
+        try {
+            String query = "SELECT id_joueur FROM joueur WHERE pseudo = ? AND mot_de_passe = ?";
+            PreparedStatement stmt = this.connection.prepareStatement(query);
 
-    /**
-     *
-     * @return
-     */
-    public Integer getHeight() {
-        return height;
-    }
+            stmt.setString(1, nomJoueur);
+            stmt.setString(2, password);
 
-    /**
-     *
-     * @param height
-     */
-    public void setHeight(Integer height) {
-        this.height = height;
-    }
+            ResultSet res = stmt.executeQuery();
 
-    /**
-     *
-     * @param height
-     * @param width
-     */
-    public final void setHeightWidth(Integer height, Integer width) {
-        this.setHeight(height);
-        this.setWidth(width);
-    }
+            if (res.next()) {
+                playerId = res.getInt("id_joueur");
+            }
 
-    /**
-     * Check element can be created
-     *
-     * @param element
-     * @return
-     */
-    private ElementDeJeu check(ElementDeJeu element) {
-        return element;
-    }
-
-    /**
-     * Generate personnages
-     */
-    private void generatePersonnages(int nbElements) {
-        Random rand = new Random();
-        for (int i = 0; i < nbElements; i++) {
-            int race = rand.nextInt(Personnage.getNbRaces());
-            String raceStr = Personnage.intToRace(race);
-
-            //int metier = rand.nextInt(Personnage.getNbMetiers());
-            //String metierStr = Personnage.intToMetier(metier);
-
-            Personnage item = new Personnage(this);
-            item.setRace(raceStr);
-            //item.setMetier(metierStr);
-
-            // Add to list
-            this.listElements.add(item);
-            this.positions.add(item.getPosition());
+            res.close();
+            stmt.close();
+        } 
+        catch (SQLException e) {
+            return null;  
         }
+
+        return playerId;
     }
 
     /**
-     * Generate Monsters
+     * save world as sauvegarde in database
+     * @param idJoueur : l'ID du joueur dans la BD
+     * @param nomPartie : le nom de la partie
+     * @param nomSauvegarde : le nom de la sauvegarde
+     * @param monde: le monde à enregistrer
      */
-    private void generateMonsters(int nbElements) {
-        Random rand = new Random();
-
-        // Generate monsters
-        for (int i = 0; i < nbElements; i++) {
-            int race = rand.nextInt(Monstre.getNbRaces());
-            String raceStr = Monstre.intToRace(race);
-
-            Monstre item = new Monstre(this);
-            this.listElements.add(item);
-            this.positions.add(item.getPosition());
-        }
-    }
-
-    /**
-     * Generate Objects
-     */
-    private void generateObjects(int nbElements) {
-        Random rand = new Random();
-
-        // Generate objects
-        for (int i = 0; i < nbElements; i++) {
-            int type = rand.nextInt(Objet.getNbTypes());
-            String typeStr = Objet.intToType(type);
-
-            Objet item = new Objet(this);
-            item.setType(typeStr);
-
-            // Add to list
-            this.listElements.add(item);
-            this.positions.add(item.getPosition());
-        }
-    }
-
-    /**
-     * Generate Player
-     */
-    private void generatePlayer(int itemType) {
-        Random rand = new Random();
-
-        int race = rand.nextInt(Personnage.getNbRaces());
-        String raceStr = Personnage.intToRace(race);
-
-        //int metier = rand.nextInt(Personnage.getNbMetiers());
-        //String metierStr = Personnage.intToMetier(metier);
-
-        Personnage item = new Personnage(this);
-        item.setRace(raceStr);
-        //item.setMetier(metierStr);
+    public void saveWorld(Integer idJoueur, String nomPartie, String nomSauvegarde, World monde) throws SQLException {
+        // TO BE DEFINED
         
-        // Add to list
-        this.listElements.add(item);
+        // Create a new "partie" in database if it does not exists and link it to the player
+        // Save partie's infos in the sauvegarde (height, width, ...) if necessary
         
-        player.setPersonnage(item);
-    }
+        // Create a new sauvegarde if it does not exist for the partie
+        // Update sauvegarde infos for the partie
+        // Remove existing elements de jeu for the sauvegarde
+        // Save world's elementdejeu in database
+        
+        // Save player infos and the player's creature infos for this partie
+        try {
+            String query;
+            query = "SELECT id_partie FROM partie WHERE id_joueur = ? AND nom_partie = ?";
+            PreparedStatement stmt1 = this.connection.prepareStatement(query);
+            stmt1.setInt(1, idJoueur);
+            stmt1.setString(2, nomPartie);
+             
+            ResultSet res1 = stmt1.executeQuery();
+            
+            if (res1.next()) {//si la partie existe
+                
+                int idPartie = res1.getInt("id_partie");
+            
+                query = "SELECT id_sauvegarde FROM sauvegarde WHERE id_partie = ? AND nom_sauvegarde = ?";
+                PreparedStatement stmt4 = this.connection.prepareStatement(query);
+                stmt4.setInt(1, idPartie);
+                stmt4.setString(2, nomSauvegarde);
+            
+                ResultSet res3 = stmt4.executeQuery();
+                
+                if (res3.next()){   //si la sauvegarde existe -> on la met à jour en supprimant les éléments du jeu associés
+                    int idSauvegarde = res3.getInt("id_sauvegarde");
+                    res3.close();
+                    stmt4.close();
+                    
+                    query = "SELECT id_element FROM element_jeu WHERE id_sauvegarde = ?";
+                    PreparedStatement stmt5 = this.connection.prepareStatement(query);
+                    stmt5.setInt(1,idSauvegarde);
+                    ResultSet res4 = stmt5.executeQuery();
 
-    /**
-     * Generate elements randomly
-     */
-    private void generate() {
-        Random rand = new Random();
-
-        generatePlayer(1);
-
-        generatePersonnages(rand.nextInt(MAXPEOPLE));
-        generateMonsters(rand.nextInt(MAXMONSTERS));
-        generateObjects(rand.nextInt(MAXOBJECTS));
-    }
-
-    /**
-     * Set Player name
-     *
-     * @param name
-     */
-    public void setPlayerName(String name) {
-        this.player.setNom(name);
-    }
-
-    public int getRoundNo() {
-        return roundNo;
-    }
-
-    public void setRoundNo(int roundNo) {
-        this.roundNo = roundNo;
-    }
-
-    public List<ElementDeJeu> getListElements() {
-        return listElements;
-    }
-
-    public void setListElements(List<ElementDeJeu> listElements) {
-        this.listElements = listElements;
-    }
-
-    public Joueur getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Joueur player) {
-        this.player = player;
-    }
-    
-    
-    
-    /**
-     * Return used positions
-     * @return 
-     */
-    public List<Point2D> getPositions() {
-        return positions;
-    }
-
-    /**
-     * Remove element from the world
-     * @param elementdejeu 
-     */
-    public void removeFromWorld(ElementDeJeu elementdejeu) {
-        if (elementdejeu != null) {
-            this.positions.remove(elementdejeu.getPosition());
-            this.listElements.remove(elementdejeu);
-            //this.roundElements.remove(elementdejeu);
+                    
+                    while(res4.next()){
+                        query = "DELETE FROM posseder WHERE id_element = ?";
+                        PreparedStatement stmt6 = this.connection.prepareStatement(query);
+                        stmt6.setInt(1, res4.getInt("id_element"));
+                        stmt6.executeUpdate();
+                        stmt6.close();
+                        query = "DELETE FROM element_jeu WHERE id_element = ?";
+                        PreparedStatement stmt7 = this.connection.prepareStatement(query);
+                        stmt7.setInt(1, res4.getInt("id_element"));
+                        stmt7.executeUpdate();
+                        stmt7.close();
+                    }
+                    query = "UPDATE sauvegarde SET round_no = ? WHERE id_sauvegarde = ? ";
+                    PreparedStatement stmt8 = this.connection.prepareStatement(query);
+                    stmt8.setInt(1, monde.getRoundNo());
+                    stmt8.setInt(2, idSauvegarde);
+                    
+                    stmt8.executeUpdate();
+                    stmt8.close();
+                    res4.close();
+                    stmt5.close();
+                    
+                }
+                else{   //si la sauvegarde n'existe pas   
+                    query = "INSERT INTO sauvegarde(nom_sauvegarde, id_partie, round_no) VALUES (?, ?, ?)";
+                    PreparedStatement stmt9 = this.connection.prepareStatement(query);
+                
+                    stmt9.setString(1, nomSauvegarde);
+                    stmt9.setInt(2, res1.getInt("id_partie"));
+                    stmt9.setInt(3, monde.getRoundNo());
+                    stmt9.executeUpdate();
+                    stmt9.close();
+                }
+            }
+            else{   //si la partie n'existe pas
+                query = "INSERT INTO partie(nom_partie, hauteur, largeur, id_joueur) VALUES (?,?,?,?)";
+                PreparedStatement stmt2 = this.connection.prepareStatement(query);
+                
+                stmt2.setString(1, nomPartie);
+                stmt2.setInt(2, monde.getHeight());
+                stmt2.setInt(3, monde.getWidth());
+                stmt2.setInt(4, idJoueur);
+                
+                stmt2.executeUpdate();
+                stmt2.close();
+               
+                query = "INSERT INTO sauvegarde(nom_sauvegarde, id_partie, round_no) VALUES (?, (SELECT DISTINCT id_partie FROM partie WHERE nom_partie = ? AND id_joueur = ?),?)";
+                PreparedStatement stmt3 = this.connection.prepareStatement(query);
+                
+                stmt3.setString(1, nomSauvegarde);
+                stmt3.setString(2, nomPartie);
+                stmt3.setInt(3, idJoueur);
+                stmt3.setInt(4, monde.getRoundNo());
+                stmt3.executeUpdate();
+                stmt3.close();
+                
+            }
+            res1.close();
+            stmt1.close();
+            
+            query = "SELECT id_sauvegarde FROM sauvegarde WHERE id_partie = (SELECT id_partie FROM partie WHERE id_joueur = ? AND nom_partie = ?) AND nom_sauvegarde = ?";
+            PreparedStatement stmt4 = this.connection.prepareStatement(query);
+            stmt4.setInt(1, idJoueur);
+            stmt4.setString(2, nomPartie);
+            stmt4.setString(3, nomSauvegarde);            
+            ResultSet res5 = stmt4.executeQuery();
+            res5.next();
+            int idSauvegarde = res5.getInt("id_sauvegarde");
+            res5.close();
+            stmt4.close();
+            
+            List<ElementDeJeu> listE = monde.getListElements();
+            for(int i=0; i< listE.size();i++){
+                int id = listE.get(i).saveToDatabase(connection, idSauvegarde);
+            }
+        
+        }catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("problème refais stp");
         }
+            
     }
+   
     
+
     /**
-     * Go to next round
+     * get world sauvegarde from database
+     * @param idJoueur
+     * @param nomPartie
+     * @param nomSauvegarde
+     * @return monde
      */
-    public void nextRound() {
-        this.roundNo++;
-        //this.roundElements = new LinkedList<ElementDeJeu>();
-        //this.roundElements.addAll(this.listElements);
-    }
-    
-    public void ajouterElement(ElementDeJeu e, Point2D pos) {
-        this.listElements.add(e);
-        this.positions.add(pos);
-    }
-    
-    /**
-     * Returns next element who has to play
-     * @return 
-     */
-    /*public ElementDeJeu nextElementInRound() {
-        ElementDeJeu nextElement = this.roundElements.getFirst();
-        if (nextElement != null) {
-            this.roundElements.removeFirst();
+    public World readWorld(Integer idJoueur, String nomPartie, String nomSauvegarde) {
+         World monde = new World();
+        // TO BE DEFINED
+        
+        // Retreive partie infos for the player
+        // Retreive sauvegarde infos for the partie
+
+        // Retreive world infos
+        // Generate object world according to the infos
+        
+        // Retreive element de jeu from sauvegarde
+        // Generate approprite objects
+        // Link objects to the world
+        
+        // Associate player with the player's creature
+
+        // Return created world
+        try {
+            
+            // Set la hauteur et la largeur
+            String query = "Select hauteur,largeur from partie where nom_partie =? and id_joueur =?";
+            PreparedStatement stmt1 = this.connection.prepareStatement(query);
+
+            stmt1.setString(1, nomPartie);
+            stmt1.setInt(2, idJoueur);
+
+            ResultSet res1 = stmt1.executeQuery();
+
+            if (res1.next()) {
+                monde.setHeight(res1.getInt("hauteur"));
+                monde.setWidth(res1.getInt("largeur"));
+            }
+
+            res1.close();
+            stmt1.close();
+            
+            //Set le nombre de round
+            query = "Select round_no from sauvegarde join partie on sauvegarde.id_partie = partie.id_partie where nom_partie =? and nom_sauvegarde =? and id_joueur =?";
+            PreparedStatement stmt2 = this.connection.prepareStatement(query);
+            
+            stmt2.setString(1, nomPartie);
+            stmt2.setString(2, nomSauvegarde);
+            stmt2.setInt(3, idJoueur);
+            
+            ResultSet res2 = stmt2.executeQuery();
+
+            if (res2.next()) {
+                for(int i=0; i<res2.getInt("round_no"); i++){
+                    monde.nextRound();
+                }
+            }
+            
+            res2.close();
+            stmt2.close();
+            
+            //Initialise le joueur (sauf son personnage)
+            query = "Select * from joueur where id_joueur =?";
+            PreparedStatement stmt4 = this.connection.prepareStatement(query);
+            
+            stmt4.setInt(1, idJoueur);
+            
+            ResultSet res4 = stmt4.executeQuery();
+            
+            Joueur joueur = null;
+            if (res4.next()) {
+               joueur = new Joueur(res4.getString("pseudo"),res4.getString("pseudo"),res4.getString("mot_de_passe"));      
+            }
+            
+            res4.close();
+            stmt4.close();
+            
+            
+            //Récupère l'id du perso du joueur pour l'attribuer au joueur dans la prochaine requete
+            query = "Select id_element from posseder join element_jeu on element_jeu.id_element = posseder.id_element join sauvegarde on element_jeu.id_sauvegarde = sauvegarde.id_sauvegarde join partie on sauvegarde.id_partie = partie.id_partie where nom_partie =? and nom_sauvegarde =? and id_joueur =? and nom_caracteristique='player'";
+            PreparedStatement stmt5 = this.connection.prepareStatement(query);
+            
+            stmt5.setInt(1, idJoueur);
+            
+            ResultSet res5 = stmt5.executeQuery();
+            
+            int id_element_joueur = -1;
+            if (res5.next()) {
+               id_element_joueur = res5.getInt("id_element");      
+            }
+            
+            res5.close();
+            stmt5.close();
+            
+            //Set la liste des éléments
+            query = "Select * from element_jeu join sauvegarde on element_jeu.id_sauvegarde = sauvegarde.id_sauvegarde join partie on sauvegarde.id_partie = partie.id_partie where nom_partie =? and nom_sauvegarde =? and id_joueur =?";
+            PreparedStatement stmt3 = this.connection.prepareStatement(query);
+            
+            stmt3.setString(1, nomPartie);
+            stmt3.setString(2, nomSauvegarde);
+            stmt3.setInt(3, idJoueur);
+            
+            ResultSet res3 = stmt3.executeQuery();
+
+            while(res3.next()){
+                ElementDeJeu element;
+                switch(res3.getString("type")){
+                    case "Potion de Soin":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Potion du Guerrier":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Potion de Magie":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Potion de Mage":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Epée démoniaque":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Arc enchanté":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Arbre":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Rocher":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Nuage toxique":
+                        element = new Objet(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Humain":
+                        element = new Personnage(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Nain":
+                        element = new Personnage(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Elfe":
+                        element = new Personnage(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Gobelin":
+                        element = new Personnage(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                    case "Troll":
+                        element = new Personnage(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                        
+                    default :
+                        element = new Monstre(monde);
+                        element.getFromDatabase(this.connection, idJoueur);
+                        element.setPosition(new Point2D(res3.getInt("pos_x"),res3.getInt("pos_y")));
+                        break;
+                        
+                }
+                
+                monde.ajouterElement(element, element.getPosition());
+                
+                //si l'element est celui du joueur alors on le relie au joueur et le joueur au monde
+                if(res3.getInt("id_element") == id_element_joueur){
+                    joueur.setPersonnage((Personnage)element);
+                    monde.setPlayer(joueur);
+                }
+            }
+            
+            res3.close();
+            stmt3.close();
+            
+        } 
+        catch (SQLException e) {
+            return null;  
         }
-        return nextElement;
-    }*/
-
-    /**
-     * Save world to database
-     *
-     * @param connection
-     * @param gameName
-     * @param saveName
-     */
-    public void saveToDatabase(Connection connection, String gameName, String saveName) {
-        if (connection != null) {
-            // Get Player ID
-
-            // Save world for Player ID
-        }
+        
+        return monde;
     }
 
-    /**
-     * Get world from database
-     *
-     * @param connection
-     * @param gameName
-     * @param saveName
-     */
-    public void getFromDatabase(Connection connection, String gameName, String saveName) {
-        if (connection != null) {
-            // Remove old data
-            this.setHeightWidth(0, 0);
-            init();
 
-            // Get Player ID
-            // get world for Player ID
+    /**
+     * remove world sauvegarde from database
+     * @param idJoueur
+     * @param nomPartie
+     * @param nomSauvegarde
+     */
+    public void removeWorld(Integer idJoueur, String nomPartie, String nomSauvegarde) {
+        // TO BE DEFINED
+        
+        // Retreive partie infos for the player
+        // Retreive sauvegarde infos for the partie
+
+        // remove elements de jeu linked to the sauvegarde
+        // remove sauvegarde
+        // remove if partie has no mode sauvegarde, remove partie
+        
+        try{            
+            String query = "SELECT id_sauvegarde FROM sauvegarde JOIN partie on partie.id_partie = sauvegarde.id_partie WHERE nom_partie =? and nom_sauvegarde =? and id_joueur =?";
+                PreparedStatement stmt1 = this.connection.prepareStatement(query);
+                stmt1.setString(1, nomPartie);
+                stmt1.setString(2, nomSauvegarde);
+                stmt1.setInt(3, idJoueur);
+            
+                ResultSet res1 = stmt1.executeQuery();
+                
+                if (res1.next()){   //si la sauvegarde existe -> on supprime les éléments du jeu associés
+                    int idSauvegarde = res1.getInt("id_sauvegarde");
+                    res1.close();
+                    
+                    query = "SELECT id_element FROM element_jeu WHERE id_sauvegarde=?";
+                    PreparedStatement stmt2 = this.connection.prepareStatement(query);
+                    stmt2.setInt(1, idSauvegarde);
+                    
+                    ResultSet res2 = stmt2.executeQuery();
+                    
+                    //supprimer tout les éléments et les posseder
+                    while(res2.next()){
+                        query = "DELETE FROM posseder WHERE id_element = ?";
+                        PreparedStatement stmt3 = this.connection.prepareStatement(query);
+                        stmt3.setInt(1, res2.getInt("id_element"));
+                        query = "DELETE FROM element_jeu WHERE id_element = ?";
+                        PreparedStatement stmt4 = this.connection.prepareStatement(query);
+                        stmt4.setInt(1, res2.getInt("id_element"));
+                    }
+                    
+                    //supprimer la sauvegarde
+                    query = "DELETE FROM sauvegarde WHERE id_sauvegarde = ?";
+                    PreparedStatement stmt5 = this.connection.prepareStatement(query);
+                    stmt5.setInt(1, idSauvegarde);
+                    
+                }
         }
+        catch (SQLException e) {
+             System.out.println("t'as pas réussi à remove mon pote");
+        }
+        
+        
     }
 }
