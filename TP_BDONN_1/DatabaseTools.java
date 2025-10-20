@@ -7,7 +7,6 @@
  * -------------------------------------------------------------------------------- */
 package fr.centrale.nantes.worldofecn;
 
-import java.sql.*;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -17,9 +16,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import fr.centrale.nantes.worldofecn.world.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
 
 /**
- * Manage database connection, saves and retreive informations
+ * Manage database connectio, saves and retreive informations
  * @author ECN
  */
 public class DatabaseTools {
@@ -94,7 +96,6 @@ public class DatabaseTools {
         Integer playerId = null;
 
         try {
-            this.connect();
             String query = "SELECT id_joueur FROM joueur WHERE pseudo = ? AND mot_de_passe = ?";
             PreparedStatement stmt = this.connection.prepareStatement(query);
 
@@ -109,7 +110,6 @@ public class DatabaseTools {
 
             res.close();
             stmt.close();
-            this.connection.close();
         } 
         catch (SQLException e) {
             return null;  
@@ -117,7 +117,6 @@ public class DatabaseTools {
 
         return playerId;
     }
-    
 
     /**
      * save world as sauvegarde in database
@@ -150,7 +149,6 @@ public class DatabaseTools {
             if (res1.next()) {//si la partie existe
                 
                 int idPartie = res1.getInt("id_partie");
-                res1.close();
             
                 query = "SELECT id_sauvegarde FROM sauvegarde WHERE id_partie = ? AND nom_sauvegarde = ?";
                 PreparedStatement stmt4 = this.connection.prepareStatement(query);
@@ -162,34 +160,46 @@ public class DatabaseTools {
                 if (res3.next()){   //si la sauvegarde existe -> on la met à jour en supprimant les éléments du jeu associés
                     int idSauvegarde = res3.getInt("id_sauvegarde");
                     res3.close();
+                    stmt4.close();
                     
-                    query = "SELECT id_element FROM element_jeu";
+                    query = "SELECT id_element FROM element_jeu WHERE id_sauvegarde = ?";
                     PreparedStatement stmt5 = this.connection.prepareStatement(query);
+                    stmt5.setInt(1,idSauvegarde);
                     ResultSet res4 = stmt5.executeQuery();
+
                     
                     while(res4.next()){
                         query = "DELETE FROM posseder WHERE id_element = ?";
                         PreparedStatement stmt6 = this.connection.prepareStatement(query);
                         stmt6.setInt(1, res4.getInt("id_element"));
+                        stmt6.executeUpdate();
+                        stmt6.close();
                         query = "DELETE FROM element_jeu WHERE id_element = ?";
                         PreparedStatement stmt7 = this.connection.prepareStatement(query);
                         stmt7.setInt(1, res4.getInt("id_element"));
+                        stmt7.executeUpdate();
+                        stmt7.close();
                     }
                     query = "UPDATE sauvegarde SET round_no = ? WHERE id_sauvegarde = ? ";
                     PreparedStatement stmt8 = this.connection.prepareStatement(query);
                     stmt8.setInt(1, monde.getRoundNo());
                     stmt8.setInt(2, idSauvegarde);
                     
+                    stmt8.executeUpdate();
+                    stmt8.close();
                     res4.close();
+                    stmt5.close();
                     
                 }
-                else{   //si la sauvegarde n'existe pas                
+                else{   //si la sauvegarde n'existe pas   
                     query = "INSERT INTO sauvegarde(nom_sauvegarde, id_partie, round_no) VALUES (?, ?, ?)";
-                    PreparedStatement stmt2 = this.connection.prepareStatement(query);
+                    PreparedStatement stmt9 = this.connection.prepareStatement(query);
                 
-                    stmt2.setString(1, nomSauvegarde);
-                    stmt2.setInt(2, res1.getInt("id_partie"));
-                    stmt2.setInt(3, monde.getRoundNo());
+                    stmt9.setString(1, nomSauvegarde);
+                    stmt9.setInt(2, res1.getInt("id_partie"));
+                    stmt9.setInt(3, monde.getRoundNo());
+                    stmt9.executeUpdate();
+                    stmt9.close();
                 }
             }
             else{   //si la partie n'existe pas
@@ -201,32 +211,47 @@ public class DatabaseTools {
                 stmt2.setInt(3, monde.getWidth());
                 stmt2.setInt(4, idJoueur);
                 
-                query = "INSERT INTO sauvegarde(nom_sauvegarde, id_partie, round_no) VALUES (?, SELECT id_partie FROM partie WHERE nom_partie = ? AND id_joueur = ?,?)";
+                stmt2.executeUpdate();
+                stmt2.close();
+               
+                query = "INSERT INTO sauvegarde(nom_sauvegarde, id_partie, round_no) VALUES (?, (SELECT DISTINCT id_partie FROM partie WHERE nom_partie = ? AND id_joueur = ?),?)";
                 PreparedStatement stmt3 = this.connection.prepareStatement(query);
                 
                 stmt3.setString(1, nomSauvegarde);
                 stmt3.setString(2, nomPartie);
                 stmt3.setInt(3, idJoueur);
                 stmt3.setInt(4, monde.getRoundNo());
+                stmt3.executeUpdate();
+                stmt3.close();
+                
             }
+            res1.close();
+            stmt1.close();
             
             query = "SELECT id_sauvegarde FROM sauvegarde WHERE id_partie = (SELECT id_partie FROM partie WHERE id_joueur = ? AND nom_partie = ?) AND nom_sauvegarde = ?";
             PreparedStatement stmt4 = this.connection.prepareStatement(query);
-            stmt4.setString(1, nomSauvegarde);
+            stmt4.setInt(1, idJoueur);
+            stmt4.setString(2, nomPartie);
+            stmt4.setString(3, nomSauvegarde);            
             ResultSet res5 = stmt4.executeQuery();
+            res5.next();
             int idSauvegarde = res5.getInt("id_sauvegarde");
             res5.close();
+            stmt4.close();
             
             List<ElementDeJeu> listE = monde.getListElements();
             for(int i=0; i< listE.size();i++){
-                int id = listE.get(i).saveToDatabase(connection);
+                int id = listE.get(i).saveToDatabase(connection, idSauvegarde);
             }
-            
+        
         }catch (SQLException e) {
+            System.out.println(e);
             System.out.println("problème refais stp");
         }
             
     }
+   
+    
 
     /**
      * get world sauvegarde from database
@@ -236,7 +261,7 @@ public class DatabaseTools {
      * @return monde
      */
     public World readWorld(Integer idJoueur, String nomPartie, String nomSauvegarde) {
-        World monde = new World();
+         World monde = new World();
         // TO BE DEFINED
         
         // Retreive partie infos for the player
@@ -253,7 +278,6 @@ public class DatabaseTools {
 
         // Return created world
         try {
-            this.connect();
             
             // Set la hauteur et la largeur
             String query = "Select hauteur,largeur from partie where nom_partie =? and id_joueur =?";
@@ -309,7 +333,7 @@ public class DatabaseTools {
             
             
             //Récupère l'id du perso du joueur pour l'attribuer au joueur dans la prochaine requete
-            query = "Select id_element from posseder join element on element.id_element = posseder.id_element join sauvegarde on element.id_sauvegarde = sauvegarde.id_sauvegarde join partie on sauvegarde.id_partie = partie.id_partie where nom_partie =? and nom_sauvegarde =? and id_joueur =? and nom_caracteristique='player'";
+            query = "Select id_element from posseder join element_jeu on element_jeu.id_element = posseder.id_element join sauvegarde on element_jeu.id_sauvegarde = sauvegarde.id_sauvegarde join partie on sauvegarde.id_partie = partie.id_partie where nom_partie =? and nom_sauvegarde =? and id_joueur =? and nom_caracteristique='player'";
             PreparedStatement stmt5 = this.connection.prepareStatement(query);
             
             stmt5.setInt(1, idJoueur);
@@ -325,7 +349,7 @@ public class DatabaseTools {
             stmt5.close();
             
             //Set la liste des éléments
-            query = "Select * from element join sauvegarde on element.id_sauvegarde = sauvegarde.id_sauvegarde join partie on sauvegarde.id_partie = partie.id_partie where nom_partie =? and nom_sauvegarde =? and id_joueur =?";
+            query = "Select * from element_jeu join sauvegarde on element_jeu.id_sauvegarde = sauvegarde.id_sauvegarde join partie on sauvegarde.id_partie = partie.id_partie where nom_partie =? and nom_sauvegarde =? and id_joueur =?";
             PreparedStatement stmt3 = this.connection.prepareStatement(query);
             
             stmt3.setString(1, nomPartie);
@@ -428,7 +452,6 @@ public class DatabaseTools {
             res3.close();
             stmt3.close();
             
-            this.connection.close();
         } 
         catch (SQLException e) {
             return null;  
@@ -454,8 +477,7 @@ public class DatabaseTools {
         // remove sauvegarde
         // remove if partie has no mode sauvegarde, remove partie
         
-        try{
-            
+        try{            
             String query = "SELECT id_sauvegarde FROM sauvegarde JOIN partie on partie.id_partie = sauvegarde.id_partie WHERE nom_partie =? and nom_sauvegarde =? and id_joueur =?";
                 PreparedStatement stmt1 = this.connection.prepareStatement(query);
                 stmt1.setString(1, nomPartie);
@@ -479,9 +501,11 @@ public class DatabaseTools {
                         query = "DELETE FROM posseder WHERE id_element = ?";
                         PreparedStatement stmt3 = this.connection.prepareStatement(query);
                         stmt3.setInt(1, res2.getInt("id_element"));
+                        stmt3.executeUpdate();
                         query = "DELETE FROM element_jeu WHERE id_element = ?";
                         PreparedStatement stmt4 = this.connection.prepareStatement(query);
                         stmt4.setInt(1, res2.getInt("id_element"));
+                        stmt4.executeUpdate();
                     }
                     
                     //supprimer la sauvegarde
@@ -490,8 +514,6 @@ public class DatabaseTools {
                     stmt5.setInt(1, idSauvegarde);
                     
                 }
-                
-                
         }
         catch (SQLException e) {
              System.out.println("t'as pas réussi à remove mon pote");
