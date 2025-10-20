@@ -10,13 +10,10 @@ package org.centrale.objet.WoE;
  */
 public abstract class Objet extends ElementDeJeu implements Utilisable{
     
-    private String nom;
-    private Point2D pos;
     private int effet;
     
     public Objet(String n,int eff, Point2D p){
-        this.nom = n;
-        this.pos = p;
+        super(n,p);
         this.effet = eff;
     }
     
@@ -36,24 +33,6 @@ public abstract class Objet extends ElementDeJeu implements Utilisable{
     
     @Override
     public abstract void retirer(Personnage perso);
-
-    @Override
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-    
-    public Point2D getPos() {
-        return pos;
-    }
-    
-    @Override
-    public void setPos(Point2D pos) {
-        this.pos = pos;
-    }
     
     public void utiliser(){
     }
