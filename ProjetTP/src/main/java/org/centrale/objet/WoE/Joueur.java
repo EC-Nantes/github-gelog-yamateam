@@ -97,9 +97,10 @@ public class Joueur {
                 System.out.println(perso.getNom() +" a raté son attaque !");
             }
         }
-        else if (perso.getPos().distance(opps.getPos())>1.5 && perso.getPos().distance(opps.getPos()) <= perso.getDistAttMax()){
+        else if (perso.getPos().distance(opps.getPos())>1.5 && perso.getPos().distance(opps.getPos()) <= perso.getDistAttMax() && ((Archer)perso).getNbFleches() > 0){
             System.out.println("===== "+ perso.getNom() + " combat à distance " + opps.getNom() + " =====");
             int RandAtt = randInt.nextInt(100) + 1;
+            ((Archer)perso).setNbFleches(((Archer)perso).getNbFleches()-1);
             
             if (RandAtt <= perso.getPageAtt()){
                 System.out.println(opps.getNom() +" subit " + perso.getDegAtt() + " dmg");
