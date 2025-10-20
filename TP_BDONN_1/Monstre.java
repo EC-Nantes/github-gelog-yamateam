@@ -152,9 +152,40 @@ public class Monstre extends Creature {
 
 
     @Override
-    public Integer saveToDatabase(Connection connection) {
+    public Integer saveToDatabase(Connection connection, int idSauvegarde) {
         Integer id = -1;
+        String query;
 
+        try {
+            query = "INSERT INTO element_jeu(pos_x,pos_y,type_element,id_sauvegarde) VALUES (?,?,?,?)";
+            PreparedStatement stmt1 = connection.prepareStatement(query);
+            stmt1.setInt(1, this.getPosition().getX());
+            stmt1.setInt(2, this.getPosition().getY());
+            stmt1.setString(3, this.getRace());
+            stmt1.setInt(4, idSauvegarde);
+            stmt1.executeUpdate();
+            stmt1.close();
+            
+            
+            query = "SELECT max(id_element) FROM element_jeu WHERE id_sauvegarde=?";
+            PreparedStatement stmt2 = connection.prepareStatement(query);
+            stmt2.setInt(1, idSauvegarde);
+            ResultSet res1 = stmt2.executeQuery();
+            res1.next();
+            int idElement = res1.getInt("id_element");
+            res1.close();
+            stmt2.close();
+            
+            query = "INSERT INTO posseder(id_element,nom_caracteristique,valeur_float) VALUES (?,?,?)";
+            PreparedStatement stmt3 = connection.prepareStatement(query);
+            stmt3.setInt(1, idElement);
+            stmt3.setString(2, "PVie");
+            stmt3.setFloat(3, this.getPVie());
+            stmt3.executeUpdate();
+            stmt3.close();
+            
+        } catch (SQLException ex) {
+        }
         return id;
     }
 
