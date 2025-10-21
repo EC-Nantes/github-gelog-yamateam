@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.io.*;
-import org.centrale.objet.WoE.ListStringTokenizer;
 
 
 /*
@@ -12,7 +11,7 @@ import org.centrale.objet.WoE.ListStringTokenizer;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-/**
+/**Implémente le monde avec ses paramètres, ses éléments de jeu sur une grille n*n et les différentes fonctions qui proposent des choix au joueur.
  *
  * @author yaelv, mathys
  */
@@ -21,28 +20,41 @@ import org.centrale.objet.WoE.ListStringTokenizer;
 public class World {
 
     /**
-     * Taille du monde
+     * 
      */
     private int taille;        
     /**
-     * Grille du jeu
+     * 
      */
     private ElementDeJeu monde[][];
     /**
-     * Liste des personnages du jeu
+     * 
      */
     private ArrayList<Creature> liste_perso;
     
     private Joueur joueur;
+
+    /**
+     *
+     */
     public int compteurTour;
     
+    /**
+     *
+     */
     private double pAge_perso_max;
+    /**
+     * 
+     */
     private double pAge_monstre_max;
+    /**
+     * 
+     */
     private double pAge_objet_max;
     
     /**
      * 
-     * Crée un monde de taille n*n
+     * Crée un monde de taille n*n.
      * @param n
      */    
     public World(int n) {
@@ -59,12 +71,15 @@ public class World {
     
     /**
      * 
-     * Crée un monde de taille 100*100
+     * Crée un monde de taille 100*100 par défaut.
      */    
     public World() {
         this(100);
     }
     
+    /**Permet au joueur de choisir de créer une nouvelle partie ou bien d'en charger une depuis un fichier texte dans le dossier de saves.
+     *
+     */
     public void choixMonde(){
         System.out.println("------ Création du monde ------");
         
@@ -124,6 +139,10 @@ public class World {
         }
     }
     
+    /**Permet au joueur de choisir le nom (xyz.txt) de sa sauvegarde. 
+     *
+     * @return nom sauvegarde
+     */
     public String choixNomSauvegarde(){
         Scanner sc = new Scanner(System.in);
         boolean a_choisi_action = false;
@@ -196,6 +215,10 @@ public class World {
         return nom_save;
     }
     
+    /**Permet au joueur de sauvegarder sa partie dans un fichier texte dans le dossier de saves.
+     *
+     * @param nom
+     */
     public void sauvegardePartie(String nom){
         BufferedWriter fichier = null;
         try{
@@ -205,8 +228,8 @@ public class World {
             fichier.newLine();
             fichier.write("CompteurTour|"+compteurTour);
             fichier.newLine();
-            for(ElementDeJeu[] ligne_monde : monde){
-                for(ElementDeJeu e : ligne_monde){
+            for(ElementDeJeu[] ligne_monde : monde){//parcours lignes
+                for(ElementDeJeu e : ligne_monde){//parcours colonnes
                     
                     if(e == null || e == joueur.getPerso() ){ //case vide ou perso (pas envie de le stocker comme une créature lambda)
                         continue;
@@ -272,9 +295,11 @@ public class World {
                 case "Archer":
                     fichier.write("Joueur|" + joueur.getPerso().getClass().getSimpleName() + "|" + joueur.getPerso().getNom() + "|" + joueur.getPerso().getPtVie() + "|" + joueur.getPerso().getDegAtt() + "|" +  joueur.getPerso().getPtPar() + "|" +joueur.getPerso().getPageAtt() + "|" +joueur.getPerso().getPagePar() + "|" +joueur.getPerso().getDistAttMax() + "|" +joueur.getPerso().getPos().getX() + "|" +joueur.getPerso().getPos().getY() + "|" + ((Archer)joueur.getPerso()).getNbFleches());
                     fichier.newLine();
+                    break;
                 case "Guerrier":
                     fichier.write("Joueur|" + joueur.getPerso().getClass().getSimpleName() + "|" + joueur.getPerso().getNom() + "|" + joueur.getPerso().getPtVie() + "|" + joueur.getPerso().getDegAtt() + "|" +  joueur.getPerso().getPtPar() + "|" +joueur.getPerso().getPageAtt() + "|" +joueur.getPerso().getPagePar() + "|" +joueur.getPerso().getDistAttMax() + "|" +joueur.getPerso().getPos().getX() + "|" +joueur.getPerso().getPos().getY());
                     fichier.newLine();
+                    break;
             }
             
             
@@ -347,8 +372,10 @@ public class World {
     
     }
 
-       
-    
+    /**Permet au joueur de charger une partie en lisant le fichier .txt et en créant le monde depuis ce dernier.
+     *
+     * @param nom
+     */
     public void chargementPartie(String nom){
         
         ListStringTokenizer tokenizer = new ListStringTokenizer(); 
@@ -366,7 +393,7 @@ public class World {
                         this.taille = Integer.parseInt(mots.get(1));
                         this.monde = new ElementDeJeu[taille][taille];
                         break;
-                    case "Compteurtour":
+                    case "CompteurTour":
                         compteurTour = Integer.parseInt(mots.get(1));
                         break;
                     case "Guerrier":
@@ -419,11 +446,11 @@ public class World {
                     case "Joueur":
                         switch(mots.get(1)){
                             case "Guerrier":
-                                joueur.chargerGuerrier(mots.get(2), Integer.parseInt(mots.get(3)), Integer.parseInt(mots.get(4)),Integer.parseInt(mots.get(5)),Integer.parseInt(mots.get(6)),Integer.parseInt(mots.get(7)),Integer.parseInt(mots.get(8)), new Point2D(Integer.parseInt(mots.get(9)),Integer.parseInt(mots.get(10))) );
+                                joueur.setPerso(new Guerrier(mots.get(2), Integer.parseInt(mots.get(3)), Integer.parseInt(mots.get(4)),Integer.parseInt(mots.get(5)),Integer.parseInt(mots.get(6)),Integer.parseInt(mots.get(7)),Integer.parseInt(mots.get(8)), new Point2D(Integer.parseInt(mots.get(9)),Integer.parseInt(mots.get(10)))));
                                 break;
 
                             case "Archer":
-                                joueur.chargerArcher(mots.get(2), Integer.parseInt(mots.get(3)), Integer.parseInt(mots.get(4)),Integer.parseInt(mots.get(5)),Integer.parseInt(mots.get(6)),Integer.parseInt(mots.get(7)),Integer.parseInt(mots.get(8)), new Point2D(Integer.parseInt(mots.get(9)),Integer.parseInt(mots.get(10))), Integer.parseInt(mots.get(11)) );
+                                joueur.setPerso(new Archer(mots.get(2), Integer.parseInt(mots.get(3)), Integer.parseInt(mots.get(4)),Integer.parseInt(mots.get(5)),Integer.parseInt(mots.get(6)),Integer.parseInt(mots.get(7)),Integer.parseInt(mots.get(8)), new Point2D(Integer.parseInt(mots.get(9)),Integer.parseInt(mots.get(10))), Integer.parseInt(mots.get(11))));
                                 break;
                             default:
                                 break;
@@ -487,12 +514,19 @@ public class World {
         
     }    
     
-
+    /**
+     *
+     * @return liste_perso
+     */
     public ArrayList<Creature> getListe_perso() {
         return liste_perso;
     }
      
-    
+    /**Ajoute (un nombre aléatoire selon pAge pour respecter une proportion) un type d'element de jeu au monde en générant des positions aléatoires et en choisissant un sous-type aléatoirement.
+     *
+     * @param pAge          Le pourcentage d'élément dans le monde est entre pAge et pAge/2
+     * @param liste_type    Contient toutes les sous-classes de l'élément 
+     */
     private void ajouterElement(double pAge, ArrayList<ElementDeJeu> liste_type){
         Random aleaInt = new Random();
         
@@ -509,9 +543,9 @@ public class World {
                 y = aleaInt.nextInt(taille);
             }
             
-            
+            //choisis le type de l'élément
             ElementDeJeu type = liste_type.get(aleaInt.nextInt(liste_type.size()));
-            ElementDeJeu new_element = type.copie();
+            ElementDeJeu new_element = type.copie(); //copie indépendante
             new_element.setPos(new Point2D(x,y));
             monde[x][y] = new_element;
             
@@ -522,15 +556,12 @@ public class World {
         }
     }
     
-/**
- * 
- * 
- * 
- * 
- */        
+    /**Génère le monde soit en le chargeant soit en générant tous les éléments aléatoirement puis lance un tourDeJeu.
+     * 
+     */        
     public void creerMondeAlea(){
         choixMonde();
-        if(joueur.getPerso() == null){ //si le monde n'est pas déjà créer
+        if(joueur.getPerso() == null){ //si le monde n'est pas déjà créer et qu'il n'a pas été chargé
             creationJoueur();
             this.ajouterElement(pAge_perso_max, new ArrayList<>(List.of(new Guerrier(), new Archer(), new Paysan())));
             this.ajouterElement(pAge_monstre_max, new ArrayList<>(List.of(new Loup(), new Lapin())));
@@ -540,7 +571,11 @@ public class World {
         tourDeJeu();
     }
     
-    
+    /**Effectue un tour de jeu où le joueur peut choisir entre :
+     * plusieurs actions définitive (saute de tour après) comme se déplacer et combattre
+     * ou bien une action alternative (reste dans le tour) comme regarder son inventaire et ses stats ou bien sauvegarder/quitter la partie.
+     *
+     */
     public void tourDeJeu(){
         System.out.println("------ Tour de Jeu n°" + compteurTour + " ------");
         joueur.afficherGrille(monde);
@@ -645,10 +680,10 @@ public class World {
         
     }
     
-    public void afficheWorld(){
-        
-    }
     
+    /**Permet au joueur de choisir le nom et la classe de son personnage.
+     *
+     */
     public void creationJoueur(){
         System.out.println("------------------- Légende -------------------");
         System.out.println("- le joueur (you) sera affiché sur une carte 3x3 des cases adjacentes à ce dernier");
@@ -688,18 +723,34 @@ public class World {
         monde[p.getX()][p.getY()] = joueur.getPerso();
     }
 
+    /**
+     *
+     * @return compteurTour
+     */
     public int getCompteurTour() {
         return compteurTour;
     }
 
+    /**
+     *
+     * @param compteurTour
+     */
     public void setCompteurTour(int compteurTour) {
         this.compteurTour = compteurTour;
     }
 
+    /**
+     *
+     * @return joueur
+     */
     public Joueur getJoueur() {
         return joueur;
     }
 
+    /**
+     *
+     * @return grille du monde
+     */
     public ElementDeJeu[][] getMonde() {
         return monde;
     }
