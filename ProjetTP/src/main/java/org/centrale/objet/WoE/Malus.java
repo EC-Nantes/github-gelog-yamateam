@@ -6,9 +6,13 @@ package org.centrale.objet.WoE;
 
 /**
  *
- * @author ian-frederickabondo
+ * @author yaelv, mathys
  */
 public class Malus extends Nourriture {
+
+    /**Constructeur par défaut.
+     *
+     */
     public Malus(){
         this.setNom("feuille de choux");
         this.setType("malus"); 
@@ -17,14 +21,33 @@ public class Malus extends Nourriture {
         this.setCaractéristique("dA");
         this.setPos(new Point2D(0,0)); 
     }
+
+    /**Constructeur avec paramètres.
+     *
+     * @param n
+     * @param t
+     * @param e
+     * @param nb
+     * @param c
+     * @param p
+     */
     public Malus(String n, String t, int e, int nb, String c, Point2D p){
         super(n,t,e,nb,c,p);
     }
     
+    /**Constructeur de copie
+     *
+     * @param b
+     */
     public Malus(Malus b){
         this(b.getNom(), b.getType(), b.getEffet(), b.getNb_tours(), b.getCaracteristique(), b.getPos());
     }
     
+     /**Applique l'effet de l'objet au perso
+     * 
+     * @param perso
+     * @param world 
+     */
     @Override
     public void utiliser(Personnage perso, World world){
         switch(this.getCaracteristique()){
@@ -56,6 +79,10 @@ public class Malus extends Nourriture {
         System.out.println("Le bonus " + this.getNom() + " a été appliqué à " + perso.getNom() + " pour " + this.getTourExpiration() + " tours");
     }
     
+    /**Retire l'effet de l'objet au perso
+     * 
+     * @param perso
+     */
     @Override
     public void retirer(Personnage perso){
         switch(this.getCaracteristique()){
@@ -80,9 +107,10 @@ public class Malus extends Nourriture {
         }
     }
     
-    /** Crée une copie indépendante de l'epee
-    * @return une copie de l'epee
-    */
+    /**
+     * Fais une copie indépendante de l'objet
+     * @return utilisable_copie
+     */
     @Override
     public Malus copie(){
         return new Malus(this);
