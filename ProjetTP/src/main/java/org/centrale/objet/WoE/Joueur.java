@@ -14,9 +14,17 @@ import java.util.ArrayList;
  * @author yaelv, mathys
  */
 public class Joueur {
-    
+    /**
+     *
+     */
     private Personnage perso;
+    /**
+     *
+     */
     private ArrayList<Utilisable> inventaire = new ArrayList<>();
+    /**
+     *
+     */
     private ArrayList<Utilisable> effets = new ArrayList<>();
 
     /**
@@ -35,7 +43,7 @@ public class Joueur {
         this.perso = perso;
     }
     
-    /**Permet au joueur de choisir son nom et le type de son perso (Guerrier/archer).
+    /**Permet au joueur de créer son perso après avoir au préalable choisi son nom et son type (Guerrier/archer).
      *
      * @param nom
      * @param type
@@ -304,7 +312,7 @@ public class Joueur {
         System.out.println();
 
         // Parcours des lignes autour du joueur
-        for (int dx = -1; dx <= 1; dx++) {
+        for (int dx = -3; dx <= 3; dx++) {
             int x = xJ + dx;
             // indice de la ligne
             System.out.print((x >= 0 && x < nb_lignes ? x : ".") + " | ");
