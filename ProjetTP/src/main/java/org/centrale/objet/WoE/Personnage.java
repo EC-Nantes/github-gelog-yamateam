@@ -1,9 +1,9 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
 package org.centrale.objet.WoE;
-import java.util.Random;
 
 /**
  * Représente un personnage du jeu World of ECN
@@ -26,8 +26,8 @@ public abstract class Personnage extends Creature{
      * @param pV       Points de vie
      * @param dA       Dégâts d'attaque
      * @param pPar     Points de parade
-     * @param paAtt    Pourcentage d'attaque
-     * @param paPar    Pourcentage de parade
+     * @param paAtt    Pourcentage de réussite d'attaque
+     * @param paPar    Pourcentage de réussite de parade
      * @param dMax     Distance maximale d’attaque
      * @param p        Position initiale
      */
