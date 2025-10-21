@@ -7,7 +7,7 @@ package org.centrale.objet.WoE;
 import java.util.Random;
 
 /**
- *
+ * Classe abstraite représentant les éléments de jeu vivants, qui peuvent donc se déplacer
  * @author yaelv
  */
 public abstract class Creature extends ElementDeJeu implements Deplacable{
@@ -36,8 +36,8 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
      * @param pV       Points de vie
      * @param dA       Dégâts d'attaque
      * @param pPar     Points de parade
-     * @param paAtt    Pourcentage d'attaque
-     * @param paPar    Pourcentage de parade
+     * @param paAtt    Pourcentage de réussite d'attaque
+     * @param paPar    Pourcentage de réussite de parade
      * @param dMax     Distance maximale d’attaque
      * @param p        Position initiale
      */
@@ -141,7 +141,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
 
     /**
      *
-     * @param ptVie
+     * @param ptVie int
      */
     public void setPtVie(int ptVie) {
         this.ptVie = ptVie;
@@ -149,7 +149,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
 
     /**
      *
-     * @param degAtt
+     * @param degAtt int
      */
     public void setDegAtt(int degAtt) {
         this.degAtt = degAtt;
@@ -157,7 +157,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
 
     /**
      *
-     * @param ptPar
+     * @param ptPar int
      */
     public void setPtPar(int ptPar) {
         this.ptPar = ptPar;
@@ -165,7 +165,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
 
     /**
      *
-     * @param pageAtt
+     * @param pageAtt int
      */
     public void setPageAtt(int pageAtt) {
         this.pageAtt = pageAtt;
@@ -173,7 +173,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
 
     /**
      *
-     * @param pagePar
+     * @param pagePar int
      */
     public void setPagePar(int pagePar) {
         this.pagePar = pagePar;
@@ -181,7 +181,7 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
 
     /**
      *
-     * @param distAttMax
+     * @param distAttMax int
      */
     public void setDistAttMax(int distAttMax) {
         this.distAttMax = distAttMax;
@@ -203,9 +203,8 @@ public abstract class Creature extends ElementDeJeu implements Deplacable{
     }
     
      /**
-     * @param deg Dégat que la créature doit subir
-     * 
      * Fait subir les dégats et affiche si la créature est morte ou pas (PtVie <= 0)
+     * @param deg Dégat que la créature doit subir
      */
     public void subirDegat(int deg){
         this.ptVie -= deg;
