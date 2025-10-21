@@ -1,10 +1,11 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 package org.centrale.objet.WoE;
 
 /**
- *
+ * Classe représentant les positions
  * @author dytri
  */
 public class Point2D {
@@ -16,9 +17,9 @@ public class Point2D {
     private int y;
 
     /**
-     *
-     * @param x
-     * @param y
+     * Constructeur principal
+     * @param x int
+     * @param y int
      */
     public Point2D(int x, int y) {
         /**
@@ -31,7 +32,7 @@ public class Point2D {
     }
     
     /**
-     *
+     * Constructeur de copie
      * @param p
      */
     public Point2D(Point2D p)
@@ -41,7 +42,7 @@ public class Point2D {
     }
     
     /**
-     *
+     * Constructeur par défaut
      */
     public Point2D() {
         /**
@@ -86,7 +87,7 @@ public class Point2D {
     }
 
     /**
-     *
+     * 
      * @param x
      * @param y
      */
@@ -96,7 +97,7 @@ public class Point2D {
     }
     
     /**
-     *
+     * Affiche la position de l'objet
      */
     public void affiche(){
         // Possibilité d'afficher le nom du point ?
@@ -104,13 +105,17 @@ public class Point2D {
         System.out.println("[" + this.x + ";" + this.y + "]");
      }
 
+    /**
+     * 
+     * @return String décrivant le Point2D
+     */
     @Override
     public String toString(){
         return("[" + this.x + ";" + this.y + "]");
     }
     
     /**
-     *
+     * Translate la position de (dx,dy)
      * @param dx
      * @param dy
      */
@@ -120,7 +125,7 @@ public class Point2D {
     }
     
     /**
-     * Donne la distance entre deux points du plan
+     * Donne la distance entre deux points du plan : l'objet (p2) et un point passé en argument
      * 
      * @param p1    Point n°1
      * @return distance entre p1 et p2 (float)
