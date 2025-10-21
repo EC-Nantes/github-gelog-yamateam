@@ -5,9 +5,12 @@
 package org.centrale.objet.WoE;
 
 /**
- *
+ * Interface indiquant les classes qui peuvent bouger
  * @author yaelv
  */
 public interface Deplacable {
+    /**
+     * deplace l'objet
+     */
     public void deplacer();
 }
