@@ -6,20 +6,43 @@ package org.centrale.objet.WoE;
 
 /**
  *
- * @author ian-frederickabondo
+ * @author yaelv, mathys
  */
 public class Bonus extends Nourriture{
+
+    /**Constructeur par défaut.
+     *
+     */
     public Bonus(){
         super();
     }
+
+    /**Constructeur avec paramètres.
+     *
+     * @param n
+     * @param t
+     * @param e
+     * @param nb
+     * @param c
+     * @param p
+     */
     public Bonus(String n, String t, int e, int nb, String c, Point2D p){
         super(n,t,e,nb,c,p);
     }
     
+    /**Constructeur de copie
+     *
+     * @param b
+     */
     public Bonus(Bonus b){
         this(b.getNom(), b.getType(), b.getEffet(), b.getNb_tours(), b.getCaracteristique(), b.getPos());
     }
     
+    /**Applique l'effet de l'objet au perso
+     * 
+     * @param perso
+     * @param world 
+     */
     @Override
     public void utiliser(Personnage perso, World world){
         switch(this.getCaracteristique()){
@@ -51,6 +74,11 @@ public class Bonus extends Nourriture{
         System.out.println("Le bonus " + this.getNom() + " a été appliqué à " + perso.getNom() + " pour " + this.getTourExpiration() + " tours");
     }
     
+    /**Retire l'effet de l'objet au perso
+     * 
+     * @param perso
+     */
+    @Override
     public void retirer(Personnage perso){
         switch(this.getCaracteristique()){
             case "pVie": //l'effet ptVie n'est pas retirable
@@ -74,9 +102,10 @@ public class Bonus extends Nourriture{
         }
     }
     
-    /** Crée une copie indépendante de l'epee
-    * @return une copie de l'epee
-    */
+    /**
+     * Fais une copie indépendante de l'objet
+     * @return utilisable_copie
+     */
     @Override
     public Bonus copie(){
         return new Bonus(this);
