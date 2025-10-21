@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -7,14 +8,14 @@ package org.centrale.objet.WoE;
 import java.util.Random;
 
 /**
- *
+ * Classe de personnage, peut combattre et est jouable 
  * @author yaelv
  */
 public class Guerrier extends Personnage implements Combattant{
     
     
     /**
-     *
+     * Constructeur principal
      * @param n
      * @param pV
      * @param dA
@@ -29,7 +30,7 @@ public class Guerrier extends Personnage implements Combattant{
     }
     
     /**
-     *
+     * Constructeur de copie
      * @param guerr
      */
     public Guerrier(Guerrier guerr){
@@ -37,17 +38,22 @@ public class Guerrier extends Personnage implements Combattant{
     }
     
     /**
-     *
+     * Constructeur par défaut
      */
     public Guerrier(){
         this("Général DJOMBY",200,20,50,75,25,1,new Point2D(0,0));  
     }
     
+    /**
+     * Constructeur d'un guerrier en initialisant seulement son nom
+     * @param n
+     */
     public Guerrier(String n){
         this(n,200,20,50,75,25,1,new Point2D(0,0));  
     }
 
-    /** Crée une copie indépendante de la créature 
+    /** 
+     * Crée une copie indépendante de la créature 
      * @return un guerrier 
      */
     @Override
@@ -56,12 +62,11 @@ public class Guerrier extends Personnage implements Combattant{
     }
     
     /**
-     * @param c Créature à combattre
-     * 
      * Fait se combattre cet objet avec la créature rentrée en paramètre.
      * Deux styles de combat selon la distance entre les créatures concernées : 
      * - Au Corps à Corps (CaC) si elles sont adjacentes
      * - A distance si elles ne le sont pas et que la distance d'attaque de l'attaquant est suffisante
+     * @param c Créature à combattre
      */
     @Override
     public void combattre(Creature c){
