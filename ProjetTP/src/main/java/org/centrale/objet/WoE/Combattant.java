@@ -5,11 +5,13 @@
 package org.centrale.objet.WoE;
 
 /**
- *
+ * Interface indiquant les classes qui peuvent combattre
+ * 
  * @author yaelv
  */
 public interface Combattant {
     /**
+     * Fait ce combattre l'objet avec une créature passée en argument
      * 
      * @param c une créature
      */
