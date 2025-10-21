@@ -6,12 +6,17 @@ package org.centrale.objet.WoE;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-/**
+/** Permet de découper une ligne avec le signe '|' en liste de groupe de mots 
  *
- * @author dytri
+ * @author yaelv, Mathys
  */
 public class ListStringTokenizer {
     
+    /**Découpe la ligne en utilisant un StringTokenizer.
+     *
+     * @param ligne
+     * @return liste de groupe de mots qui étaient séparés par '|' dans la ligne
+     */
     public ArrayList<String> decoupe(String ligne){
         ArrayList<String> liste_mots = new ArrayList<>();
         String delimiteurs = "|";
