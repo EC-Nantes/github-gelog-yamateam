@@ -1,0 +1,2047 @@
+Taille|100
+CompteurTour|7
+Loup|Loup|100|10|2|60|40|1|0|2
+PotionSoin|Potion de Soin|30|0|4
+PotionSoin|Potion de Soin|30|0|6
+PotionSoin|Potion de Soin|30|0|8
+NuageToxique|1|2|5|4|0|11
+Lapin|Lapin|100|10|2|60|40|1|0|12
+Loup|Loup|100|10|2|60|40|1|0|14
+PotionSoin|Potion de Soin|30|0|24
+Loup|Loup|100|10|2|60|40|1|0|28
+Malus|feuille de choux|malus|2|3|dA|0|29
+Bonus|feuille d'épinard|bonus|2|3|pVie|0|33
+Paysan|Jean|100|50|50|75|25|3|0|35
+Guerrier|Général DJOMBY|200|20|50|75|25|1|0|37
+Lapin|Lapin|100|10|2|60|40|1|0|51
+Loup|Loup|100|10|2|60|40|1|0|58
+Loup|Loup|100|10|2|60|40|1|0|59
+Lapin|Lapin|100|10|2|60|40|1|0|68
+NuageToxique|1|2|5|4|0|93
+Loup|Loup|100|10|2|60|40|1|0|97
+Archer|Mohammed|100|50|50|75|25|5|1|2|12
+NuageToxique|1|2|5|4|1|8
+Loup|Loup|100|10|2|60|40|1|1|11
+Loup|Loup|100|10|2|60|40|1|1|28
+Lapin|Lapin|100|10|2|60|40|1|1|36
+NuageToxique|1|2|5|4|1|37
+Guerrier|Général DJOMBY|200|20|50|75|25|1|1|40
+Malus|feuille de choux|malus|2|3|dA|1|41
+Loup|Loup|100|10|2|60|40|1|1|46
+Malus|feuille de choux|malus|2|3|dA|1|51
+Guerrier|Général DJOMBY|200|20|50|75|25|1|1|54
+Guerrier|Général DJOMBY|200|20|50|75|25|1|1|65
+NuageToxique|1|2|5|4|1|66
+Lapin|Lapin|100|10|2|60|40|1|1|69
+Malus|feuille de choux|malus|2|3|dA|1|80
+PotionSoin|Potion de Soin|30|1|81
+NuageToxique|1|2|5|4|1|88
+PotionSoin|Potion de Soin|30|1|94
+Lapin|Lapin|100|10|2|60|40|1|1|97
+Loup|Loup|100|10|2|60|40|1|2|1
+Lapin|Lapin|100|10|2|60|40|1|2|2
+Bonus|feuille d'épinard|bonus|2|3|pVie|2|3
+Guerrier|Général DJOMBY|200|20|50|75|25|1|2|10
+Loup|Loup|100|10|2|60|40|1|2|12
+PotionSoin|Potion de Soin|30|2|19
+PotionSoin|Potion de Soin|30|2|28
+Malus|feuille de choux|malus|2|3|dA|2|30
+Epee|Epée|30|2|34
+Bonus|feuille d'épinard|bonus|2|3|pVie|2|40
+Epee|Epée|30|2|43
+Epee|Epée|30|2|53
+NuageToxique|1|2|5|4|2|61
+Malus|feuille de choux|malus|2|3|dA|2|62
+NuageToxique|1|2|5|4|2|63
+Paysan|Jean|100|50|50|75|25|3|2|73
+Lapin|Lapin|100|10|2|60|40|1|2|79
+Guerrier|Général DJOMBY|200|20|50|75|25|1|2|80
+Epee|Epée|30|2|82
+Epee|Epée|30|2|85
+Lapin|Lapin|100|10|2|60|40|1|2|88
+Malus|feuille de choux|malus|2|3|dA|2|94
+PotionSoin|Potion de Soin|30|2|98
+Paysan|Jean|100|50|50|75|25|3|3|3
+Loup|Loup|100|10|2|60|40|1|3|5
+NuageToxique|1|2|5|4|3|9
+Archer|Mohammed|100|50|50|75|25|5|3|11|12
+Lapin|Lapin|100|10|2|60|40|1|3|22
+PotionSoin|Potion de Soin|30|3|29
+Lapin|Lapin|100|10|2|60|40|1|3|31
+Guerrier|Général DJOMBY|200|20|50|75|25|1|3|32
+Bonus|feuille d'épinard|bonus|2|3|pVie|3|44
+Archer|Mohammed|100|50|50|75|25|5|3|52|12
+Lapin|Lapin|100|10|2|60|40|1|3|54
+Archer|Mohammed|100|50|50|75|25|5|3|71|12
+Lapin|Lapin|100|10|2|60|40|1|3|72
+Malus|feuille de choux|malus|2|3|dA|3|73
+NuageToxique|1|2|5|4|3|78
+Epee|Epée|30|3|87
+NuageToxique|1|2|5|4|3|88
+Loup|Loup|100|10|2|60|40|1|3|90
+NuageToxique|1|2|5|4|3|91
+Epee|Epée|30|3|93
+PotionSoin|Potion de Soin|30|3|94
+Bonus|feuille d'épinard|bonus|2|3|pVie|4|4
+Archer|Mohammed|100|50|50|75|25|5|4|6|12
+Loup|Loup|100|10|2|60|40|1|4|13
+Paysan|Jean|100|50|50|75|25|3|4|17
+Epee|Epée|30|4|20
+Lapin|Lapin|100|10|2|60|40|1|4|21
+Loup|Loup|100|10|2|60|40|1|4|25
+Lapin|Lapin|100|10|2|60|40|1|4|37
+Paysan|Jean|100|50|50|75|25|3|4|46
+Loup|Loup|100|10|2|60|40|1|4|49
+Bonus|feuille d'épinard|bonus|2|3|pVie|4|51
+Bonus|feuille d'épinard|bonus|2|3|pVie|4|52
+Guerrier|Général DJOMBY|200|20|50|75|25|1|4|55
+Guerrier|Général DJOMBY|200|20|50|75|25|1|4|57
+NuageToxique|1|2|5|4|4|58
+Archer|Mohammed|100|50|50|75|25|5|4|60|12
+PotionSoin|Potion de Soin|30|4|72
+Bonus|feuille d'épinard|bonus|2|3|pVie|4|75
+PotionSoin|Potion de Soin|30|4|76
+NuageToxique|1|2|5|4|4|77
+Epee|Epée|30|4|81
+Malus|feuille de choux|malus|2|3|dA|4|97
+Loup|Loup|100|10|2|60|40|1|5|3
+Bonus|feuille d'épinard|bonus|2|3|pVie|5|5
+Archer|Mohammed|100|50|50|75|25|5|5|13|12
+Loup|Loup|100|10|2|60|40|1|5|22
+Lapin|Lapin|100|10|2|60|40|1|5|25
+NuageToxique|1|2|5|4|5|36
+Lapin|Lapin|100|10|2|60|40|1|5|40
+PotionSoin|Potion de Soin|30|5|41
+Lapin|Lapin|100|10|2|60|40|1|5|46
+Loup|Loup|100|10|2|60|40|1|5|49
+Bonus|feuille d'épinard|bonus|2|3|pVie|5|50
+PotionSoin|Potion de Soin|30|5|63
+PotionSoin|Potion de Soin|30|5|75
+Epee|Epée|30|5|77
+Guerrier|Général DJOMBY|200|20|50|75|25|1|5|83
+Lapin|Lapin|100|10|2|60|40|1|5|85
+NuageToxique|1|2|5|4|5|86
+Loup|Loup|100|10|2|60|40|1|5|92
+Guerrier|Général DJOMBY|200|20|50|75|25|1|5|95
+Guerrier|Général DJOMBY|200|20|50|75|25|1|5|97
+Epee|Epée|30|5|98
+Loup|Loup|100|10|2|60|40|1|6|10
+Loup|Loup|100|10|2|60|40|1|6|12
+NuageToxique|1|2|5|4|6|13
+Loup|Loup|100|10|2|60|40|1|6|16
+Loup|Loup|100|10|2|60|40|1|6|20
+Epee|Epée|30|6|22
+PotionSoin|Potion de Soin|30|6|25
+Loup|Loup|100|10|2|60|40|1|6|29
+Bonus|feuille d'épinard|bonus|2|3|pVie|6|33
+NuageToxique|1|2|5|4|6|42
+Loup|Loup|100|10|2|60|40|1|6|46
+Malus|feuille de choux|malus|2|3|dA|6|48
+Archer|Mohammed|100|50|50|75|25|5|6|57|12
+Loup|Loup|100|10|2|60|40|1|6|65
+Malus|feuille de choux|malus|2|3|dA|6|66
+Paysan|Jean|100|50|50|75|25|3|6|68
+Epee|Epée|30|6|73
+Epee|Epée|30|6|82
+Guerrier|Général DJOMBY|200|20|50|75|25|1|6|83
+Archer|Mohammed|100|50|50|75|25|5|6|84|12
+Epee|Epée|30|6|85
+Malus|feuille de choux|malus|2|3|dA|6|89
+Epee|Epée|30|6|92
+Loup|Loup|100|10|2|60|40|1|6|95
+Archer|Mohammed|100|50|50|75|25|5|6|96|12
+Loup|Loup|100|10|2|60|40|1|7|5
+Loup|Loup|100|10|2|60|40|1|7|8
+Epee|Epée|30|7|21
+Malus|feuille de choux|malus|2|3|dA|7|24
+Epee|Epée|30|7|26
+Paysan|Jean|100|50|50|75|25|3|7|27
+Paysan|Jean|100|50|50|75|25|3|7|28
+Guerrier|Général DJOMBY|200|20|50|75|25|1|7|31
+Bonus|feuille d'épinard|bonus|2|3|pVie|7|33
+Epee|Epée|30|7|41
+Lapin|Lapin|100|10|2|60|40|1|7|50
+Paysan|Jean|100|50|50|75|25|3|7|51
+Lapin|Lapin|100|10|2|60|40|1|7|52
+Malus|feuille de choux|malus|2|3|dA|7|61
+Lapin|Lapin|100|10|2|60|40|1|7|62
+Loup|Loup|100|10|2|60|40|1|7|64
+Loup|Loup|100|10|2|60|40|1|7|73
+Paysan|Jean|100|50|50|75|25|3|7|82
+Guerrier|Général DJOMBY|200|20|50|75|25|1|7|90
+Archer|Mohammed|100|50|50|75|25|5|7|93|12
+Lapin|Lapin|100|10|2|60|40|1|7|96
+Archer|Mohammed|100|50|50|75|25|5|7|97|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|8|5
+Loup|Loup|100|10|2|60|40|1|8|12
+NuageToxique|1|2|5|4|8|30
+Guerrier|Général DJOMBY|200|20|50|75|25|1|8|35
+Loup|Loup|100|10|2|60|40|1|8|37
+NuageToxique|1|2|5|4|8|39
+Loup|Loup|100|10|2|60|40|1|8|42
+Loup|Loup|100|10|2|60|40|1|8|44
+Lapin|Lapin|100|10|2|60|40|1|8|57
+Guerrier|Général DJOMBY|200|20|50|75|25|1|8|58
+PotionSoin|Potion de Soin|30|8|59
+Malus|feuille de choux|malus|2|3|dA|8|67
+NuageToxique|1|2|5|4|8|70
+Bonus|feuille d'épinard|bonus|2|3|pVie|8|74
+NuageToxique|1|2|5|4|8|75
+Lapin|Lapin|100|10|2|60|40|1|8|78
+Lapin|Lapin|100|10|2|60|40|1|8|90
+Bonus|feuille d'épinard|bonus|2|3|pVie|8|91
+Malus|feuille de choux|malus|2|3|dA|9|29
+Guerrier|Général DJOMBY|200|20|50|75|25|1|9|32
+Malus|feuille de choux|malus|2|3|dA|9|39
+Paysan|Jean|100|50|50|75|25|3|9|44
+Bonus|feuille d'épinard|bonus|2|3|pVie|9|46
+NuageToxique|1|2|5|4|9|48
+Paysan|Jean|100|50|50|75|25|3|9|56
+Guerrier|Général DJOMBY|200|20|50|75|25|1|9|58
+Lapin|Lapin|100|10|2|60|40|1|9|62
+Loup|Loup|100|10|2|60|40|1|9|68
+NuageToxique|1|2|5|4|9|69
+Paysan|Jean|100|50|50|75|25|3|9|71
+Loup|Loup|100|10|2|60|40|1|9|75
+Malus|feuille de choux|malus|2|3|dA|9|77
+Bonus|feuille d'épinard|bonus|2|3|pVie|9|78
+Loup|Loup|100|10|2|60|40|1|9|81
+Archer|Mohammed|100|50|50|75|25|5|9|82|12
+Loup|Loup|100|10|2|60|40|1|9|85
+Bonus|feuille d'épinard|bonus|2|3|pVie|9|88
+Archer|Mohammed|100|50|50|75|25|5|9|90|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|9|92
+Lapin|Lapin|100|10|2|60|40|1|10|1
+Malus|feuille de choux|malus|2|3|dA|10|30
+Malus|feuille de choux|malus|2|3|dA|10|36
+Epee|Epée|30|10|37
+Lapin|Lapin|100|10|2|60|40|1|10|47
+Lapin|Lapin|100|10|2|60|40|1|10|50
+NuageToxique|1|2|5|4|10|53
+Epee|Epée|30|10|54
+Loup|Loup|100|10|2|60|40|1|10|55
+NuageToxique|1|2|5|4|10|64
+Paysan|Jean|100|50|50|75|25|3|10|66
+Lapin|Lapin|100|10|2|60|40|1|10|67
+Paysan|Jean|100|50|50|75|25|3|10|69
+Guerrier|Général DJOMBY|200|20|50|75|25|1|10|72
+Archer|Mohammed|100|50|50|75|25|5|10|81|12
+PotionSoin|Potion de Soin|30|10|85
+Archer|Mohammed|100|50|50|75|25|5|10|87|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|10|90
+Archer|Mohammed|100|50|50|75|25|5|10|91|12
+Lapin|Lapin|100|10|2|60|40|1|10|93
+Loup|Loup|100|10|2|60|40|1|11|27
+Epee|Epée|30|11|30
+PotionSoin|Potion de Soin|30|11|33
+Loup|Loup|100|10|2|60|40|1|11|39
+Archer|Mohammed|100|50|50|75|25|5|11|41|12
+NuageToxique|1|2|5|4|11|42
+Loup|Loup|100|10|2|60|40|1|11|60
+Lapin|Lapin|100|10|2|60|40|1|11|65
+NuageToxique|1|2|5|4|11|67
+Archer|Mohammed|100|50|50|75|25|5|11|68|12
+Epee|Epée|30|11|83
+Loup|Loup|100|10|2|60|40|1|11|86
+Lapin|Lapin|100|10|2|60|40|1|11|87
+Bonus|feuille d'épinard|bonus|2|3|pVie|11|90
+Malus|feuille de choux|malus|2|3|dA|11|98
+Malus|feuille de choux|malus|2|3|dA|12|0
+Loup|Loup|100|10|2|60|40|1|12|3
+Epee|Epée|30|12|6
+Lapin|Lapin|100|10|2|60|40|1|12|18
+Loup|Loup|100|10|2|60|40|1|12|19
+Loup|Loup|100|10|2|60|40|1|12|20
+Bonus|feuille d'épinard|bonus|2|3|pVie|12|27
+Malus|feuille de choux|malus|2|3|dA|12|38
+Paysan|Jean|100|50|50|75|25|3|12|46
+NuageToxique|1|2|5|4|12|48
+Guerrier|Général DJOMBY|200|20|50|75|25|1|12|51
+Loup|Loup|100|10|2|60|40|1|12|53
+Archer|Mohammed|100|50|50|75|25|5|12|61|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|12|62
+Archer|Mohammed|100|50|50|75|25|5|12|63|12
+Archer|Mohammed|100|50|50|75|25|5|12|65|12
+Loup|Loup|100|10|2|60|40|1|12|67
+Loup|Loup|100|10|2|60|40|1|12|75
+Loup|Loup|100|10|2|60|40|1|12|80
+Lapin|Lapin|100|10|2|60|40|1|12|82
+Loup|Loup|100|10|2|60|40|1|12|83
+Malus|feuille de choux|malus|2|3|dA|12|85
+Bonus|feuille d'épinard|bonus|2|3|pVie|12|86
+Paysan|Jean|100|50|50|75|25|3|12|97
+Bonus|feuille d'épinard|bonus|2|3|pVie|13|0
+Bonus|feuille d'épinard|bonus|2|3|pVie|13|7
+Lapin|Lapin|100|10|2|60|40|1|13|14
+Guerrier|Général DJOMBY|200|20|50|75|25|1|13|15
+Loup|Loup|100|10|2|60|40|1|13|16
+Archer|Mohammed|100|50|50|75|25|5|13|43|12
+NuageToxique|1|2|5|4|13|44
+PotionSoin|Potion de Soin|30|13|61
+Guerrier|Général DJOMBY|200|20|50|75|25|1|13|64
+PotionSoin|Potion de Soin|30|13|65
+NuageToxique|1|2|5|4|13|74
+Paysan|Jean|100|50|50|75|25|3|13|75
+Paysan|Jean|100|50|50|75|25|3|13|76
+Loup|Loup|100|10|2|60|40|1|13|80
+Loup|Loup|100|10|2|60|40|1|13|88
+Malus|feuille de choux|malus|2|3|dA|13|92
+Paysan|Jean|100|50|50|75|25|3|13|94
+Lapin|Lapin|100|10|2|60|40|1|13|97
+Loup|Loup|100|10|2|60|40|1|13|99
+Lapin|Lapin|100|10|2|60|40|1|14|1
+Loup|Loup|100|10|2|60|40|1|14|26
+Archer|Mohammed|100|50|50|75|25|5|14|27|12
+Malus|feuille de choux|malus|2|3|dA|14|28
+Malus|feuille de choux|malus|2|3|dA|14|31
+Loup|Loup|100|10|2|60|40|1|14|34
+Loup|Loup|100|10|2|60|40|1|14|35
+Paysan|Jean|100|50|50|75|25|3|14|43
+Bonus|feuille d'épinard|bonus|2|3|pVie|14|49
+Epee|Epée|30|14|52
+Paysan|Jean|100|50|50|75|25|3|14|57
+Bonus|feuille d'épinard|bonus|2|3|pVie|14|59
+Loup|Loup|100|10|2|60|40|1|14|65
+Epee|Epée|30|14|69
+Loup|Loup|100|10|2|60|40|1|14|72
+NuageToxique|1|2|5|4|14|74
+Lapin|Lapin|100|10|2|60|40|1|14|75
+Loup|Loup|100|10|2|60|40|1|14|76
+Epee|Epée|30|14|78
+PotionSoin|Potion de Soin|30|14|91
+Loup|Loup|100|10|2|60|40|1|15|1
+Loup|Loup|100|10|2|60|40|1|15|2
+Epee|Epée|30|15|7
+Loup|Loup|100|10|2|60|40|1|15|9
+PotionSoin|Potion de Soin|30|15|15
+Epee|Epée|30|15|20
+Paysan|Jean|100|50|50|75|25|3|15|23
+Bonus|feuille d'épinard|bonus|2|3|pVie|15|25
+Lapin|Lapin|100|10|2|60|40|1|15|29
+Malus|feuille de choux|malus|2|3|dA|15|30
+Paysan|Jean|100|50|50|75|25|3|15|31
+Lapin|Lapin|100|10|2|60|40|1|15|32
+Malus|feuille de choux|malus|2|3|dA|15|33
+Lapin|Lapin|100|10|2|60|40|1|15|34
+Bonus|feuille d'épinard|bonus|2|3|pVie|15|39
+Lapin|Lapin|100|10|2|60|40|1|15|42
+Bonus|feuille d'épinard|bonus|2|3|pVie|15|49
+Lapin|Lapin|100|10|2|60|40|1|15|51
+Malus|feuille de choux|malus|2|3|dA|15|60
+PotionSoin|Potion de Soin|30|15|64
+Lapin|Lapin|100|10|2|60|40|1|15|66
+Loup|Loup|100|10|2|60|40|1|15|68
+Epee|Epée|30|15|69
+Bonus|feuille d'épinard|bonus|2|3|pVie|15|74
+Bonus|feuille d'épinard|bonus|2|3|pVie|15|77
+Loup|Loup|100|10|2|60|40|1|15|82
+Paysan|Jean|100|50|50|75|25|3|15|87
+Epee|Epée|30|15|89
+Paysan|Jean|100|50|50|75|25|3|15|92
+PotionSoin|Potion de Soin|30|15|94
+Archer|Mohammed|100|50|50|75|25|5|15|98|12
+PotionSoin|Potion de Soin|30|16|1
+Archer|Mohammed|100|50|50|75|25|5|16|8|12
+Paysan|Jean|100|50|50|75|25|3|16|9
+Malus|feuille de choux|malus|2|3|dA|16|14
+PotionSoin|Potion de Soin|30|16|27
+Guerrier|Général DJOMBY|200|20|50|75|25|1|16|28
+PotionSoin|Potion de Soin|30|16|29
+Epee|Epée|30|16|33
+Lapin|Lapin|100|10|2|60|40|1|16|57
+Bonus|feuille d'épinard|bonus|2|3|pVie|16|59
+PotionSoin|Potion de Soin|30|16|67
+Epee|Epée|30|16|71
+Epee|Epée|30|16|74
+PotionSoin|Potion de Soin|30|16|76
+Loup|Loup|100|10|2|60|40|1|16|89
+Epee|Epée|30|16|90
+Epee|Epée|30|16|91
+Malus|feuille de choux|malus|2|3|dA|17|8
+Lapin|Lapin|100|10|2|60|40|1|17|18
+Paysan|Jean|100|50|50|75|25|3|17|19
+Bonus|feuille d'épinard|bonus|2|3|pVie|17|23
+Loup|Loup|100|10|2|60|40|1|17|24
+Epee|Epée|30|17|27
+Loup|Loup|100|10|2|60|40|1|17|28
+NuageToxique|1|2|5|4|17|34
+NuageToxique|1|2|5|4|17|37
+Archer|Mohammed|100|50|50|75|25|5|17|43|12
+Lapin|Lapin|100|10|2|60|40|1|17|57
+Loup|Loup|100|10|2|60|40|1|17|62
+Lapin|Lapin|100|10|2|60|40|1|17|64
+Paysan|Jean|100|50|50|75|25|3|17|66
+Epee|Epée|30|17|70
+PotionSoin|Potion de Soin|30|17|75
+Bonus|feuille d'épinard|bonus|2|3|pVie|17|89
+Lapin|Lapin|100|10|2|60|40|1|17|91
+Lapin|Lapin|100|10|2|60|40|1|17|95
+Epee|Epée|30|18|2
+NuageToxique|1|2|5|4|18|3
+Epee|Epée|30|18|8
+Epee|Epée|30|18|9
+PotionSoin|Potion de Soin|30|18|17
+Lapin|Lapin|100|10|2|60|40|1|18|25
+Archer|Mohammed|100|50|50|75|25|5|18|26|12
+NuageToxique|1|2|5|4|18|32
+Loup|Loup|100|10|2|60|40|1|18|35
+Paysan|Jean|100|50|50|75|25|3|18|39
+Bonus|feuille d'épinard|bonus|2|3|pVie|18|41
+Archer|Mohammed|100|50|50|75|25|5|18|46|12
+Lapin|Lapin|100|10|2|60|40|1|18|47
+Loup|Loup|100|10|2|60|40|1|18|58
+Lapin|Lapin|100|10|2|60|40|1|18|62
+Lapin|Lapin|100|10|2|60|40|1|18|66
+Bonus|feuille d'épinard|bonus|2|3|pVie|18|71
+Malus|feuille de choux|malus|2|3|dA|18|79
+Epee|Epée|30|18|83
+Guerrier|Général DJOMBY|200|20|50|75|25|1|18|84
+Epee|Epée|30|18|86
+NuageToxique|1|2|5|4|18|91
+Guerrier|Général DJOMBY|200|20|50|75|25|1|18|97
+PotionSoin|Potion de Soin|30|19|9
+Bonus|feuille d'épinard|bonus|2|3|pVie|19|11
+NuageToxique|1|2|5|4|19|14
+Malus|feuille de choux|malus|2|3|dA|19|17
+Lapin|Lapin|100|10|2|60|40|1|19|18
+Lapin|Lapin|100|10|2|60|40|1|19|20
+Loup|Loup|100|10|2|60|40|1|19|22
+Loup|Loup|100|10|2|60|40|1|19|24
+Malus|feuille de choux|malus|2|3|dA|19|26
+Bonus|feuille d'épinard|bonus|2|3|pVie|19|28
+Archer|Mohammed|100|50|50|75|25|5|19|29|12
+Loup|Loup|100|10|2|60|40|1|19|30
+Guerrier|Général DJOMBY|200|20|50|75|25|1|19|31
+Bonus|feuille d'épinard|bonus|2|3|pVie|19|37
+Guerrier|Général DJOMBY|200|20|50|75|25|1|19|40
+Lapin|Lapin|100|10|2|60|40|1|19|49
+Bonus|feuille d'épinard|bonus|2|3|pVie|19|56
+NuageToxique|1|2|5|4|19|57
+Lapin|Lapin|100|10|2|60|40|1|19|60
+Epee|Epée|30|19|65
+Paysan|Jean|100|50|50|75|25|3|19|66
+Archer|Mohammed|100|50|50|75|25|5|19|75|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|19|79
+Lapin|Lapin|100|10|2|60|40|1|19|80
+Archer|Mohammed|100|50|50|75|25|5|19|82|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|19|84
+Loup|Loup|100|10|2|60|40|1|19|95
+Lapin|Lapin|100|10|2|60|40|1|20|8
+Paysan|Jean|100|50|50|75|25|3|20|17
+Loup|Loup|100|10|2|60|40|1|20|18
+Epee|Epée|30|20|29
+Lapin|Lapin|100|10|2|60|40|1|20|32
+Archer|Mohammed|100|50|50|75|25|5|20|35|12
+NuageToxique|1|2|5|4|20|38
+Epee|Epée|30|20|49
+Archer|Mohammed|100|50|50|75|25|5|20|55|12
+Archer|Mohammed|100|50|50|75|25|5|20|60|12
+Paysan|Jean|100|50|50|75|25|3|20|63
+PotionSoin|Potion de Soin|30|20|64
+Bonus|feuille d'épinard|bonus|2|3|pVie|20|70
+Loup|Loup|100|10|2|60|40|1|20|79
+PotionSoin|Potion de Soin|30|20|80
+Guerrier|Général DJOMBY|200|20|50|75|25|1|20|84
+Malus|feuille de choux|malus|2|3|dA|20|88
+NuageToxique|1|2|5|4|20|90
+Loup|Loup|100|10|2|60|40|1|20|96
+Archer|Mohammed|100|50|50|75|25|5|20|99|12
+NuageToxique|1|2|5|4|21|0
+Lapin|Lapin|100|10|2|60|40|1|21|5
+Loup|Loup|100|10|2|60|40|1|21|8
+Guerrier|Général DJOMBY|200|20|50|75|25|1|21|15
+NuageToxique|1|2|5|4|21|25
+Lapin|Lapin|100|10|2|60|40|1|21|29
+Archer|Mohammed|100|50|50|75|25|5|21|35|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|21|37
+Loup|Loup|100|10|2|60|40|1|21|40
+Loup|Loup|100|10|2|60|40|1|21|42
+Epee|Epée|30|21|48
+Lapin|Lapin|100|10|2|60|40|1|21|50
+Lapin|Lapin|100|10|2|60|40|1|21|61
+Archer|Mohammed|100|50|50|75|25|5|21|62|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|21|66
+Loup|Loup|100|10|2|60|40|1|21|75
+PotionSoin|Potion de Soin|30|21|76
+Loup|Loup|100|10|2|60|40|1|21|77
+Loup|Loup|100|10|2|60|40|1|21|89
+Epee|Epée|30|21|93
+Malus|feuille de choux|malus|2|3|dA|21|98
+Loup|Loup|100|10|2|60|40|1|22|6
+Epee|Epée|30|22|10
+NuageToxique|1|2|5|4|22|21
+NuageToxique|1|2|5|4|22|24
+Epee|Epée|30|22|27
+Lapin|Lapin|100|10|2|60|40|1|22|30
+Bonus|feuille d'épinard|bonus|2|3|pVie|22|34
+Epee|Epée|30|22|41
+PotionSoin|Potion de Soin|30|22|44
+NuageToxique|1|2|5|4|22|45
+Epee|Epée|30|22|49
+PotionSoin|Potion de Soin|30|22|60
+Epee|Epée|30|22|61
+Archer|Mohammed|100|50|50|75|25|5|22|63|12
+NuageToxique|1|2|5|4|22|70
+Loup|Loup|100|10|2|60|40|1|22|84
+Bonus|feuille d'épinard|bonus|2|3|pVie|22|94
+Archer|Mohammed|100|50|50|75|25|5|23|1|12
+Paysan|Jean|100|50|50|75|25|3|23|5
+Epee|Epée|30|23|10
+Lapin|Lapin|100|10|2|60|40|1|23|11
+Epee|Epée|30|23|14
+Paysan|Jean|100|50|50|75|25|3|23|18
+Lapin|Lapin|100|10|2|60|40|1|23|28
+Guerrier|Général DJOMBY|200|20|50|75|25|1|23|30
+PotionSoin|Potion de Soin|30|23|31
+NuageToxique|1|2|5|4|23|33
+Lapin|Lapin|100|10|2|60|40|1|23|47
+Archer|Mohammed|100|50|50|75|25|5|23|48|12
+Lapin|Lapin|100|10|2|60|40|1|23|49
+Loup|Loup|100|10|2|60|40|1|23|53
+Loup|Loup|100|10|2|60|40|1|23|61
+Loup|Loup|100|10|2|60|40|1|23|63
+Bonus|feuille d'épinard|bonus|2|3|pVie|23|69
+Epee|Epée|30|23|76
+Loup|Loup|100|10|2|60|40|1|23|86
+Paysan|Jean|100|50|50|75|25|3|23|88
+Malus|feuille de choux|malus|2|3|dA|23|92
+NuageToxique|1|2|5|4|23|94
+Lapin|Lapin|100|10|2|60|40|1|24|0
+Archer|Mohammed|100|50|50|75|25|5|24|6|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|24|17
+Bonus|feuille d'épinard|bonus|2|3|pVie|24|20
+Archer|Mohammed|100|50|50|75|25|5|24|31|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|24|44
+Lapin|Lapin|100|10|2|60|40|1|24|47
+Malus|feuille de choux|malus|2|3|dA|24|51
+Loup|Loup|100|10|2|60|40|1|24|52
+NuageToxique|1|2|5|4|24|55
+PotionSoin|Potion de Soin|30|24|62
+Archer|Mohammed|100|50|50|75|25|5|24|63|12
+Archer|Mohammed|100|50|50|75|25|5|24|66|12
+Loup|Loup|100|10|2|60|40|1|24|68
+NuageToxique|1|2|5|4|24|73
+NuageToxique|1|2|5|4|24|76
+NuageToxique|1|2|5|4|24|80
+PotionSoin|Potion de Soin|30|24|83
+Malus|feuille de choux|malus|2|3|dA|24|88
+Loup|Loup|100|10|2|60|40|1|24|95
+Loup|Loup|100|10|2|60|40|1|24|98
+Lapin|Lapin|100|10|2|60|40|1|24|99
+Loup|Loup|100|10|2|60|40|1|25|5
+Paysan|Jean|100|50|50|75|25|3|25|6
+NuageToxique|1|2|5|4|25|11
+Paysan|Jean|100|50|50|75|25|3|25|12
+Lapin|Lapin|100|10|2|60|40|1|25|16
+NuageToxique|1|2|5|4|25|22
+Bonus|feuille d'épinard|bonus|2|3|pVie|25|24
+Loup|Loup|100|10|2|60|40|1|25|30
+NuageToxique|1|2|5|4|25|34
+PotionSoin|Potion de Soin|30|25|38
+Archer|Mohammed|100|50|50|75|25|5|25|40|12
+Epee|Epée|30|25|41
+Epee|Epée|30|25|42
+Epee|Epée|30|25|48
+Malus|feuille de choux|malus|2|3|dA|25|54
+Guerrier|Général DJOMBY|200|20|50|75|25|1|25|62
+Loup|Loup|100|10|2|60|40|1|25|66
+Malus|feuille de choux|malus|2|3|dA|25|67
+Archer|Mohammed|100|50|50|75|25|5|25|79|12
+Malus|feuille de choux|malus|2|3|dA|25|86
+Malus|feuille de choux|malus|2|3|dA|25|89
+Paysan|Jean|100|50|50|75|25|3|25|92
+PotionSoin|Potion de Soin|30|25|93
+Archer|Mohammed|100|50|50|75|25|5|26|2|12
+Lapin|Lapin|100|10|2|60|40|1|26|14
+Lapin|Lapin|100|10|2|60|40|1|26|15
+Paysan|Jean|100|50|50|75|25|3|26|19
+NuageToxique|1|2|5|4|26|23
+Archer|Mohammed|100|50|50|75|25|5|26|43|12
+NuageToxique|1|2|5|4|26|51
+Epee|Epée|30|26|57
+Lapin|Lapin|100|10|2|60|40|1|26|62
+PotionSoin|Potion de Soin|30|26|66
+PotionSoin|Potion de Soin|30|26|67
+Archer|Mohammed|100|50|50|75|25|5|26|76|12
+Epee|Epée|30|26|78
+Lapin|Lapin|100|10|2|60|40|1|26|84
+Lapin|Lapin|100|10|2|60|40|1|26|93
+Bonus|feuille d'épinard|bonus|2|3|pVie|26|97
+Bonus|feuille d'épinard|bonus|2|3|pVie|27|0
+Paysan|Jean|100|50|50|75|25|3|27|1
+Guerrier|Général DJOMBY|200|20|50|75|25|1|27|6
+Loup|Loup|100|10|2|60|40|1|27|8
+NuageToxique|1|2|5|4|27|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|27|13
+Loup|Loup|100|10|2|60|40|1|27|20
+Paysan|Jean|100|50|50|75|25|3|27|25
+Lapin|Lapin|100|10|2|60|40|1|27|26
+Loup|Loup|100|10|2|60|40|1|27|31
+NuageToxique|1|2|5|4|27|40
+Lapin|Lapin|100|10|2|60|40|1|27|51
+Paysan|Jean|100|50|50|75|25|3|27|52
+Lapin|Lapin|100|10|2|60|40|1|27|58
+Guerrier|Général DJOMBY|200|20|50|75|25|1|27|60
+Lapin|Lapin|100|10|2|60|40|1|27|62
+Loup|Loup|100|10|2|60|40|1|27|66
+Loup|Loup|100|10|2|60|40|1|27|67
+Paysan|Jean|100|50|50|75|25|3|27|79
+Archer|Mohammed|100|50|50|75|25|5|27|80|12
+Malus|feuille de choux|malus|2|3|dA|27|86
+Guerrier|Général DJOMBY|200|20|50|75|25|1|27|87
+Loup|Loup|100|10|2|60|40|1|27|90
+Loup|Loup|100|10|2|60|40|1|27|93
+Archer|Mohammed|100|50|50|75|25|5|28|1|12
+Loup|Loup|100|10|2|60|40|1|28|5
+NuageToxique|1|2|5|4|28|7
+Loup|Loup|100|10|2|60|40|1|28|21
+NuageToxique|1|2|5|4|28|25
+Guerrier|Général DJOMBY|200|20|50|75|25|1|28|26
+Paysan|Jean|100|50|50|75|25|3|28|27
+Paysan|Jean|100|50|50|75|25|3|28|35
+Loup|Loup|100|10|2|60|40|1|28|43
+Bonus|feuille d'épinard|bonus|2|3|pVie|28|50
+Malus|feuille de choux|malus|2|3|dA|28|53
+Loup|Loup|100|10|2|60|40|1|28|59
+Guerrier|Général DJOMBY|200|20|50|75|25|1|28|72
+NuageToxique|1|2|5|4|28|78
+Epee|Epée|30|28|81
+Guerrier|Général DJOMBY|200|20|50|75|25|1|28|82
+Lapin|Lapin|100|10|2|60|40|1|28|89
+Loup|Loup|100|10|2|60|40|1|28|93
+Bonus|feuille d'épinard|bonus|2|3|pVie|28|94
+Malus|feuille de choux|malus|2|3|dA|28|97
+NuageToxique|1|2|5|4|29|1
+Archer|Mohammed|100|50|50|75|25|5|29|15|12
+Loup|Loup|100|10|2|60|40|1|29|25
+Malus|feuille de choux|malus|2|3|dA|29|32
+Loup|Loup|100|10|2|60|40|1|29|38
+Epee|Epée|30|29|44
+Malus|feuille de choux|malus|2|3|dA|29|47
+PotionSoin|Potion de Soin|30|29|49
+Bonus|feuille d'épinard|bonus|2|3|pVie|29|50
+Lapin|Lapin|100|10|2|60|40|1|29|53
+Malus|feuille de choux|malus|2|3|dA|29|59
+Paysan|Jean|100|50|50|75|25|3|29|62
+Lapin|Lapin|100|10|2|60|40|1|29|67
+Archer|Mohammed|100|50|50|75|25|5|29|68|12
+NuageToxique|1|2|5|4|29|69
+Lapin|Lapin|100|10|2|60|40|1|29|70
+Loup|Loup|100|10|2|60|40|1|29|72
+NuageToxique|1|2|5|4|29|74
+Malus|feuille de choux|malus|2|3|dA|29|76
+Malus|feuille de choux|malus|2|3|dA|29|77
+Loup|Loup|100|10|2|60|40|1|29|78
+Paysan|Jean|100|50|50|75|25|3|29|80
+Loup|Loup|100|10|2|60|40|1|29|81
+PotionSoin|Potion de Soin|30|29|82
+Bonus|feuille d'épinard|bonus|2|3|pVie|29|88
+Loup|Loup|100|10|2|60|40|1|29|89
+PotionSoin|Potion de Soin|30|29|90
+PotionSoin|Potion de Soin|30|29|96
+Guerrier|Général DJOMBY|200|20|50|75|25|1|30|0
+Paysan|Jean|100|50|50|75|25|3|30|2
+Lapin|Lapin|100|10|2|60|40|1|30|4
+PotionSoin|Potion de Soin|30|30|7
+Lapin|Lapin|100|10|2|60|40|1|30|8
+Lapin|Lapin|100|10|2|60|40|1|30|16
+Loup|Loup|100|10|2|60|40|1|30|17
+Malus|feuille de choux|malus|2|3|dA|30|21
+NuageToxique|1|2|5|4|30|23
+Archer|Mohammed|100|50|50|75|25|5|30|24|12
+NuageToxique|1|2|5|4|30|29
+Lapin|Lapin|100|10|2|60|40|1|30|36
+Archer|Mohammed|100|50|50|75|25|5|30|52|12
+NuageToxique|1|2|5|4|30|60
+Paysan|Jean|100|50|50|75|25|3|30|62
+Bonus|feuille d'épinard|bonus|2|3|pVie|30|63
+Loup|Loup|100|10|2|60|40|1|30|73
+PotionSoin|Potion de Soin|30|30|79
+Paysan|Jean|100|50|50|75|25|3|30|81
+Lapin|Lapin|100|10|2|60|40|1|30|85
+Loup|Loup|100|10|2|60|40|1|30|91
+Bonus|feuille d'épinard|bonus|2|3|pVie|30|96
+Bonus|feuille d'épinard|bonus|2|3|pVie|31|5
+Loup|Loup|100|10|2|60|40|1|31|14
+Guerrier|Général DJOMBY|200|20|50|75|25|1|31|20
+Bonus|feuille d'épinard|bonus|2|3|pVie|31|41
+Guerrier|Général DJOMBY|200|20|50|75|25|1|31|45
+Epee|Epée|30|31|46
+Lapin|Lapin|100|10|2|60|40|1|31|62
+Lapin|Lapin|100|10|2|60|40|1|31|64
+Guerrier|Général DJOMBY|200|20|50|75|25|1|31|67
+Paysan|Jean|100|50|50|75|25|3|31|68
+PotionSoin|Potion de Soin|30|31|69
+Bonus|feuille d'épinard|bonus|2|3|pVie|31|79
+Paysan|Jean|100|50|50|75|25|3|31|80
+Guerrier|Général DJOMBY|200|20|50|75|25|1|31|81
+Archer|Mohammed|100|50|50|75|25|5|31|89|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|31|92
+Guerrier|Général DJOMBY|200|20|50|75|25|1|31|95
+PotionSoin|Potion de Soin|30|32|8
+Lapin|Lapin|100|10|2|60|40|1|32|17
+Archer|Mohammed|100|50|50|75|25|5|32|18|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|32|23
+Loup|Loup|100|10|2|60|40|1|32|24
+Paysan|Jean|100|50|50|75|25|3|32|36
+Epee|Epée|30|32|37
+Loup|Loup|100|10|2|60|40|1|32|39
+Archer|Mohammed|100|50|50|75|25|5|32|43|12
+Lapin|Lapin|100|10|2|60|40|1|32|47
+Archer|Mohammed|100|50|50|75|25|5|32|48|12
+Loup|Loup|100|10|2|60|40|1|32|53
+PotionSoin|Potion de Soin|30|32|54
+Loup|Loup|100|10|2|60|40|1|32|55
+Lapin|Lapin|100|10|2|60|40|1|32|63
+Lapin|Lapin|100|10|2|60|40|1|32|64
+Lapin|Lapin|100|10|2|60|40|1|32|70
+Bonus|feuille d'épinard|bonus|2|3|pVie|32|72
+Epee|Epée|30|32|79
+Epee|Epée|30|32|93
+Paysan|Jean|100|50|50|75|25|3|32|97
+PotionSoin|Potion de Soin|30|33|0
+Lapin|Lapin|100|10|2|60|40|1|33|4
+Bonus|feuille d'épinard|bonus|2|3|pVie|33|8
+Bonus|feuille d'épinard|bonus|2|3|pVie|33|19
+NuageToxique|1|2|5|4|33|22
+Loup|Loup|100|10|2|60|40|1|33|24
+Epee|Epée|30|33|34
+Malus|feuille de choux|malus|2|3|dA|33|49
+NuageToxique|1|2|5|4|33|57
+Epee|Epée|30|33|58
+Lapin|Lapin|100|10|2|60|40|1|33|64
+Lapin|Lapin|100|10|2|60|40|1|33|69
+Guerrier|Général DJOMBY|200|20|50|75|25|1|33|76
+Bonus|feuille d'épinard|bonus|2|3|pVie|33|87
+Guerrier|Général DJOMBY|200|20|50|75|25|1|33|93
+Guerrier|Général DJOMBY|200|20|50|75|25|1|33|97
+Loup|Loup|100|10|2|60|40|1|34|0
+Malus|feuille de choux|malus|2|3|dA|34|2
+Paysan|Jean|100|50|50|75|25|3|34|21
+Guerrier|Général DJOMBY|200|20|50|75|25|1|34|22
+Paysan|Jean|100|50|50|75|25|3|34|24
+Lapin|Lapin|100|10|2|60|40|1|34|48
+Malus|feuille de choux|malus|2|3|dA|34|53
+Malus|feuille de choux|malus|2|3|dA|34|59
+Epee|Epée|30|34|75
+Bonus|feuille d'épinard|bonus|2|3|pVie|34|77
+Epee|Epée|30|34|79
+Guerrier|Général DJOMBY|200|20|50|75|25|1|34|83
+Archer|Mohammed|100|50|50|75|25|5|34|96|12
+Paysan|Jean|100|50|50|75|25|3|35|1
+Paysan|Jean|100|50|50|75|25|3|35|6
+Guerrier|Général DJOMBY|200|20|50|75|25|1|35|9
+Loup|Loup|100|10|2|60|40|1|35|15
+PotionSoin|Potion de Soin|30|35|19
+Malus|feuille de choux|malus|2|3|dA|35|25
+PotionSoin|Potion de Soin|30|35|26
+Loup|Loup|100|10|2|60|40|1|35|31
+Lapin|Lapin|100|10|2|60|40|1|35|34
+Guerrier|Général DJOMBY|200|20|50|75|25|1|35|35
+NuageToxique|1|2|5|4|35|36
+Lapin|Lapin|100|10|2|60|40|1|35|37
+NuageToxique|1|2|5|4|35|44
+PotionSoin|Potion de Soin|30|35|45
+Lapin|Lapin|100|10|2|60|40|1|35|50
+PotionSoin|Potion de Soin|30|35|52
+Epee|Epée|30|35|53
+Loup|Loup|100|10|2|60|40|1|35|54
+Lapin|Lapin|100|10|2|60|40|1|35|56
+Epee|Epée|30|35|72
+Paysan|Jean|100|50|50|75|25|3|35|75
+PotionSoin|Potion de Soin|30|35|77
+PotionSoin|Potion de Soin|30|35|80
+NuageToxique|1|2|5|4|35|87
+Guerrier|Général DJOMBY|200|20|50|75|25|1|35|88
+Paysan|Jean|100|50|50|75|25|3|35|93
+Lapin|Lapin|100|10|2|60|40|1|35|95
+Lapin|Lapin|100|10|2|60|40|1|35|96
+Paysan|Jean|100|50|50|75|25|3|36|3
+Epee|Epée|30|36|9
+Paysan|Jean|100|50|50|75|25|3|36|11
+Guerrier|Général DJOMBY|200|20|50|75|25|1|36|19
+PotionSoin|Potion de Soin|30|36|20
+Loup|Loup|100|10|2|60|40|1|36|21
+Guerrier|Général DJOMBY|200|20|50|75|25|1|36|22
+Malus|feuille de choux|malus|2|3|dA|36|30
+NuageToxique|1|2|5|4|36|34
+Bonus|feuille d'épinard|bonus|2|3|pVie|36|35
+Guerrier|Général DJOMBY|200|20|50|75|25|1|36|40
+Loup|Loup|100|10|2|60|40|1|36|52
+Loup|Loup|100|10|2|60|40|1|36|60
+NuageToxique|1|2|5|4|36|63
+PotionSoin|Potion de Soin|30|36|71
+Bonus|feuille d'épinard|bonus|2|3|pVie|36|72
+Lapin|Lapin|100|10|2|60|40|1|36|85
+Epee|Epée|30|36|90
+Guerrier|Général DJOMBY|200|20|50|75|25|1|36|93
+Bonus|feuille d'épinard|bonus|2|3|pVie|36|95
+Bonus|feuille d'épinard|bonus|2|3|pVie|36|97
+NuageToxique|1|2|5|4|37|7
+PotionSoin|Potion de Soin|30|37|16
+Guerrier|Général DJOMBY|200|20|50|75|25|1|37|29
+Malus|feuille de choux|malus|2|3|dA|37|31
+Guerrier|Général DJOMBY|200|20|50|75|25|1|37|32
+Lapin|Lapin|100|10|2|60|40|1|37|34
+Bonus|feuille d'épinard|bonus|2|3|pVie|37|37
+Loup|Loup|100|10|2|60|40|1|37|39
+Bonus|feuille d'épinard|bonus|2|3|pVie|37|40
+Loup|Loup|100|10|2|60|40|1|37|43
+PotionSoin|Potion de Soin|30|37|45
+Loup|Loup|100|10|2|60|40|1|37|63
+Paysan|Jean|100|50|50|75|25|3|37|66
+Paysan|Jean|100|50|50|75|25|3|37|79
+PotionSoin|Potion de Soin|30|37|83
+Archer|Mohammed|100|50|50|75|25|5|37|85|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|37|95
+Lapin|Lapin|100|10|2|60|40|1|37|96
+NuageToxique|1|2|5|4|38|0
+Guerrier|Général DJOMBY|200|20|50|75|25|1|38|4
+Lapin|Lapin|100|10|2|60|40|1|38|6
+Loup|Loup|100|10|2|60|40|1|38|9
+Archer|Mohammed|100|50|50|75|25|5|38|14|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|38|22
+Archer|Mohammed|100|50|50|75|25|5|38|28|12
+Loup|Loup|100|10|2|60|40|1|38|50
+NuageToxique|1|2|5|4|38|53
+Malus|feuille de choux|malus|2|3|dA|38|54
+PotionSoin|Potion de Soin|30|38|62
+Archer|Mohammed|100|50|50|75|25|5|38|64|12
+Malus|feuille de choux|malus|2|3|dA|38|85
+Malus|feuille de choux|malus|2|3|dA|38|90
+Lapin|Lapin|100|10|2|60|40|1|38|91
+Guerrier|Général DJOMBY|200|20|50|75|25|1|38|92
+Loup|Loup|100|10|2|60|40|1|39|1
+Loup|Loup|100|10|2|60|40|1|39|6
+Lapin|Lapin|100|10|2|60|40|1|39|7
+Paysan|Jean|100|50|50|75|25|3|39|18
+Paysan|Jean|100|50|50|75|25|3|39|19
+Lapin|Lapin|100|10|2|60|40|1|39|31
+Malus|feuille de choux|malus|2|3|dA|39|33
+Epee|Epée|30|39|39
+Loup|Loup|100|10|2|60|40|1|39|46
+PotionSoin|Potion de Soin|30|39|47
+PotionSoin|Potion de Soin|30|39|48
+Paysan|Jean|100|50|50|75|25|3|39|58
+NuageToxique|1|2|5|4|39|67
+Lapin|Lapin|100|10|2|60|40|1|39|69
+Bonus|feuille d'épinard|bonus|2|3|pVie|39|91
+Lapin|Lapin|100|10|2|60|40|1|39|93
+Malus|feuille de choux|malus|2|3|dA|40|5
+Paysan|Jean|100|50|50|75|25|3|40|25
+Paysan|Jean|100|50|50|75|25|3|40|26
+Malus|feuille de choux|malus|2|3|dA|40|27
+NuageToxique|1|2|5|4|40|34
+NuageToxique|1|2|5|4|40|51
+Epee|Epée|30|40|56
+Guerrier|Général DJOMBY|200|20|50|75|25|1|40|61
+Lapin|Lapin|100|10|2|60|40|1|40|68
+Loup|Loup|100|10|2|60|40|1|40|74
+Malus|feuille de choux|malus|2|3|dA|40|81
+Malus|feuille de choux|malus|2|3|dA|40|82
+Loup|Loup|100|10|2|60|40|1|40|84
+Lapin|Lapin|100|10|2|60|40|1|40|98
+Lapin|Lapin|100|10|2|60|40|1|40|99
+Paysan|Jean|100|50|50|75|25|3|41|3
+Epee|Epée|30|41|6
+NuageToxique|1|2|5|4|41|8
+PotionSoin|Potion de Soin|30|41|9
+Loup|Loup|100|10|2|60|40|1|41|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|41|15
+Lapin|Lapin|100|10|2|60|40|1|41|16
+Bonus|feuille d'épinard|bonus|2|3|pVie|41|18
+Malus|feuille de choux|malus|2|3|dA|41|24
+PotionSoin|Potion de Soin|30|41|25
+NuageToxique|1|2|5|4|41|29
+Guerrier|Général DJOMBY|200|20|50|75|25|1|41|30
+Malus|feuille de choux|malus|2|3|dA|41|32
+Malus|feuille de choux|malus|2|3|dA|41|33
+Loup|Loup|100|10|2|60|40|1|41|38
+Loup|Loup|100|10|2|60|40|1|41|47
+Bonus|feuille d'épinard|bonus|2|3|pVie|41|52
+NuageToxique|1|2|5|4|41|53
+Bonus|feuille d'épinard|bonus|2|3|pVie|41|55
+Lapin|Lapin|100|10|2|60|40|1|41|56
+Malus|feuille de choux|malus|2|3|dA|41|58
+Epee|Epée|30|41|63
+Malus|feuille de choux|malus|2|3|dA|41|75
+Malus|feuille de choux|malus|2|3|dA|41|76
+Bonus|feuille d'épinard|bonus|2|3|pVie|41|81
+Guerrier|Général DJOMBY|200|20|50|75|25|1|41|82
+Epee|Epée|30|42|4
+Epee|Epée|30|42|11
+Epee|Epée|30|42|13
+Loup|Loup|100|10|2|60|40|1|42|21
+NuageToxique|1|2|5|4|42|23
+Loup|Loup|100|10|2|60|40|1|42|26
+Archer|Mohammed|100|50|50|75|25|5|42|29|12
+Malus|feuille de choux|malus|2|3|dA|42|31
+Epee|Epée|30|42|39
+NuageToxique|1|2|5|4|42|41
+Paysan|Jean|100|50|50|75|25|3|42|45
+Lapin|Lapin|100|10|2|60|40|1|42|48
+Lapin|Lapin|100|10|2|60|40|1|42|49
+Lapin|Lapin|100|10|2|60|40|1|42|55
+Guerrier|Général DJOMBY|200|20|50|75|25|1|42|57
+Lapin|Lapin|100|10|2|60|40|1|42|59
+NuageToxique|1|2|5|4|42|61
+Guerrier|Général DJOMBY|200|20|50|75|25|1|42|63
+Guerrier|Général DJOMBY|200|20|50|75|25|1|42|66
+Bonus|feuille d'épinard|bonus|2|3|pVie|42|98
+Lapin|Lapin|100|10|2|60|40|1|43|2
+Loup|Loup|100|10|2|60|40|1|43|3
+Loup|Loup|100|10|2|60|40|1|43|9
+Bonus|feuille d'épinard|bonus|2|3|pVie|43|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|43|13
+Lapin|Lapin|100|10|2|60|40|1|43|17
+Malus|feuille de choux|malus|2|3|dA|43|20
+Bonus|feuille d'épinard|bonus|2|3|pVie|43|28
+PotionSoin|Potion de Soin|30|43|31
+PotionSoin|Potion de Soin|30|43|36
+PotionSoin|Potion de Soin|30|43|53
+NuageToxique|1|2|5|4|43|58
+PotionSoin|Potion de Soin|30|43|64
+Epee|Epée|30|43|73
+Bonus|feuille d'épinard|bonus|2|3|pVie|43|80
+Bonus|feuille d'épinard|bonus|2|3|pVie|43|89
+Malus|feuille de choux|malus|2|3|dA|43|93
+Loup|Loup|100|10|2|60|40|1|44|7
+Guerrier|Général DJOMBY|200|20|50|75|25|1|44|9
+Archer|Mohammed|100|50|50|75|25|5|44|10|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|44|17
+Epee|Epée|30|44|31
+Malus|feuille de choux|malus|2|3|dA|44|35
+Loup|Loup|100|10|2|60|40|1|44|39
+Epee|Epée|30|44|40
+Malus|feuille de choux|malus|2|3|dA|44|49
+Malus|feuille de choux|malus|2|3|dA|44|60
+Guerrier|Général DJOMBY|200|20|50|75|25|1|44|63
+Bonus|feuille d'épinard|bonus|2|3|pVie|44|65
+Lapin|Lapin|100|10|2|60|40|1|44|66
+Archer|Mohammed|100|50|50|75|25|5|44|69|12
+Lapin|Lapin|100|10|2|60|40|1|44|78
+Loup|Loup|100|10|2|60|40|1|44|85
+Malus|feuille de choux|malus|2|3|dA|44|86
+Malus|feuille de choux|malus|2|3|dA|44|94
+Lapin|Lapin|100|10|2|60|40|1|44|95
+Epee|Epée|30|44|97
+Lapin|Lapin|100|10|2|60|40|1|44|98
+Loup|Loup|100|10|2|60|40|1|45|0
+Malus|feuille de choux|malus|2|3|dA|45|2
+Paysan|Jean|100|50|50|75|25|3|45|3
+Loup|Loup|100|10|2|60|40|1|45|7
+Loup|Loup|100|10|2|60|40|1|45|11
+Loup|Loup|100|10|2|60|40|1|45|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|45|19
+Malus|feuille de choux|malus|2|3|dA|45|38
+NuageToxique|1|2|5|4|45|39
+Malus|feuille de choux|malus|2|3|dA|45|42
+PotionSoin|Potion de Soin|30|45|45
+Lapin|Lapin|100|10|2|60|40|1|45|57
+Paysan|Jean|100|50|50|75|25|3|45|66
+Paysan|Jean|100|50|50|75|25|3|45|83
+Loup|Loup|100|10|2|60|40|1|45|84
+Epee|Epée|30|45|89
+Loup|Loup|100|10|2|60|40|1|45|90
+Loup|Loup|100|10|2|60|40|1|45|99
+NuageToxique|1|2|5|4|46|5
+Archer|Mohammed|100|50|50|75|25|5|46|17|12
+PotionSoin|Potion de Soin|30|46|28
+Loup|Loup|100|10|2|60|40|1|46|34
+PotionSoin|Potion de Soin|30|46|36
+Lapin|Lapin|100|10|2|60|40|1|46|37
+Guerrier|Général DJOMBY|200|20|50|75|25|1|46|43
+Loup|Loup|100|10|2|60|40|1|46|49
+Lapin|Lapin|100|10|2|60|40|1|46|58
+Lapin|Lapin|100|10|2|60|40|1|46|66
+PotionSoin|Potion de Soin|30|46|68
+Loup|Loup|100|10|2|60|40|1|46|71
+Archer|Mohammed|100|50|50|75|25|5|46|74|12
+Epee|Epée|30|46|80
+NuageToxique|1|2|5|4|46|89
+Lapin|Lapin|100|10|2|60|40|1|46|91
+Lapin|Lapin|100|10|2|60|40|1|46|93
+Loup|Loup|100|10|2|60|40|1|46|94
+Loup|Loup|100|10|2|60|40|1|46|96
+Malus|feuille de choux|malus|2|3|dA|47|7
+Bonus|feuille d'épinard|bonus|2|3|pVie|47|8
+Lapin|Lapin|100|10|2|60|40|1|47|9
+Loup|Loup|100|10|2|60|40|1|47|13
+Epee|Epée|30|47|16
+Epee|Epée|30|47|17
+Paysan|Jean|100|50|50|75|25|3|47|19
+Paysan|Jean|100|50|50|75|25|3|47|21
+Lapin|Lapin|100|10|2|60|40|1|47|23
+Lapin|Lapin|100|10|2|60|40|1|47|25
+Loup|Loup|100|10|2|60|40|1|47|26
+NuageToxique|1|2|5|4|47|27
+NuageToxique|1|2|5|4|47|36
+Paysan|Jean|100|50|50|75|25|3|47|41
+Guerrier|Général DJOMBY|200|20|50|75|25|1|47|46
+Malus|feuille de choux|malus|2|3|dA|47|57
+Bonus|feuille d'épinard|bonus|2|3|pVie|47|61
+Lapin|Lapin|100|10|2|60|40|1|47|66
+Archer|Mohammed|100|50|50|75|25|5|47|77|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|47|78
+Epee|Epée|30|47|80
+Lapin|Lapin|100|10|2|60|40|1|47|81
+Epee|Epée|30|47|91
+Bonus|feuille d'épinard|bonus|2|3|pVie|47|94
+Loup|Loup|100|10|2|60|40|1|47|97
+Lapin|Lapin|100|10|2|60|40|1|47|98
+Guerrier|Général DJOMBY|200|20|50|75|25|1|48|6
+Guerrier|Général DJOMBY|200|20|50|75|25|1|48|7
+Lapin|Lapin|100|10|2|60|40|1|48|10
+Epee|Epée|30|48|20
+NuageToxique|1|2|5|4|48|23
+Loup|Loup|100|10|2|60|40|1|48|27
+Loup|Loup|100|10|2|60|40|1|48|30
+Bonus|feuille d'épinard|bonus|2|3|pVie|48|34
+NuageToxique|1|2|5|4|48|38
+NuageToxique|1|2|5|4|48|39
+Paysan|Jean|100|50|50|75|25|3|48|40
+Guerrier|Général DJOMBY|200|20|50|75|25|1|48|54
+Malus|feuille de choux|malus|2|3|dA|48|62
+Bonus|feuille d'épinard|bonus|2|3|pVie|48|63
+NuageToxique|1|2|5|4|48|64
+Loup|Loup|100|10|2|60|40|1|48|68
+Paysan|Jean|100|50|50|75|25|3|48|69
+Guerrier|Général DJOMBY|200|20|50|75|25|1|48|75
+Malus|feuille de choux|malus|2|3|dA|48|79
+Lapin|Lapin|100|10|2|60|40|1|49|3
+Lapin|Lapin|100|10|2|60|40|1|49|13
+NuageToxique|1|2|5|4|49|15
+PotionSoin|Potion de Soin|30|49|16
+Paysan|Jean|100|50|50|75|25|3|49|18
+NuageToxique|1|2|5|4|49|20
+PotionSoin|Potion de Soin|30|49|22
+Lapin|Lapin|100|10|2|60|40|1|49|24
+Loup|Loup|100|10|2|60|40|1|49|31
+Guerrier|Général DJOMBY|200|20|50|75|25|1|49|32
+Loup|Loup|100|10|2|60|40|1|49|37
+Malus|feuille de choux|malus|2|3|dA|49|50
+Loup|Loup|100|10|2|60|40|1|49|53
+Lapin|Lapin|100|10|2|60|40|1|49|54
+Paysan|Jean|100|50|50|75|25|3|49|58
+PotionSoin|Potion de Soin|30|49|59
+NuageToxique|1|2|5|4|49|63
+Malus|feuille de choux|malus|2|3|dA|49|71
+Lapin|Lapin|100|10|2|60|40|1|49|72
+Loup|Loup|100|10|2|60|40|1|49|82
+Guerrier|Général DJOMBY|200|20|50|75|25|1|49|84
+Archer|Mohammed|100|50|50|75|25|5|49|94|12
+PotionSoin|Potion de Soin|30|50|3
+Lapin|Lapin|100|10|2|60|40|1|50|5
+Lapin|Lapin|100|10|2|60|40|1|50|8
+NuageToxique|1|2|5|4|50|10
+Loup|Loup|100|10|2|60|40|1|50|11
+Loup|Loup|100|10|2|60|40|1|50|13
+Epee|Epée|30|50|20
+Malus|feuille de choux|malus|2|3|dA|50|28
+PotionSoin|Potion de Soin|30|50|31
+Bonus|feuille d'épinard|bonus|2|3|pVie|50|34
+NuageToxique|1|2|5|4|50|40
+Paysan|Jean|100|50|50|75|25|3|50|43
+Loup|Loup|100|10|2|60|40|1|50|49
+Loup|Loup|100|10|2|60|40|1|50|50
+Guerrier|Général DJOMBY|200|20|50|75|25|1|50|51
+Loup|Loup|100|10|2|60|40|1|50|54
+Malus|feuille de choux|malus|2|3|dA|50|56
+Bonus|feuille d'épinard|bonus|2|3|pVie|50|73
+Paysan|Jean|100|50|50|75|25|3|50|94
+Bonus|feuille d'épinard|bonus|2|3|pVie|50|99
+NuageToxique|1|2|5|4|51|17
+Lapin|Lapin|100|10|2|60|40|1|51|19
+NuageToxique|1|2|5|4|51|21
+PotionSoin|Potion de Soin|30|51|26
+Loup|Loup|100|10|2|60|40|1|51|34
+Bonus|feuille d'épinard|bonus|2|3|pVie|51|40
+Bonus|feuille d'épinard|bonus|2|3|pVie|51|42
+Bonus|feuille d'épinard|bonus|2|3|pVie|51|45
+Archer|Mohammed|100|50|50|75|25|5|51|47|12
+Malus|feuille de choux|malus|2|3|dA|51|57
+Archer|Mohammed|100|50|50|75|25|5|51|58|12
+Archer|Mohammed|100|50|50|75|25|5|51|62|12
+Malus|feuille de choux|malus|2|3|dA|51|90
+NuageToxique|1|2|5|4|51|96
+Malus|feuille de choux|malus|2|3|dA|51|98
+Lapin|Lapin|100|10|2|60|40|1|51|99
+Bonus|feuille d'épinard|bonus|2|3|pVie|52|0
+Loup|Loup|100|10|2|60|40|1|52|8
+Guerrier|Général DJOMBY|200|20|50|75|25|1|52|15
+NuageToxique|1|2|5|4|52|18
+Loup|Loup|100|10|2|60|40|1|52|20
+Malus|feuille de choux|malus|2|3|dA|52|25
+NuageToxique|1|2|5|4|52|26
+Lapin|Lapin|100|10|2|60|40|1|52|35
+Malus|feuille de choux|malus|2|3|dA|52|40
+Loup|Loup|100|10|2|60|40|1|52|46
+Epee|Epée|30|52|47
+Archer|Mohammed|100|50|50|75|25|5|52|51|12
+Paysan|Jean|100|50|50|75|25|3|52|52
+Epee|Epée|30|52|59
+Lapin|Lapin|100|10|2|60|40|1|52|62
+Bonus|feuille d'épinard|bonus|2|3|pVie|52|64
+Loup|Loup|100|10|2|60|40|1|52|66
+Lapin|Lapin|100|10|2|60|40|1|52|71
+Lapin|Lapin|100|10|2|60|40|1|52|75
+Guerrier|Général DJOMBY|200|20|50|75|25|1|52|76
+NuageToxique|1|2|5|4|52|79
+Lapin|Lapin|100|10|2|60|40|1|52|82
+Lapin|Lapin|100|10|2|60|40|1|52|84
+Archer|Mohammed|100|50|50|75|25|5|52|86|12
+Loup|Loup|100|10|2|60|40|1|52|91
+Epee|Epée|30|52|92
+PotionSoin|Potion de Soin|30|52|95
+NuageToxique|1|2|5|4|53|5
+Lapin|Lapin|100|10|2|60|40|1|53|7
+PotionSoin|Potion de Soin|30|53|9
+Lapin|Lapin|100|10|2|60|40|1|53|13
+Loup|Loup|100|10|2|60|40|1|53|14
+NuageToxique|1|2|5|4|53|16
+Epee|Epée|30|53|19
+Lapin|Lapin|100|10|2|60|40|1|53|23
+Loup|Loup|100|10|2|60|40|1|53|25
+Lapin|Lapin|100|10|2|60|40|1|53|29
+Epee|Epée|30|53|31
+Guerrier|Général DJOMBY|200|20|50|75|25|1|53|40
+NuageToxique|1|2|5|4|53|43
+Bonus|feuille d'épinard|bonus|2|3|pVie|53|51
+Paysan|Jean|100|50|50|75|25|3|53|60
+Epee|Epée|30|53|61
+Loup|Loup|100|10|2|60|40|1|53|64
+Guerrier|Général DJOMBY|200|20|50|75|25|1|53|69
+Guerrier|Général DJOMBY|200|20|50|75|25|1|53|70
+Lapin|Lapin|100|10|2|60|40|1|53|75
+Lapin|Lapin|100|10|2|60|40|1|53|81
+Loup|Loup|100|10|2|60|40|1|53|90
+PotionSoin|Potion de Soin|30|53|93
+Epee|Epée|30|54|2
+Bonus|feuille d'épinard|bonus|2|3|pVie|54|4
+Malus|feuille de choux|malus|2|3|dA|54|10
+Lapin|Lapin|100|10|2|60|40|1|54|11
+Loup|Loup|100|10|2|60|40|1|54|12
+Epee|Epée|30|54|13
+Epee|Epée|30|54|17
+Bonus|feuille d'épinard|bonus|2|3|pVie|54|21
+Archer|Mohammed|100|50|50|75|25|5|54|24|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|54|34
+Malus|feuille de choux|malus|2|3|dA|54|44
+Lapin|Lapin|100|10|2|60|40|1|54|47
+Loup|Loup|100|10|2|60|40|1|54|51
+Loup|Loup|100|10|2|60|40|1|54|56
+Lapin|Lapin|100|10|2|60|40|1|54|60
+Malus|feuille de choux|malus|2|3|dA|54|63
+NuageToxique|1|2|5|4|54|96
+Loup|Loup|100|10|2|60|40|1|55|9
+Archer|Mohammed|100|50|50|75|25|5|55|14|12
+Archer|Mohammed|100|50|50|75|25|5|55|15|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|55|33
+Malus|feuille de choux|malus|2|3|dA|55|48
+Archer|Mohammed|100|50|50|75|25|5|55|49|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|55|54
+Malus|feuille de choux|malus|2|3|dA|55|55
+NuageToxique|1|2|5|4|55|56
+Epee|Epée|30|55|62
+Guerrier|Général DJOMBY|200|20|50|75|25|1|55|77
+Malus|feuille de choux|malus|2|3|dA|55|82
+PotionSoin|Potion de Soin|30|55|83
+Lapin|Lapin|100|10|2|60|40|1|55|97
+Malus|feuille de choux|malus|2|3|dA|56|0
+PotionSoin|Potion de Soin|30|56|1
+Loup|Loup|100|10|2|60|40|1|56|4
+Loup|Loup|100|10|2|60|40|1|56|5
+Loup|Loup|100|10|2|60|40|1|56|6
+Loup|Loup|100|10|2|60|40|1|56|7
+Bonus|feuille d'épinard|bonus|2|3|pVie|56|8
+Malus|feuille de choux|malus|2|3|dA|56|14
+Lapin|Lapin|100|10|2|60|40|1|56|16
+Guerrier|Général DJOMBY|200|20|50|75|25|1|56|19
+Lapin|Lapin|100|10|2|60|40|1|56|23
+Bonus|feuille d'épinard|bonus|2|3|pVie|56|25
+Paysan|Jean|100|50|50|75|25|3|56|27
+Bonus|feuille d'épinard|bonus|2|3|pVie|56|30
+PotionSoin|Potion de Soin|30|56|31
+Loup|Loup|100|10|2|60|40|1|56|34
+Paysan|Jean|100|50|50|75|25|3|56|35
+Loup|Loup|100|10|2|60|40|1|56|36
+Malus|feuille de choux|malus|2|3|dA|56|37
+Paysan|Jean|100|50|50|75|25|3|56|38
+Paysan|Jean|100|50|50|75|25|3|56|43
+PotionSoin|Potion de Soin|30|56|49
+Lapin|Lapin|100|10|2|60|40|1|56|50
+Guerrier|Général DJOMBY|200|20|50|75|25|1|56|61
+Archer|Mohammed|100|50|50|75|25|5|56|68|12
+PotionSoin|Potion de Soin|30|56|75
+PotionSoin|Potion de Soin|30|56|79
+Bonus|feuille d'épinard|bonus|2|3|pVie|56|81
+Loup|Loup|100|10|2|60|40|1|56|83
+Loup|Loup|100|10|2|60|40|1|56|88
+Archer|Mohammed|100|50|50|75|25|5|56|96|12
+Loup|Loup|100|10|2|60|40|1|57|3
+Lapin|Lapin|100|10|2|60|40|1|57|9
+Malus|feuille de choux|malus|2|3|dA|57|12
+Loup|Loup|100|10|2|60|40|1|57|15
+Loup|Loup|100|10|2|60|40|1|57|29
+Guerrier|Général DJOMBY|200|20|50|75|25|1|57|31
+Guerrier|Général DJOMBY|200|20|50|75|25|1|57|34
+Lapin|Lapin|100|10|2|60|40|1|57|35
+NuageToxique|1|2|5|4|57|39
+Loup|Loup|100|10|2|60|40|1|57|44
+Loup|Loup|100|10|2|60|40|1|57|47
+Lapin|Lapin|100|10|2|60|40|1|57|48
+Lapin|Lapin|100|10|2|60|40|1|57|50
+NuageToxique|1|2|5|4|57|52
+Epee|Epée|30|57|54
+Guerrier|Général DJOMBY|200|20|50|75|25|1|57|66
+Bonus|feuille d'épinard|bonus|2|3|pVie|57|67
+Malus|feuille de choux|malus|2|3|dA|57|69
+Lapin|Lapin|100|10|2|60|40|1|57|80
+Lapin|Lapin|100|10|2|60|40|1|58|3
+PotionSoin|Potion de Soin|30|58|5
+Bonus|feuille d'épinard|bonus|2|3|pVie|58|6
+Malus|feuille de choux|malus|2|3|dA|58|14
+Malus|feuille de choux|malus|2|3|dA|58|34
+Bonus|feuille d'épinard|bonus|2|3|pVie|58|36
+Loup|Loup|100|10|2|60|40|1|58|42
+Malus|feuille de choux|malus|2|3|dA|58|43
+Loup|Loup|100|10|2|60|40|1|58|44
+Lapin|Lapin|100|10|2|60|40|1|58|46
+Archer|Mohammed|100|50|50|75|25|5|58|52|12
+Epee|Epée|30|58|53
+Paysan|Jean|100|50|50|75|25|3|58|54
+Archer|Mohammed|100|50|50|75|25|5|58|56|12
+Epee|Epée|30|58|59
+Archer|Mohammed|100|50|50|75|25|5|58|66|12
+PotionSoin|Potion de Soin|30|58|67
+Loup|Loup|100|10|2|60|40|1|58|69
+Loup|Loup|100|10|2|60|40|1|58|79
+Bonus|feuille d'épinard|bonus|2|3|pVie|58|80
+Bonus|feuille d'épinard|bonus|2|3|pVie|58|82
+Loup|Loup|100|10|2|60|40|1|58|89
+Bonus|feuille d'épinard|bonus|2|3|pVie|58|90
+Malus|feuille de choux|malus|2|3|dA|58|93
+Loup|Loup|100|10|2|60|40|1|58|95
+Lapin|Lapin|100|10|2|60|40|1|59|21
+Lapin|Lapin|100|10|2|60|40|1|59|23
+Bonus|feuille d'épinard|bonus|2|3|pVie|59|25
+Lapin|Lapin|100|10|2|60|40|1|59|26
+Loup|Loup|100|10|2|60|40|1|59|28
+NuageToxique|1|2|5|4|59|29
+Malus|feuille de choux|malus|2|3|dA|59|31
+Bonus|feuille d'épinard|bonus|2|3|pVie|59|33
+PotionSoin|Potion de Soin|30|59|45
+Malus|feuille de choux|malus|2|3|dA|59|46
+Lapin|Lapin|100|10|2|60|40|1|59|52
+Loup|Loup|100|10|2|60|40|1|59|53
+PotionSoin|Potion de Soin|30|59|55
+Lapin|Lapin|100|10|2|60|40|1|59|56
+Loup|Loup|100|10|2|60|40|1|59|59
+Loup|Loup|100|10|2|60|40|1|59|68
+Loup|Loup|100|10|2|60|40|1|59|70
+Loup|Loup|100|10|2|60|40|1|59|80
+Archer|Mohammed|100|50|50|75|25|5|59|83|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|59|94
+NuageToxique|1|2|5|4|59|99
+Loup|Loup|100|10|2|60|40|1|60|3
+Lapin|Lapin|100|10|2|60|40|1|60|7
+Guerrier|Général DJOMBY|200|20|50|75|25|1|60|12
+Archer|Mohammed|100|50|50|75|25|5|60|16|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|60|18
+Epee|Epée|30|60|34
+Loup|Loup|100|10|2|60|40|1|60|39
+NuageToxique|1|2|5|4|60|48
+Archer|Mohammed|100|50|50|75|25|5|60|52|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|60|56
+Loup|Loup|100|10|2|60|40|1|60|62
+Loup|Loup|100|10|2|60|40|1|60|64
+Paysan|Jean|100|50|50|75|25|3|60|69
+Loup|Loup|100|10|2|60|40|1|60|88
+Lapin|Lapin|100|10|2|60|40|1|60|89
+Epee|Epée|30|60|96
+Loup|Loup|100|10|2|60|40|1|61|0
+NuageToxique|1|2|5|4|61|5
+Paysan|Jean|100|50|50|75|25|3|61|6
+Guerrier|Général DJOMBY|200|20|50|75|25|1|61|9
+Archer|Mohammed|100|50|50|75|25|5|61|11|12
+Lapin|Lapin|100|10|2|60|40|1|61|13
+Bonus|feuille d'épinard|bonus|2|3|pVie|61|19
+Malus|feuille de choux|malus|2|3|dA|61|21
+Loup|Loup|100|10|2|60|40|1|61|22
+Bonus|feuille d'épinard|bonus|2|3|pVie|61|26
+Lapin|Lapin|100|10|2|60|40|1|61|28
+Archer|Mohammed|100|50|50|75|25|5|61|30|12
+Paysan|Jean|100|50|50|75|25|3|61|34
+Archer|Mohammed|100|50|50|75|25|5|61|38|12
+Lapin|Lapin|100|10|2|60|40|1|61|41
+Bonus|feuille d'épinard|bonus|2|3|pVie|61|47
+Archer|Mohammed|100|50|50|75|25|5|61|56|12
+Lapin|Lapin|100|10|2|60|40|1|61|62
+PotionSoin|Potion de Soin|30|61|68
+Epee|Epée|30|61|72
+Bonus|feuille d'épinard|bonus|2|3|pVie|61|73
+PotionSoin|Potion de Soin|30|61|79
+PotionSoin|Potion de Soin|30|61|91
+NuageToxique|1|2|5|4|61|94
+Lapin|Lapin|100|10|2|60|40|1|61|98
+Malus|feuille de choux|malus|2|3|dA|62|0
+PotionSoin|Potion de Soin|30|62|3
+Loup|Loup|100|10|2|60|40|1|62|10
+Loup|Loup|100|10|2|60|40|1|62|11
+Epee|Epée|30|62|13
+Guerrier|Général DJOMBY|200|20|50|75|25|1|62|25
+Paysan|Jean|100|50|50|75|25|3|62|28
+NuageToxique|1|2|5|4|62|45
+Paysan|Jean|100|50|50|75|25|3|62|47
+Loup|Loup|100|10|2|60|40|1|62|48
+Malus|feuille de choux|malus|2|3|dA|62|51
+Lapin|Lapin|100|10|2|60|40|1|62|62
+PotionSoin|Potion de Soin|30|62|64
+Archer|Mohammed|100|50|50|75|25|5|62|67|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|62|78
+NuageToxique|1|2|5|4|62|79
+Archer|Mohammed|100|50|50|75|25|5|62|82|12
+Loup|Loup|100|10|2|60|40|1|62|88
+Archer|Mohammed|100|50|50|75|25|5|62|93|12
+NuageToxique|1|2|5|4|62|96
+Malus|feuille de choux|malus|2|3|dA|62|99
+Loup|Loup|100|10|2|60|40|1|63|5
+PotionSoin|Potion de Soin|30|63|8
+Epee|Epée|30|63|12
+Loup|Loup|100|10|2|60|40|1|63|13
+Malus|feuille de choux|malus|2|3|dA|63|15
+PotionSoin|Potion de Soin|30|63|21
+Bonus|feuille d'épinard|bonus|2|3|pVie|63|22
+PotionSoin|Potion de Soin|30|63|25
+Loup|Loup|100|10|2|60|40|1|63|26
+Malus|feuille de choux|malus|2|3|dA|63|30
+Loup|Loup|100|10|2|60|40|1|63|31
+PotionSoin|Potion de Soin|30|63|40
+Guerrier|Général DJOMBY|200|20|50|75|25|1|63|50
+Archer|Mohammed|100|50|50|75|25|5|63|51|12
+NuageToxique|1|2|5|4|63|55
+Paysan|Jean|100|50|50|75|25|3|63|70
+Paysan|Jean|100|50|50|75|25|3|63|74
+NuageToxique|1|2|5|4|63|75
+Malus|feuille de choux|malus|2|3|dA|63|81
+Paysan|Jean|100|50|50|75|25|3|63|82
+Guerrier|Général DJOMBY|200|20|50|75|25|1|64|1
+NuageToxique|1|2|5|4|64|3
+Archer|Mohammed|100|50|50|75|25|5|64|4|12
+Loup|Loup|100|10|2|60|40|1|64|18
+Epee|Epée|30|64|19
+Epee|Epée|30|64|21
+Loup|Loup|100|10|2|60|40|1|64|23
+PotionSoin|Potion de Soin|30|64|24
+Lapin|Lapin|100|10|2|60|40|1|64|27
+Loup|Loup|100|10|2|60|40|1|64|32
+Archer|Mohammed|100|50|50|75|25|5|64|36|12
+Loup|Loup|100|10|2|60|40|1|64|37
+Archer|Mohammed|100|50|50|75|25|5|64|39|12
+Epee|Epée|30|64|40
+PotionSoin|Potion de Soin|30|64|49
+Malus|feuille de choux|malus|2|3|dA|64|65
+Malus|feuille de choux|malus|2|3|dA|64|66
+Epee|Epée|30|64|70
+Epee|Epée|30|64|78
+Guerrier|Général DJOMBY|200|20|50|75|25|1|64|79
+Bonus|feuille d'épinard|bonus|2|3|pVie|64|90
+Lapin|Lapin|100|10|2|60|40|1|64|96
+Epee|Epée|30|64|97
+Loup|Loup|100|10|2|60|40|1|64|99
+Lapin|Lapin|100|10|2|60|40|1|65|7
+Loup|Loup|100|10|2|60|40|1|65|8
+Loup|Loup|100|10|2|60|40|1|65|15
+NuageToxique|1|2|5|4|65|16
+Epee|Epée|30|65|18
+Loup|Loup|100|10|2|60|40|1|65|19
+NuageToxique|1|2|5|4|65|21
+Malus|feuille de choux|malus|2|3|dA|65|24
+Lapin|Lapin|100|10|2|60|40|1|65|27
+Lapin|Lapin|100|10|2|60|40|1|65|32
+Guerrier|Général DJOMBY|200|20|50|75|25|1|65|33
+Archer|Mohammed|100|50|50|75|25|5|65|34|12
+NuageToxique|1|2|5|4|65|36
+PotionSoin|Potion de Soin|30|65|44
+NuageToxique|1|2|5|4|65|45
+PotionSoin|Potion de Soin|30|65|49
+Guerrier|Général DJOMBY|200|20|50|75|25|1|65|55
+Loup|Loup|100|10|2|60|40|1|65|61
+Guerrier|Général DJOMBY|200|20|50|75|25|1|65|65
+Loup|Loup|100|10|2|60|40|1|65|69
+Loup|Loup|100|10|2|60|40|1|65|71
+Lapin|Lapin|100|10|2|60|40|1|65|74
+Epee|Epée|30|65|80
+Archer|Mohammed|100|50|50|75|25|5|65|81|12
+Epee|Epée|30|65|94
+Lapin|Lapin|100|10|2|60|40|1|66|0
+Malus|feuille de choux|malus|2|3|dA|66|1
+Lapin|Lapin|100|10|2|60|40|1|66|2
+Archer|Mohammed|100|50|50|75|25|5|66|6|12
+PotionSoin|Potion de Soin|30|66|14
+PotionSoin|Potion de Soin|30|66|25
+Paysan|Jean|100|50|50|75|25|3|66|26
+Paysan|Jean|100|50|50|75|25|3|66|38
+Bonus|feuille d'épinard|bonus|2|3|pVie|66|46
+NuageToxique|1|2|5|4|66|50
+Paysan|Jean|100|50|50|75|25|3|66|60
+Malus|feuille de choux|malus|2|3|dA|66|61
+Loup|Loup|100|10|2|60|40|1|66|69
+Lapin|Lapin|100|10|2|60|40|1|66|74
+Loup|Loup|100|10|2|60|40|1|66|75
+Malus|feuille de choux|malus|2|3|dA|66|77
+Loup|Loup|100|10|2|60|40|1|66|82
+Guerrier|Général DJOMBY|200|20|50|75|25|1|66|90
+Lapin|Lapin|100|10|2|60|40|1|66|91
+Archer|Mohammed|100|50|50|75|25|5|66|93|12
+NuageToxique|1|2|5|4|66|97
+Malus|feuille de choux|malus|2|3|dA|66|99
+Lapin|Lapin|100|10|2|60|40|1|67|1
+Bonus|feuille d'épinard|bonus|2|3|pVie|67|11
+Bonus|feuille d'épinard|bonus|2|3|pVie|67|19
+Paysan|Jean|100|50|50|75|25|3|67|21
+Archer|Mohammed|100|50|50|75|25|5|67|22|12
+Lapin|Lapin|100|10|2|60|40|1|67|32
+Malus|feuille de choux|malus|2|3|dA|67|33
+Bonus|feuille d'épinard|bonus|2|3|pVie|67|44
+Lapin|Lapin|100|10|2|60|40|1|67|45
+Guerrier|Général DJOMBY|200|20|50|75|25|1|67|51
+Paysan|Jean|100|50|50|75|25|3|67|54
+Lapin|Lapin|100|10|2|60|40|1|67|60
+Lapin|Lapin|100|10|2|60|40|1|67|62
+Bonus|feuille d'épinard|bonus|2|3|pVie|67|63
+Lapin|Lapin|100|10|2|60|40|1|67|74
+Lapin|Lapin|100|10|2|60|40|1|67|76
+Loup|Loup|100|10|2|60|40|1|67|77
+PotionSoin|Potion de Soin|30|67|78
+PotionSoin|Potion de Soin|30|67|80
+Paysan|Jean|100|50|50|75|25|3|67|82
+Bonus|feuille d'épinard|bonus|2|3|pVie|67|86
+Loup|Loup|100|10|2|60|40|1|67|89
+Paysan|Jean|100|50|50|75|25|3|68|10
+Malus|feuille de choux|malus|2|3|dA|68|14
+NuageToxique|1|2|5|4|68|15
+Loup|Loup|100|10|2|60|40|1|68|23
+Bonus|feuille d'épinard|bonus|2|3|pVie|68|24
+Loup|Loup|100|10|2|60|40|1|68|29
+NuageToxique|1|2|5|4|68|33
+Bonus|feuille d'épinard|bonus|2|3|pVie|68|41
+Malus|feuille de choux|malus|2|3|dA|68|45
+Lapin|Lapin|100|10|2|60|40|1|68|46
+Loup|Loup|100|10|2|60|40|1|68|50
+Paysan|Jean|100|50|50|75|25|3|68|57
+PotionSoin|Potion de Soin|30|68|59
+Malus|feuille de choux|malus|2|3|dA|68|61
+Lapin|Lapin|100|10|2|60|40|1|68|67
+Malus|feuille de choux|malus|2|3|dA|68|79
+Loup|Loup|100|10|2|60|40|1|68|82
+Bonus|feuille d'épinard|bonus|2|3|pVie|68|87
+Archer|Mohammed|100|50|50|75|25|5|68|96|12
+NuageToxique|1|2|5|4|68|98
+Epee|Epée|30|69|1
+NuageToxique|1|2|5|4|69|4
+Loup|Loup|100|10|2|60|40|1|69|6
+NuageToxique|1|2|5|4|69|7
+Lapin|Lapin|100|10|2|60|40|1|69|9
+Loup|Loup|100|10|2|60|40|1|69|14
+Lapin|Lapin|100|10|2|60|40|1|69|16
+PotionSoin|Potion de Soin|30|69|24
+Guerrier|Général DJOMBY|200|20|50|75|25|1|69|26
+Lapin|Lapin|100|10|2|60|40|1|69|29
+NuageToxique|1|2|5|4|69|37
+Loup|Loup|100|10|2|60|40|1|69|44
+Loup|Loup|100|10|2|60|40|1|69|45
+Loup|Loup|100|10|2|60|40|1|69|46
+Bonus|feuille d'épinard|bonus|2|3|pVie|69|48
+Loup|Loup|100|10|2|60|40|1|69|52
+Lapin|Lapin|100|10|2|60|40|1|69|63
+Paysan|Jean|100|50|50|75|25|3|69|66
+Paysan|Jean|100|50|50|75|25|3|69|67
+Loup|Loup|100|10|2|60|40|1|69|74
+Lapin|Lapin|100|10|2|60|40|1|69|75
+Archer|Mohammed|100|50|50|75|25|5|69|77|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|69|80
+Paysan|Jean|100|50|50|75|25|3|69|81
+Malus|feuille de choux|malus|2|3|dA|69|87
+Paysan|Jean|100|50|50|75|25|3|69|90
+Malus|feuille de choux|malus|2|3|dA|69|92
+Bonus|feuille d'épinard|bonus|2|3|pVie|69|97
+Malus|feuille de choux|malus|2|3|dA|69|99
+Malus|feuille de choux|malus|2|3|dA|70|7
+Archer|Mohammed|100|50|50|75|25|5|70|11|12
+Epee|Epée|30|70|13
+Lapin|Lapin|100|10|2|60|40|1|70|15
+Lapin|Lapin|100|10|2|60|40|1|70|18
+Lapin|Lapin|100|10|2|60|40|1|70|21
+NuageToxique|1|2|5|4|70|25
+Loup|Loup|100|10|2|60|40|1|70|30
+Loup|Loup|100|10|2|60|40|1|70|34
+Malus|feuille de choux|malus|2|3|dA|70|38
+Malus|feuille de choux|malus|2|3|dA|70|45
+Lapin|Lapin|100|10|2|60|40|1|70|47
+Lapin|Lapin|100|10|2|60|40|1|70|51
+Archer|Mohammed|100|50|50|75|25|5|70|52|12
+Loup|Loup|100|10|2|60|40|1|70|54
+Epee|Epée|30|70|55
+NuageToxique|1|2|5|4|70|66
+NuageToxique|1|2|5|4|70|73
+Guerrier|Général DJOMBY|200|20|50|75|25|1|70|74
+Paysan|Jean|100|50|50|75|25|3|70|79
+NuageToxique|1|2|5|4|70|88
+Guerrier|Général DJOMBY|200|20|50|75|25|1|70|90
+Epee|Epée|30|70|91
+Loup|Loup|100|10|2|60|40|1|71|13
+Bonus|feuille d'épinard|bonus|2|3|pVie|71|18
+Loup|Loup|100|10|2|60|40|1|71|19
+Archer|Mohammed|100|50|50|75|25|5|71|27|12
+Lapin|Lapin|100|10|2|60|40|1|71|29
+Loup|Loup|100|10|2|60|40|1|71|35
+Malus|feuille de choux|malus|2|3|dA|71|38
+Loup|Loup|100|10|2|60|40|1|71|39
+Epee|Epée|30|71|40
+Lapin|Lapin|100|10|2|60|40|1|71|44
+NuageToxique|1|2|5|4|71|56
+Archer|Mohammed|100|50|50|75|25|5|71|69|12
+Lapin|Lapin|100|10|2|60|40|1|71|72
+Archer|Mohammed|100|50|50|75|25|5|71|90|12
+Loup|Loup|100|10|2|60|40|1|71|93
+Loup|Loup|100|10|2|60|40|1|71|96
+NuageToxique|1|2|5|4|72|3
+Lapin|Lapin|100|10|2|60|40|1|72|16
+Bonus|feuille d'épinard|bonus|2|3|pVie|72|21
+Loup|Loup|100|10|2|60|40|1|72|22
+Lapin|Lapin|100|10|2|60|40|1|72|26
+Paysan|Jean|100|50|50|75|25|3|72|37
+Guerrier|Général DJOMBY|200|20|50|75|25|1|72|39
+Bonus|feuille d'épinard|bonus|2|3|pVie|72|43
+Lapin|Lapin|100|10|2|60|40|1|72|46
+Lapin|Lapin|100|10|2|60|40|1|72|56
+Archer|Mohammed|100|50|50|75|25|5|72|59|12
+Loup|Loup|100|10|2|60|40|1|72|60
+Lapin|Lapin|100|10|2|60|40|1|72|65
+Epee|Epée|30|72|72
+Lapin|Lapin|100|10|2|60|40|1|72|84
+Loup|Loup|100|10|2|60|40|1|72|93
+Epee|Epée|30|72|97
+Guerrier|Général DJOMBY|200|20|50|75|25|1|72|99
+Lapin|Lapin|100|10|2|60|40|1|73|15
+NuageToxique|1|2|5|4|73|22
+Paysan|Jean|100|50|50|75|25|3|73|40
+Archer|Mohammed|100|50|50|75|25|5|73|53|12
+PotionSoin|Potion de Soin|30|73|61
+Bonus|feuille d'épinard|bonus|2|3|pVie|73|63
+Lapin|Lapin|100|10|2|60|40|1|73|73
+PotionSoin|Potion de Soin|30|73|80
+PotionSoin|Potion de Soin|30|73|83
+Guerrier|Général DJOMBY|200|20|50|75|25|1|73|84
+Bonus|feuille d'épinard|bonus|2|3|pVie|73|85
+Archer|Mohammed|100|50|50|75|25|5|73|92|12
+Loup|Loup|100|10|2|60|40|1|73|94
+Loup|Loup|100|10|2|60|40|1|73|98
+Malus|feuille de choux|malus|2|3|dA|74|12
+Epee|Epée|30|74|13
+Malus|feuille de choux|malus|2|3|dA|74|15
+NuageToxique|1|2|5|4|74|20
+Guerrier|Général DJOMBY|200|20|50|75|25|1|74|39
+PotionSoin|Potion de Soin|30|74|42
+Epee|Epée|30|74|44
+Bonus|feuille d'épinard|bonus|2|3|pVie|74|45
+Malus|feuille de choux|malus|2|3|dA|74|52
+Guerrier|Général DJOMBY|200|20|50|75|25|1|74|62
+Loup|Loup|100|10|2|60|40|1|74|64
+Loup|Loup|100|10|2|60|40|1|74|67
+NuageToxique|1|2|5|4|74|74
+Loup|Loup|100|10|2|60|40|1|74|80
+Archer|Mohammed|100|50|50|75|25|5|74|82|12
+Paysan|Jean|100|50|50|75|25|3|74|89
+Lapin|Lapin|100|10|2|60|40|1|74|92
+PotionSoin|Potion de Soin|30|74|93
+Paysan|Jean|100|50|50|75|25|3|75|4
+Lapin|Lapin|100|10|2|60|40|1|75|17
+Loup|Loup|100|10|2|60|40|1|75|18
+Epee|Epée|30|75|19
+Paysan|Jean|100|50|50|75|25|3|75|29
+Archer|Mohammed|100|50|50|75|25|5|75|31|12
+Loup|Loup|100|10|2|60|40|1|75|38
+Loup|Loup|100|10|2|60|40|1|75|39
+Loup|Loup|100|10|2|60|40|1|75|42
+Epee|Epée|30|75|46
+Archer|Mohammed|100|50|50|75|25|5|75|61|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|75|70
+NuageToxique|1|2|5|4|75|71
+Archer|Mohammed|100|50|50|75|25|5|75|74|12
+Loup|Loup|100|10|2|60|40|1|75|76
+Archer|Mohammed|100|50|50|75|25|5|75|83|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|75|91
+PotionSoin|Potion de Soin|30|75|99
+NuageToxique|1|2|5|4|76|0
+Malus|feuille de choux|malus|2|3|dA|76|13
+Epee|Epée|30|76|21
+Epee|Epée|30|76|37
+Epee|Epée|30|76|38
+Lapin|Lapin|100|10|2|60|40|1|76|39
+PotionSoin|Potion de Soin|30|76|42
+Paysan|Jean|100|50|50|75|25|3|76|45
+Archer|Mohammed|100|50|50|75|25|5|76|47|12
+Lapin|Lapin|100|10|2|60|40|1|76|55
+Paysan|Jean|80|50|50|75|25|3|76|66
+NuageToxique|1|2|5|4|76|69
+Archer|Mohammed|100|50|50|75|25|5|76|74|12
+PotionSoin|Potion de Soin|30|76|76
+Epee|Epée|30|76|77
+NuageToxique|1|2|5|4|76|83
+Malus|feuille de choux|malus|2|3|dA|76|93
+Epee|Epée|30|77|3
+Guerrier|Général DJOMBY|200|20|50|75|25|1|77|4
+Lapin|Lapin|100|10|2|60|40|1|77|5
+Paysan|Jean|100|50|50|75|25|3|77|8
+NuageToxique|1|2|5|4|77|12
+Archer|Mohammed|100|50|50|75|25|5|77|13|12
+PotionSoin|Potion de Soin|30|77|14
+Loup|Loup|100|10|2|60|40|1|77|18
+Loup|Loup|100|10|2|60|40|1|77|20
+Paysan|Jean|100|50|50|75|25|3|77|27
+PotionSoin|Potion de Soin|30|77|28
+Lapin|Lapin|100|10|2|60|40|1|77|29
+Malus|feuille de choux|malus|2|3|dA|77|37
+NuageToxique|1|2|5|4|77|40
+Loup|Loup|100|10|2|60|40|1|77|43
+Paysan|Jean|100|50|50|75|25|3|77|49
+Lapin|Lapin|100|10|2|60|40|1|77|51
+Lapin|Lapin|100|10|2|60|40|1|77|59
+Loup|Loup|100|10|2|60|40|1|77|74
+Epee|Epée|30|77|77
+Bonus|feuille d'épinard|bonus|2|3|pVie|77|83
+Lapin|Lapin|100|10|2|60|40|1|77|87
+Bonus|feuille d'épinard|bonus|2|3|pVie|77|94
+Paysan|Jean|100|50|50|75|25|3|77|96
+Archer|Mohammed|100|50|50|75|25|5|77|97|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|78|11
+Bonus|feuille d'épinard|bonus|2|3|pVie|78|12
+Lapin|Lapin|100|10|2|60|40|1|78|19
+Loup|Loup|100|10|2|60|40|1|78|23
+Malus|feuille de choux|malus|2|3|dA|78|25
+NuageToxique|1|2|5|4|78|30
+Loup|Loup|100|10|2|60|40|1|78|48
+Paysan|Jean|100|50|50|75|25|3|78|50
+PotionSoin|Potion de Soin|30|78|54
+PotionSoin|Potion de Soin|30|78|57
+Lapin|Lapin|100|10|2|60|40|1|78|58
+Guerrier|Général DJOMBY|200|20|50|75|25|1|78|70
+Epee|Epée|30|78|71
+Guerrier|Général DJOMBY|200|20|50|75|25|1|78|82
+Lapin|Lapin|100|10|2|60|40|1|78|84
+Guerrier|Général DJOMBY|200|20|50|75|25|1|78|88
+Archer|Mohammed|100|50|50|75|25|5|78|92|12
+Epee|Epée|30|78|95
+Loup|Loup|100|10|2|60|40|1|78|96
+Paysan|Jean|100|50|50|75|25|3|78|97
+Malus|feuille de choux|malus|2|3|dA|79|0
+Paysan|Jean|100|50|50|75|25|3|79|3
+Loup|Loup|100|10|2|60|40|1|79|4
+NuageToxique|1|2|5|4|79|6
+NuageToxique|1|2|5|4|79|7
+Paysan|Jean|100|50|50|75|25|3|79|12
+Epee|Epée|30|79|18
+Guerrier|Général DJOMBY|200|20|50|75|25|1|79|23
+Malus|feuille de choux|malus|2|3|dA|79|26
+PotionSoin|Potion de Soin|30|79|31
+PotionSoin|Potion de Soin|30|79|32
+Epee|Epée|30|79|34
+Loup|Loup|100|10|2|60|40|1|79|38
+Paysan|Jean|100|50|50|75|25|3|79|42
+Paysan|Jean|100|50|50|75|25|3|79|47
+Malus|feuille de choux|malus|2|3|dA|79|48
+Epee|Epée|30|79|49
+Epee|Epée|30|79|50
+Lapin|Lapin|100|10|2|60|40|1|79|51
+Archer|Mohammed|100|50|50|75|25|5|79|62|12
+Epee|Epée|30|79|64
+Epee|Epée|30|79|83
+PotionSoin|Potion de Soin|30|79|85
+Loup|Loup|100|10|2|60|40|1|79|93
+PotionSoin|Potion de Soin|30|80|0
+PotionSoin|Potion de Soin|30|80|13
+Epee|Epée|30|80|17
+Paysan|Jean|100|50|50|75|25|3|80|24
+NuageToxique|1|2|5|4|80|25
+Malus|feuille de choux|malus|2|3|dA|80|41
+Paysan|Jean|100|50|50|75|25|3|80|46
+Archer|Mohammed|100|50|50|75|25|5|80|57|12
+Paysan|Jean|100|50|50|75|25|3|80|84
+NuageToxique|1|2|5|4|80|90
+Lapin|Lapin|100|10|2|60|40|1|80|94
+Bonus|feuille d'épinard|bonus|2|3|pVie|81|2
+Epee|Epée|30|81|8
+Loup|Loup|100|10|2|60|40|1|81|19
+Loup|Loup|100|10|2|60|40|1|81|20
+Lapin|Lapin|100|10|2|60|40|1|81|21
+PotionSoin|Potion de Soin|30|81|40
+Lapin|Lapin|100|10|2|60|40|1|81|42
+Paysan|Jean|100|50|50|75|25|3|81|52
+Malus|feuille de choux|malus|2|3|dA|81|54
+Paysan|Jean|100|50|50|75|25|3|81|60
+Guerrier|Général DJOMBY|200|20|50|75|25|1|81|64
+Malus|feuille de choux|malus|2|3|dA|81|68
+Malus|feuille de choux|malus|2|3|dA|81|70
+Paysan|Jean|100|50|50|75|25|3|81|71
+Lapin|Lapin|100|10|2|60|40|1|81|72
+Paysan|Jean|100|50|50|75|25|3|81|81
+Lapin|Lapin|100|10|2|60|40|1|81|83
+Guerrier|Général DJOMBY|200|20|50|75|25|1|81|86
+Archer|Mohammed|100|50|50|75|25|5|81|90|12
+Lapin|Lapin|100|10|2|60|40|1|81|92
+Lapin|Lapin|100|10|2|60|40|1|81|93
+Lapin|Lapin|100|10|2|60|40|1|81|95
+Lapin|Lapin|100|10|2|60|40|1|81|96
+Paysan|Jean|100|50|50|75|25|3|81|97
+Bonus|feuille d'épinard|bonus|2|3|pVie|82|4
+NuageToxique|1|2|5|4|82|6
+Malus|feuille de choux|malus|2|3|dA|82|17
+Loup|Loup|100|10|2|60|40|1|82|20
+Loup|Loup|100|10|2|60|40|1|82|21
+Epee|Epée|30|82|26
+Guerrier|Général DJOMBY|200|20|50|75|25|1|82|27
+Lapin|Lapin|100|10|2|60|40|1|82|31
+Archer|Mohammed|100|50|50|75|25|5|82|36|12
+Malus|feuille de choux|malus|2|3|dA|82|40
+Paysan|Jean|100|50|50|75|25|3|82|45
+Guerrier|Général DJOMBY|200|20|50|75|25|1|82|49
+Archer|Mohammed|100|50|50|75|25|5|82|51|12
+Loup|Loup|100|10|2|60|40|1|82|52
+Loup|Loup|100|10|2|60|40|1|82|54
+Loup|Loup|100|10|2|60|40|1|82|57
+NuageToxique|1|2|5|4|82|78
+Archer|Mohammed|100|50|50|75|25|5|82|91|12
+Archer|Mohammed|100|50|50|75|25|5|82|92|12
+Archer|Mohammed|100|50|50|75|25|5|82|98|12
+NuageToxique|1|2|5|4|83|0
+Archer|Mohammed|100|50|50|75|25|5|83|1|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|83|2
+Malus|feuille de choux|malus|2|3|dA|83|12
+Paysan|Jean|100|50|50|75|25|3|83|15
+Archer|Mohammed|100|50|50|75|25|5|83|16|12
+Archer|Mohammed|100|50|50|75|25|5|83|18|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|83|24
+Archer|Mohammed|100|50|50|75|25|5|83|25|12
+Archer|Mohammed|100|50|50|75|25|5|83|26|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|83|37
+NuageToxique|1|2|5|4|83|42
+Bonus|feuille d'épinard|bonus|2|3|pVie|83|43
+Loup|Loup|100|10|2|60|40|1|83|52
+Loup|Loup|100|10|2|60|40|1|83|54
+NuageToxique|1|2|5|4|83|59
+Paysan|Jean|100|50|50|75|25|3|83|60
+PotionSoin|Potion de Soin|30|83|62
+Lapin|Lapin|100|10|2|60|40|1|83|69
+Malus|feuille de choux|malus|2|3|dA|83|72
+PotionSoin|Potion de Soin|30|83|74
+Malus|feuille de choux|malus|2|3|dA|83|75
+Malus|feuille de choux|malus|2|3|dA|83|76
+Lapin|Lapin|100|10|2|60|40|1|83|82
+PotionSoin|Potion de Soin|30|83|87
+NuageToxique|1|2|5|4|83|89
+Loup|Loup|100|10|2|60|40|1|83|93
+Archer|Mohammed|100|50|50|75|25|5|83|99|12
+Archer|Mohammed|100|50|50|75|25|5|84|17|12
+Archer|Mohammed|100|50|50|75|25|5|84|22|12
+Lapin|Lapin|100|10|2|60|40|1|84|23
+Lapin|Lapin|100|10|2|60|40|1|84|39
+PotionSoin|Potion de Soin|30|84|53
+Epee|Epée|30|84|62
+Archer|Mohammed|100|50|50|75|25|5|84|75|12
+Lapin|Lapin|100|10|2|60|40|1|84|82
+PotionSoin|Potion de Soin|30|84|86
+PotionSoin|Potion de Soin|30|84|95
+PotionSoin|Potion de Soin|30|85|3
+Archer|Mohammed|100|50|50|75|25|5|85|7|12
+Malus|feuille de choux|malus|2|3|dA|85|10
+PotionSoin|Potion de Soin|30|85|24
+Bonus|feuille d'épinard|bonus|2|3|pVie|85|39
+Lapin|Lapin|100|10|2|60|40|1|85|41
+Loup|Loup|100|10|2|60|40|1|85|44
+Lapin|Lapin|100|10|2|60|40|1|85|46
+Epee|Epée|30|85|51
+Paysan|Jean|100|50|50|75|25|3|85|52
+Epee|Epée|30|85|55
+Lapin|Lapin|100|10|2|60|40|1|85|58
+Lapin|Lapin|100|10|2|60|40|1|85|69
+Epee|Epée|30|85|72
+Loup|Loup|100|10|2|60|40|1|85|76
+Guerrier|Général DJOMBY|200|20|50|75|25|1|85|78
+Loup|Loup|100|10|2|60|40|1|85|79
+Lapin|Lapin|100|10|2|60|40|1|85|91
+NuageToxique|1|2|5|4|85|92
+Epee|Epée|30|85|96
+Malus|feuille de choux|malus|2|3|dA|85|97
+NuageToxique|1|2|5|4|86|2
+Malus|feuille de choux|malus|2|3|dA|86|8
+Lapin|Lapin|100|10|2|60|40|1|86|10
+Bonus|feuille d'épinard|bonus|2|3|pVie|86|13
+Bonus|feuille d'épinard|bonus|2|3|pVie|86|14
+Loup|Loup|100|10|2|60|40|1|86|16
+Loup|Loup|100|10|2|60|40|1|86|32
+Bonus|feuille d'épinard|bonus|2|3|pVie|86|60
+Lapin|Lapin|100|10|2|60|40|1|86|61
+Archer|Mohammed|100|50|50|75|25|5|86|71|12
+PotionSoin|Potion de Soin|30|86|74
+PotionSoin|Potion de Soin|30|86|75
+NuageToxique|1|2|5|4|86|76
+Lapin|Lapin|100|10|2|60|40|1|86|80
+Malus|feuille de choux|malus|2|3|dA|86|82
+Bonus|feuille d'épinard|bonus|2|3|pVie|86|91
+Archer|Mohammed|100|50|50|75|25|5|86|93|12
+NuageToxique|1|2|5|4|87|14
+Archer|Mohammed|100|50|50|75|25|5|87|20|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|87|29
+Lapin|Lapin|100|10|2|60|40|1|87|30
+Guerrier|Général DJOMBY|200|20|50|75|25|1|87|35
+Guerrier|Général DJOMBY|200|20|50|75|25|1|87|41
+Loup|Loup|100|10|2|60|40|1|87|50
+Bonus|feuille d'épinard|bonus|2|3|pVie|87|55
+Archer|Mohammed|100|50|50|75|25|5|87|59|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|87|62
+Loup|Loup|100|10|2|60|40|1|87|65
+PotionSoin|Potion de Soin|30|87|72
+Loup|Loup|100|10|2|60|40|1|87|74
+Malus|feuille de choux|malus|2|3|dA|87|79
+Malus|feuille de choux|malus|2|3|dA|87|88
+Malus|feuille de choux|malus|2|3|dA|87|93
+Malus|feuille de choux|malus|2|3|dA|88|5
+PotionSoin|Potion de Soin|30|88|12
+Archer|Mohammed|100|50|50|75|25|5|88|16|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|88|22
+Lapin|Lapin|100|10|2|60|40|1|88|26
+Archer|Mohammed|100|50|50|75|25|5|88|31|12
+Paysan|Jean|100|50|50|75|25|3|88|43
+Paysan|Jean|100|50|50|75|25|3|88|45
+Epee|Epée|30|88|48
+Epee|Epée|30|88|51
+PotionSoin|Potion de Soin|30|88|53
+NuageToxique|1|2|5|4|88|54
+Lapin|Lapin|100|10|2|60|40|1|88|56
+Loup|Loup|100|10|2|60|40|1|88|57
+Archer|Mohammed|100|50|50|75|25|5|88|61|12
+Malus|feuille de choux|malus|2|3|dA|88|70
+Guerrier|Général DJOMBY|200|20|50|75|25|1|88|72
+Guerrier|Général DJOMBY|200|20|50|75|25|1|88|83
+Loup|Loup|100|10|2|60|40|1|88|93
+Malus|feuille de choux|malus|2|3|dA|88|95
+Epee|Epée|30|88|99
+Guerrier|Général DJOMBY|200|20|50|75|25|1|89|3
+PotionSoin|Potion de Soin|30|89|7
+Archer|Mohammed|100|50|50|75|25|5|89|10|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|89|11
+Loup|Loup|100|10|2|60|40|1|89|21
+Epee|Epée|30|89|25
+Archer|Mohammed|100|50|50|75|25|5|89|28|12
+PotionSoin|Potion de Soin|30|89|35
+PotionSoin|Potion de Soin|30|89|48
+Epee|Epée|30|89|49
+Lapin|Lapin|100|10|2|60|40|1|89|54
+Loup|Loup|100|10|2|60|40|1|89|61
+Bonus|feuille d'épinard|bonus|2|3|pVie|89|63
+Lapin|Lapin|100|10|2|60|40|1|89|66
+Loup|Loup|100|10|2|60|40|1|89|69
+Paysan|Jean|100|50|50|75|25|3|89|71
+Archer|Mohammed|100|50|50|75|25|5|89|80|12
+PotionSoin|Potion de Soin|30|89|83
+Archer|Mohammed|100|50|50|75|25|5|89|87|12
+Malus|feuille de choux|malus|2|3|dA|89|88
+Paysan|Jean|100|50|50|75|25|3|89|94
+Loup|Loup|100|10|2|60|40|1|89|96
+Loup|Loup|100|10|2|60|40|1|90|1
+Bonus|feuille d'épinard|bonus|2|3|pVie|90|3
+Loup|Loup|100|10|2|60|40|1|90|4
+Archer|Mohammed|100|50|50|75|25|5|90|27|12
+PotionSoin|Potion de Soin|30|90|28
+Archer|Mohammed|100|50|50|75|25|5|90|30|12
+NuageToxique|1|2|5|4|90|36
+Archer|Mohammed|100|50|50|75|25|5|90|41|12
+Loup|Loup|100|10|2|60|40|1|90|43
+Lapin|Lapin|100|10|2|60|40|1|90|47
+Epee|Epée|30|90|67
+NuageToxique|1|2|5|4|90|69
+Lapin|Lapin|100|10|2|60|40|1|90|74
+Archer|Mohammed|100|50|50|75|25|5|90|75|12
+Paysan|Jean|100|50|50|75|25|3|90|76
+Bonus|feuille d'épinard|bonus|2|3|pVie|90|84
+Epee|Epée|30|90|98
+Loup|Loup|100|10|2|60|40|1|90|99
+Epee|Epée|30|91|0
+NuageToxique|1|2|5|4|91|3
+Lapin|Lapin|100|10|2|60|40|1|91|9
+Lapin|Lapin|100|10|2|60|40|1|91|16
+PotionSoin|Potion de Soin|30|91|18
+Bonus|feuille d'épinard|bonus|2|3|pVie|91|20
+Bonus|feuille d'épinard|bonus|2|3|pVie|91|21
+PotionSoin|Potion de Soin|30|91|24
+Loup|Loup|100|10|2|60|40|1|91|30
+Loup|Loup|100|10|2|60|40|1|91|32
+Paysan|Jean|100|50|50|75|25|3|91|33
+Paysan|Jean|100|50|50|75|25|3|91|38
+NuageToxique|1|2|5|4|91|41
+Bonus|feuille d'épinard|bonus|2|3|pVie|91|45
+Loup|Loup|100|10|2|60|40|1|91|46
+Guerrier|Général DJOMBY|200|20|50|75|25|1|91|49
+Loup|Loup|100|10|2|60|40|1|91|52
+Loup|Loup|100|10|2|60|40|1|91|53
+NuageToxique|1|2|5|4|91|63
+Lapin|Lapin|100|10|2|60|40|1|91|64
+Loup|Loup|100|10|2|60|40|1|91|71
+Loup|Loup|100|10|2|60|40|1|91|81
+PotionSoin|Potion de Soin|30|91|82
+Epee|Epée|30|91|84
+PotionSoin|Potion de Soin|30|91|86
+Lapin|Lapin|100|10|2|60|40|1|91|89
+Loup|Loup|100|10|2|60|40|1|91|93
+Lapin|Lapin|100|10|2|60|40|1|92|2
+Guerrier|Général DJOMBY|200|20|50|75|25|1|92|24
+Bonus|feuille d'épinard|bonus|2|3|pVie|92|25
+Paysan|Jean|100|50|50|75|25|3|92|26
+Archer|Mohammed|100|50|50|75|25|5|92|27|12
+Lapin|Lapin|100|10|2|60|40|1|92|29
+Guerrier|Général DJOMBY|200|20|50|75|25|1|92|33
+Malus|feuille de choux|malus|2|3|dA|92|34
+Archer|Mohammed|100|50|50|75|25|5|92|38|12
+Loup|Loup|100|10|2|60|40|1|92|40
+PotionSoin|Potion de Soin|30|92|46
+Paysan|Jean|100|50|50|75|25|3|92|64
+Loup|Loup|100|10|2|60|40|1|92|71
+Loup|Loup|100|10|2|60|40|1|92|75
+NuageToxique|1|2|5|4|92|77
+Lapin|Lapin|100|10|2|60|40|1|92|78
+Lapin|Lapin|100|10|2|60|40|1|92|79
+Loup|Loup|100|10|2|60|40|1|92|80
+Malus|feuille de choux|malus|2|3|dA|92|82
+Loup|Loup|100|10|2|60|40|1|92|85
+Archer|Mohammed|100|50|50|75|25|5|92|99|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|93|2
+Paysan|Jean|100|50|50|75|25|3|93|5
+Bonus|feuille d'épinard|bonus|2|3|pVie|93|7
+Bonus|feuille d'épinard|bonus|2|3|pVie|93|9
+Paysan|Jean|100|50|50|75|25|3|93|11
+Epee|Epée|30|93|12
+Lapin|Lapin|100|10|2|60|40|1|93|16
+Guerrier|Général DJOMBY|200|20|50|75|25|1|93|19
+Archer|Mohammed|100|50|50|75|25|5|93|22|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|93|37
+Bonus|feuille d'épinard|bonus|2|3|pVie|93|50
+Loup|Loup|100|10|2|60|40|1|93|53
+Malus|feuille de choux|malus|2|3|dA|93|54
+Malus|feuille de choux|malus|2|3|dA|93|61
+Loup|Loup|100|10|2|60|40|1|93|65
+Archer|Mohammed|100|50|50|75|25|5|93|70|12
+Epee|Epée|30|93|77
+Epee|Epée|30|93|80
+Lapin|Lapin|100|10|2|60|40|1|93|81
+Loup|Loup|100|10|2|60|40|1|93|89
+NuageToxique|1|2|5|4|93|93
+Archer|Mohammed|100|50|50|75|25|5|94|6|12
+Lapin|Lapin|100|10|2|60|40|1|94|14
+Epee|Epée|30|94|19
+Malus|feuille de choux|malus|2|3|dA|94|21
+Epee|Epée|30|94|25
+Bonus|feuille d'épinard|bonus|2|3|pVie|94|26
+NuageToxique|1|2|5|4|94|30
+Epee|Epée|30|94|34
+Lapin|Lapin|100|10|2|60|40|1|94|47
+NuageToxique|1|2|5|4|94|51
+Bonus|feuille d'épinard|bonus|2|3|pVie|94|60
+Archer|Mohammed|100|50|50|75|25|5|94|62|12
+Guerrier|Général DJOMBY|200|20|50|75|25|1|94|77
+Loup|Loup|100|10|2|60|40|1|94|81
+Loup|Loup|100|10|2|60|40|1|94|95
+Loup|Loup|100|10|2|60|40|1|95|2
+PotionSoin|Potion de Soin|30|95|5
+Malus|feuille de choux|malus|2|3|dA|95|9
+Loup|Loup|100|10|2|60|40|1|95|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|95|15
+Lapin|Lapin|100|10|2|60|40|1|95|18
+Loup|Loup|100|10|2|60|40|1|95|21
+Paysan|Jean|100|50|50|75|25|3|95|24
+Paysan|Jean|100|50|50|75|25|3|95|33
+Archer|Mohammed|100|50|50|75|25|5|95|43|12
+Paysan|Jean|100|50|50|75|25|3|95|48
+PotionSoin|Potion de Soin|30|95|67
+Bonus|feuille d'épinard|bonus|2|3|pVie|95|95
+Epee|Epée|30|95|98
+Malus|feuille de choux|malus|2|3|dA|96|2
+Paysan|Jean|100|50|50|75|25|3|96|4
+Paysan|Jean|100|50|50|75|25|3|96|5
+PotionSoin|Potion de Soin|30|96|7
+Loup|Loup|100|10|2|60|40|1|96|13
+Lapin|Lapin|100|10|2|60|40|1|96|19
+Malus|feuille de choux|malus|2|3|dA|96|20
+NuageToxique|1|2|5|4|96|29
+Epee|Epée|30|96|33
+Lapin|Lapin|100|10|2|60|40|1|96|36
+Loup|Loup|100|10|2|60|40|1|96|37
+Malus|feuille de choux|malus|2|3|dA|96|43
+Lapin|Lapin|100|10|2|60|40|1|96|44
+Paysan|Jean|100|50|50|75|25|3|96|49
+Lapin|Lapin|100|10|2|60|40|1|96|53
+Loup|Loup|100|10|2|60|40|1|96|66
+Lapin|Lapin|100|10|2|60|40|1|96|67
+PotionSoin|Potion de Soin|30|96|69
+Loup|Loup|100|10|2|60|40|1|96|89
+Bonus|feuille d'épinard|bonus|2|3|pVie|97|1
+Malus|feuille de choux|malus|2|3|dA|97|2
+Loup|Loup|100|10|2|60|40|1|97|11
+Paysan|Jean|100|50|50|75|25|3|97|23
+Lapin|Lapin|100|10|2|60|40|1|97|24
+Bonus|feuille d'épinard|bonus|2|3|pVie|97|35
+Loup|Loup|100|10|2|60|40|1|97|45
+Loup|Loup|100|10|2|60|40|1|97|49
+Loup|Loup|100|10|2|60|40|1|97|57
+Loup|Loup|100|10|2|60|40|1|97|62
+Archer|Mohammed|100|50|50|75|25|5|97|68|12
+Loup|Loup|100|10|2|60|40|1|97|71
+Loup|Loup|100|10|2|60|40|1|97|72
+NuageToxique|1|2|5|4|97|75
+Epee|Epée|30|97|79
+NuageToxique|1|2|5|4|97|87
+NuageToxique|1|2|5|4|97|92
+Archer|Mohammed|100|50|50|75|25|5|97|93|12
+PotionSoin|Potion de Soin|30|97|98
+Paysan|Jean|100|50|50|75|25|3|98|1
+Lapin|Lapin|100|10|2|60|40|1|98|20
+Epee|Epée|30|98|26
+Bonus|feuille d'épinard|bonus|2|3|pVie|98|33
+Malus|feuille de choux|malus|2|3|dA|98|40
+Epee|Epée|30|98|43
+Malus|feuille de choux|malus|2|3|dA|98|44
+Loup|Loup|100|10|2|60|40|1|98|50
+NuageToxique|1|2|5|4|98|59
+NuageToxique|1|2|5|4|98|60
+Lapin|Lapin|100|10|2|60|40|1|98|62
+Archer|Mohammed|100|50|50|75|25|5|98|66|12
+Malus|feuille de choux|malus|2|3|dA|98|71
+Bonus|feuille d'épinard|bonus|2|3|pVie|98|77
+Lapin|Lapin|100|10|2|60|40|1|98|80
+Lapin|Lapin|100|10|2|60|40|1|98|85
+PotionSoin|Potion de Soin|30|99|2
+Paysan|Jean|100|50|50|75|25|3|99|8
+NuageToxique|1|2|5|4|99|10
+Lapin|Lapin|100|10|2|60|40|1|99|17
+Lapin|Lapin|100|10|2|60|40|1|99|23
+Malus|feuille de choux|malus|2|3|dA|99|26
+Loup|Loup|100|10|2|60|40|1|99|29
+Epee|Epée|30|99|30
+Epee|Epée|30|99|32
+Paysan|Jean|100|50|50|75|25|3|99|35
+Malus|feuille de choux|malus|2|3|dA|99|44
+PotionSoin|Potion de Soin|30|99|52
+Lapin|Lapin|100|10|2|60|40|1|99|54
+Archer|Mohammed|100|50|50|75|25|5|99|57|12
+Loup|Loup|100|10|2|60|40|1|99|59
+PotionSoin|Potion de Soin|30|99|68
+Loup|Loup|100|10|2|60|40|1|99|71
+Lapin|Lapin|100|10|2|60|40|1|99|72
+PotionSoin|Potion de Soin|30|99|80
+Archer|Mohammed|100|50|50|75|25|5|99|82|12
+Bonus|feuille d'épinard|bonus|2|3|pVie|99|84
+Loup|Loup|100|10|2|60|40|1|99|91
+Joueur|Guerrier|Test|200|20|50|75|25|1|77|67
+Inventaire|Malus|feuille de choux|malus|2|3|dA|74|69
+Inventaire|Epee|Epée|30|77|67
