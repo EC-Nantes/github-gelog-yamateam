@@ -7,24 +7,27 @@ package org.centrale.objet.WoE;
 import java.util.Random;
 
 /**
- *
- * @author dytri
+ * Classe de personnage, peut combattre et est jouable
+ * 
+ * @author mathys, yaelv
  */
 public class Archer extends Personnage implements Combattant {
     
+    /**nombre de flèches restant à l'archer*/
     private int nbFleches;
     
     /**
-     *
-     * @param n
-     * @param pV
-     * @param dA
-     * @param pPar
-     * @param paAtt
-     * @param paPar
-     * @param dMax
-     * @param p
-     * @param nbFl
+     * Constructeur d'un archer en fixant tous ses attributs
+     * 
+     * @param n String Son nom
+     * @param pV int Ses points de vie
+     * @param dA int Ses dégâts d'attaque
+     * @param pPar int Ses points de parade
+     * @param paAtt int Pourcentage de réussite d'attaque
+     * @param paPar int Pourcentage de réussite de parade
+     * @param dMax int Distance maximale d'attaque
+     * @param p Point2D Position
+     * @param nbFl int Son nombre de flèches disponibles
      */
     public Archer(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p, int nbFl){
         super(n,pV,dA,pPar,paAtt,paPar,dMax,p);
@@ -32,39 +35,49 @@ public class Archer extends Personnage implements Combattant {
     }
     
     /**
-     *
-     * @param a
+     * Constructeur de copie d'un archer
+     * 
+     * @param a Archer
      */
     public Archer(Archer a){
         this(a.getNom(), a.getPtVie(),a.getDegAtt(),a.getPtPar(), a.getPageAtt(), a.getPagePar(),a.getDistAttMax(),new Point2D(a.getPos()), a.getNbFleches());
     }
     
     /**
-     *
+     * Constructeur par défaut d'un archer
      */
     public Archer(){
-        this("Mohammed",100,50,50,75,25,10,new Point2D(0,0), 12);  
+        this("Robin",100,50,50,75,25,5,new Point2D(0,0), 12);  
     }
     
+    /**
+     * Constructeur d'un archer en intialisant seulement son nom
+     * 
+     * @param n String son nom
+     */
     public Archer(String n){
-        this(n,100,50,50,75,25,10,new Point2D(0,0), 12);  
+        this(n,100,50,50,75,25,5,new Point2D(0,0), 12);  
     }
 
     /**
      *
-     * @param nbFleches
+     * @param nbFleches int
      */
     public void setNbFleches(int nbFleches) {
         this.nbFleches = nbFleches;
     }
     
+    /**
+     * Affiche dans le terminal la description de l'archer
+     */
     @Override
     public void affiche(){
         super.affiche();
         System.out.println("Nombre de flèche : " + this.getNbFleches());
     }
 
-    /** Crée une copie indépendante de la créature 
+    /** 
+     * Crée une copie indépendante de la créature 
      * @return un archer
      */
     @Override
@@ -81,12 +94,12 @@ public class Archer extends Personnage implements Combattant {
     }
     
     /**
-     * @param c Créature à combattre
-     * 
      * Fait se combattre cet objet avec la créature rentrée en paramètre.
      * Deux styles de combat selon la distance entre les créatures concernées : 
      * - Au Corps à Corps (CaC) si elles sont adjacentes
      * - A distance si elles ne le sont pas et que la distance d'attaque de l'attaquant est suffisante
+     * 
+     * @param c Créature à combattre
      */
     @Override
     public void combattre(Creature c){
