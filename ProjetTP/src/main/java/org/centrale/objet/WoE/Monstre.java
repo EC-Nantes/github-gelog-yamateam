@@ -1,4 +1,5 @@
 
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -14,7 +15,8 @@ public abstract class Monstre extends Creature {
     
 
     /**
-     *@param n
+     * Constructeur principal
+     * @param n
      * @param ptVie
      * @param degAtt
      * @param ptPar
@@ -28,18 +30,22 @@ public abstract class Monstre extends Creature {
     }
 
     /**
-     *
+     * Constructeur par défaut
      */
     public Monstre() {
         this("Monstre",100,10,2,60,40,1,new Point2D());
     }
     
+    /**
+     * Constructeur en initialisant le nom
+     * @param n
+     */
     public Monstre(String n) {
         this(n,100,10,2,60,40,1,new Point2D());
     }
     
     /**
-     *
+     * Constructeur de copie
      * @param m
      */
     public Monstre(Monstre m) {
@@ -47,7 +53,7 @@ public abstract class Monstre extends Creature {
     }
     
     /**
-     *
+     * Affiche dans le terminal les caractéristiques du monstre
      */
     @Override
     public void affiche(){
