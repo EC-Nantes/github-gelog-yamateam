@@ -8,9 +8,10 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/**
+/** Implémente le joueur du monde, son perso, son inventaire, ses effets actifs et les fonctions qui lui permettent de jouer.
+ * 
  *
- * @author yaelv
+ * @author yaelv, mathys
  */
 public class Joueur {
     
@@ -18,21 +19,28 @@ public class Joueur {
     private ArrayList<Utilisable> inventaire = new ArrayList<>();
     private ArrayList<Utilisable> effets = new ArrayList<>();
 
+    /**
+     *
+     * @return perso
+     */
     public Personnage getPerso() {
         return perso;
     }
 
+    /**
+     *
+     * @param perso
+     */
     public void setPerso(Personnage perso) {
         this.perso = perso;
     }
-    public void chargerArcher(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p, int nbFl){
-        this.perso = new Archer( n,  pV,  dA,  pPar,  paAtt,  paPar,  dMax,  p,  nbFl);
-    }
     
-    public void chargerGuerrier(String n, int pV, int dA, int pPar, int paAtt, int paPar, int dMax, Point2D p){       
-        this.perso = new Guerrier(n,  pV,  dA,  pPar,  paAtt,  paPar,  dMax,  p);                        
-    }
-    
+    /**Permet au joueur de choisir son nom et le type de son perso (Guerrier/archer).
+     *
+     * @param nom
+     * @param type
+     * @return
+     */
     public boolean choixPerso(String nom,String type){
         switch(type){
             case "Guerrier" -> {
@@ -52,6 +60,10 @@ public class Joueur {
         }
     }
     
+    /**Permet de combattre à distance ou au CaC une créature choisie.
+     *
+     * @param world
+     */
     public void combattre(World world){
         
         Random randInt = new Random();
@@ -119,6 +131,11 @@ public class Joueur {
         }
     }
     
+    /**Permet au joueur de choisir une créature parmis celles accessibles autour de lui.
+     *
+     * @param world
+     * @return
+     */
     public Creature choisir_adversaire(World world){
         System.out.println("------ Combattre : Choix adversaire ------");
         System.out.println("Choisir le numéro de l'adversaire :");
@@ -155,6 +172,11 @@ public class Joueur {
         return opps;
     }
     
+    /**Permet au joueur de se déplacer sur une case libre adjacente à sa position et d'en récupérer le potentiel objet.
+     *
+     * @param world
+     * @return
+     */
     public Point2D deplacer(World world){
         System.out.println("------ Se déplacer : Choix position ------");
         System.out.println("Rentrer une position libre ( . ) au format 'x y' ('-1' si toutes les cases sont occupées)");
@@ -211,6 +233,10 @@ public class Joueur {
         return dep;
     }
     
+    /**Permet au joueur de regarder/utiliser les items qu'il a récupéré dans son inventaire.
+     *
+     * @param monde
+     */
     public void RegarderInventaire(World monde){
         System.out.println("------ Inventaire ------");
         
@@ -254,6 +280,10 @@ public class Joueur {
         
     }
     
+    /**Affiche une grille 7*7 autour du joueur pour lui permettre de se repérer dans le monde.
+     *
+     * @param monde
+     */
     public void afficherGrille(ElementDeJeu[][] monde) {
         int nb_lignes = monde.length;
         int nb_colonnes = monde[0].length;
@@ -262,13 +292,13 @@ public class Joueur {
 
         // Affichage indices des colonnes
         System.out.print("    "); // espace pour l'indice de ligne
-        for (int dy = -1; dy <= 1; dy++) {
+        for (int dy = -3; dy <= 3; dy++) {
             int y = yJ + dy;
             System.out.print(String.format("%-4s", (y >= 0 && y < nb_colonnes) ? y : ".")); 
         }
         System.out.println();
         System.out.print("    "); // ligne séparatrice
-        for (int dy = -1; dy <= 1; dy++) {
+        for (int dy = -3; dy <= 3; dy++) {
             System.out.print("____");
         }
         System.out.println();
@@ -279,7 +309,7 @@ public class Joueur {
             // indice de la ligne
             System.out.print((x >= 0 && x < nb_lignes ? x : ".") + " | ");
 
-            for (int dy = -1; dy <= 1; dy++) {
+            for (int dy = -3; dy <= 3; dy++) {
                 int y = yJ + dy;
                 if (x >= 0 && x < nb_lignes && y >= 0 && y < nb_colonnes) {
                     if (dx == 0 && dy == 0) {
@@ -297,18 +327,34 @@ public class Joueur {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Utilisable> getInventaire() {
         return inventaire;
     }
 
+    /**
+     *
+     * @param inventaire
+     */
     public void setInventaire(ArrayList<Utilisable> inventaire) {
         this.inventaire = inventaire;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Utilisable> getEffets() {
         return effets;
     }
 
+    /**
+     *
+     * @param effets
+     */
     public void setEffets(ArrayList<Utilisable> effets) {
         this.effets = effets;
     }
