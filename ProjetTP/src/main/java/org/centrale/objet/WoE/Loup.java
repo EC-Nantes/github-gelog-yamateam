@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -7,12 +8,13 @@ package org.centrale.objet.WoE;
 import java.util.Random;
 
 /**
- *
+ * Type de monstre, peut combattre
  * @author yaelv
  */
 public class Loup extends Monstre implements Combattant{
 
     /**
+     * Constructeur principal
      * @param n
      * @param ptVie
      * @param degAtt
@@ -27,25 +29,30 @@ public class Loup extends Monstre implements Combattant{
     }
 
     /**
-     *
+     * Constructeur par défaut
      */
     public Loup() {
         super("Loup");
     }
     
+    /**
+     * Constructeur en initialisant le nom
+     * @param n
+     */
     public Loup(String n) {
         super(n);
     }
 
     /**
-     *
+     * Constructeur de copie
      * @param l
      */
     public Loup(Loup l) {
         super(l);
     }
     
-    /** Crée une copie indépendante de la créature 
+    /** 
+     * Crée une copie indépendante de la créature 
      * @return un loup
      */
     @Override
@@ -54,8 +61,8 @@ public class Loup extends Monstre implements Combattant{
     }
     
     /**
-     * @param c
      * Fait ce combattre cet objet avec la créature rentrée en paramètre
+     * @param c
      */
     @Override
     public void combattre(Creature c){
