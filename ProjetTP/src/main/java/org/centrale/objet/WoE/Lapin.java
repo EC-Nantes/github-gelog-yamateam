@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -5,12 +6,13 @@
 package org.centrale.objet.WoE;
 
 /**
- *
+ * un type de monstre, ne peut pas combattre
  * @author yaelv
  */
 public class Lapin extends Monstre {
 
     /**
+     * Constructeur principal
      * @param n
      * @param ptVie
      * @param degAtt
@@ -25,25 +27,30 @@ public class Lapin extends Monstre {
     }
 
     /**
-     *
+     * Constructeur par défaut
      */
     public Lapin() {
         super("Lapin");
     }
     
+    /**
+     * Constructeur en initialisant le nom
+     * @param n
+     */
     public Lapin(String n) {
         super(n);
     }
 
     /**
-     *
+     * Constructeur de copie
      * @param l
      */
     public Lapin(Lapin l) {
         super(l);
     }
     
-    /** Crée une copie indépendante de la créature 
+    /** 
+     * Crée une copie indépendante de la créature 
      * @return un lapin
      */
     @Override
