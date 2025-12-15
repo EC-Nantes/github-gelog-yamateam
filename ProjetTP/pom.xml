@@ -9,5 +9,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>24</maven.compiler.release>
         <exec.mainClass>org.centrale.objet.WoE.ProjetTP</exec.mainClass>
+        <sonar.organization>ec-nantes</sonar.organization>
     </properties>
 </project>
